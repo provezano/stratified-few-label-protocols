@@ -1,0 +1,50 @@
+{
+  "fm6": {
+    "model": "TabDPT v1.3",
+    "venv": ".venv_fm_extra",
+    "packages": {
+      "tabdpt": "1.3.1",
+      "torch": "2.14.1",
+      "scikit-learn": "1.9.1",
+      "numpy": "2.5.4"
+    },
+    "hf_repo": "Layer6/TabDPT",
+    "hf_revision": "a5ca6e01c0fa09ec68c73e958e5199d1932abb3a",
+    "file": "tabdpt1_3.safetensors",
+    "sha256": "97dc3b60bfad6b42ec1a07b7e121d86b0fc7c9fd67c8d2eaac3d815da197eacb",
+    "licence": "Apache-2.0 (code and weights)"
+  },
+  "fm7": {
+    "model": "Mitra-v2 (mitra-classifier-2)",
+    "venv": ".venv_fm_extra_mitra",
+    "packages": {
+      "autogluon.tabular": "1.6.3",
+      "torch": "2.10.0",
+      "numpy": "2.5.4"
+    },
+    "hf_repo": "autogluon/mitra-classifier-2",
+    "hf_revision": "edada0d20759c58ada8c8605c25f22f6e98ea5f0",
+    "file": "model.safetensors",
+    "sha256": "5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09",
+    "licence": "Apache-2.0",
+    "settings": "fine_tune=False, n_estimators=1, precision float32 (package default bf16 autocast)"
+  },
+  "fm8": {
+    "model": "LimiX-16M (LimiX-1_16M)",
+    "venv": ".venv_fm_extra_limix",
+    "packages": {
+      "limix": "2.0.0",
+      "torch": "2.14.1",
+      "numpy": "2.5.4"
+    },
+    "code_repo": "github.com/limix-ldm/LimiX",
+    "code_commit": "516bf396333feb3198cf7aff8a6c10421f218e24",
+    "hf_repo": "stable-ai/LimiX-1_16M",
+    "hf_revision": "3a7c18ac7876fa0f4418cc077abc12630c4fefbf",
+    "file": "LimiX-1_16M.ckpt",
+    "sha256": "0862b8aacc4669ead009ad418c83d33c143396b7aeec069e7d0d667aa70a168a",
+    "licence": "Stable AI Technology Co., Ltd. License v1.0 (Apache-2.0 + Sec. 10 attribution/naming)",
+    "settings": "config cls_default_noretrieval.json, mix_precision=False"
+  },
+  "fm2_note": "fm2 already uses tabicl 2.2.0 default checkpoint tabicl-classifier-v2-20260212.ckpt = TabICLv2"
+}

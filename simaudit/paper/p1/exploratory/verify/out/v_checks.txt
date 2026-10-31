@@ -1,0 +1,71 @@
+## Reproduction of stored metrics (own code vs stored)
+T1' st_macro_f1: max|diff|=0.00e+00 nan-mismatch=0
+T1' st_accuracy: max|diff|=0.00e+00 nan-mismatch=0
+T1' st_balanced_accuracy: max|diff|=0.00e+00 nan-mismatch=0
+T1' st_log_loss: max|diff|=8.88e-16 nan-mismatch=0
+T1' st_auc: max|diff|=3.33e-16 nan-mismatch=0
+DEV st_macro_f1: max|diff|=0.00e+00 nan-mismatch=0
+DEV st_accuracy: max|diff|=0.00e+00 nan-mismatch=0
+DEV st_balanced_accuracy: max|diff|=0.00e+00 nan-mismatch=0
+DEV st_log_loss: max|diff|=1.78e-15 nan-mismatch=0
+DEV st_auc: max|diff|=3.33e-16 nan-mismatch=0
+T1' integrity: query==panel\labeled True labeled in pool True seen matches True
+T1' max |row sum - 1| = 2.4340988602489233e-07 ; unseen prob mass max = 0.0
+T1' fits: 38532 tables: 52 binary tables: 35
+rows per strategy: {'kmedoids_nested': 5556, 'lucos_nested': 5556, 'random': 18520, 'stratified': 8900}
+single-class (n_seen==1) fits: 2612 AUC NaN: 2612
+
+## T3 per-draw caps
+stored macro_f1 > absorption cap: 0 of 38532; max excess 5.551115123125783e-17
+own macro_f1 > absorption cap: 0 of 38532; max excess 5.551115123125783e-17
+BA > n_seen/C: 0
+
+## T7: stratified minus covered-random macro-F1 at 1C (per table)
+fm2: n=42 mean=+0.0093 [-0.013,+0.034] Wilcoxon p=0.68
+fm1: n=42 mean=+0.0124 [-0.010,+0.036] Wilcoxon p=0.41
+fm3: n=42 mean=+0.0153 [-0.006,+0.038] Wilcoxon p=0.32
+fm5: n=42 mean=+0.0118 [-0.009,+0.034] Wilcoxon p=0.51
+
+## Claim k: 1C miss rate of random draws vs exact hypergeometric (pool counts)
+stored 1C random draws re-derived from sel_seed exactly: 520 of 520
+binary: draws=350 observed miss rate=0.483 exact(pool)=0.567 exact(full table)=0.569 fresh-seed sim=0.567 z=-3.25
+multiclass: draws=170 observed miss rate=0.929 exact(pool)=0.936 exact(full table)=0.936 fresh-seed sim=0.936 z=-0.37
+all: draws=520 observed miss rate=0.629 exact(pool)=0.688 exact(full table)=0.689 fresh-seed sim=0.687 z=-3.20
+binary exact Poisson-binomial P(X<=169) = 0.0007 (two-sided ~0.0014)
+per-table residual (obs - expected), binary, sorted:
+        dataset         pool  obs_miss  p_exact  sim_miss     resid
+ pmlb_612078220     [93, 74]         0 0.503499   0.48525 -5.034990
+ pmlb_452957568   [623, 657]         1 0.499962   0.48950 -3.999621
+ pmlb_321653624     [67, 61]         2 0.497170   0.50750 -2.971703
+ pmlb_140070728     [43, 42]         2 0.494118   0.48150 -2.941176
+pmlb_1000000545 [1410, 1900]         3 0.510810   0.51175 -2.108096
+ pmlb_471213511   [224, 176]         3 0.505965   0.50125 -2.059649
+ pmlb_776526808     [72, 59]         3 0.501116   0.50375 -2.011157
+pmlb_1000000850   [356, 364]         3 0.499366   0.49725 -1.993664
+ pmlb_298032972    [59, 109]         4 0.541560   0.54125 -1.415597
+ pmlb_216388530   [278, 489]         4 0.537236   0.53300 -1.372361
+  pmlb_51679336   [282, 486]         4 0.534672   0.55275 -1.346724
+ pmlb_899643728 [2485, 1616]         4 0.522334   0.52325 -1.223342
+ pmlb_148263816    [179, 66]         5 0.604751   0.60025 -1.047508
+pmlb_1000000451     [40, 53]         4 0.504441   0.51025 -1.044413
+ pmlb_196466410     [47, 59]         4 0.501707   0.49550 -1.017071
+ pmlb_158349848   [129, 147]         4 0.500316   0.48600 -1.003162
+  pmlb_70999782   [489, 481]         4 0.499518   0.50800 -0.995180
+ pmlb_675884895    [161, 68]         5 0.580633   0.59125 -0.806328
+  pmlb_52156669  [3868, 632]         7 0.758507   0.74875 -0.585067
+ pmlb_147524437    [195, 17]         8 0.851784   0.85575 -0.517840
+ pmlb_629865933   [244, 126]         5 0.549637   0.54850 -0.496374
+ pmlb_760627086   [353, 185]         5 0.547915   0.54775 -0.479152
+pmlb_1000000563  [2240, 410]         7 0.738342   0.73825 -0.383420
+ pmlb_285622297   [102, 179]         5 0.535892   0.52825 -0.358922
+ pmlb_814233394    [121, 23]         7 0.729701   0.73500 -0.297009
+ pmlb_112947990  [129, 2534]         9 0.907775   0.90725 -0.077753
+  pmlb_33590086   [230, 830]         7 0.659878   0.66725  0.401215
+ pmlb_536739196     [28, 96]         7 0.647522   0.64750  0.524784
+ pmlb_891171204   [205, 143]         6 0.514475   0.51300  0.855245
+pmlb_1000000267   [607, 491]         6 0.505130   0.50575  0.948701
+ pmlb_696605717 [1268, 1428]         6 0.501576   0.49850  0.984238
+ pmlb_190478228   [215, 195]         6 0.499970   0.50475  1.000298
+ pmlb_402875677   [478, 492]         6 0.499588   0.50025  1.004117
+ pmlb_771782289     [78, 82]         6 0.497170   0.50625  1.028302
+pmlb_1000000519    [163, 77]         7 0.562378   0.57075  1.376220

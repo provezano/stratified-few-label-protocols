@@ -1,0 +1,853 @@
+{
+ "prisma": {
+  "identification": {
+   "arxiv_raw_hits": 625,
+   "arxiv_unique": 261,
+   "s2_raw_hits": 491,
+   "s2_in_scope": 286,
+   "snowball_raw_citations": 1196,
+   "snowball_with_L_term_in_window": 236,
+   "snowball_in_scope": 177,
+   "openalex_raw_hits": 1677,
+   "openalex_in_scope": 696,
+   "prior_audit_records": 39,
+   "records_before_dedup": 1459,
+   "records_after_dedup": 367,
+   "duplicates_removed": 1092,
+   "only_prior_audit": 24
+  },
+  "stage1_screened": 343,
+  "stage1_excluded": 144,
+  "stage1_excluded_by_reason": {
+   "not_classification": 54,
+   "not_tabular": 41,
+   "table_QA_or_text2sql": 22,
+   "no_reduced_label_experiment": 18,
+   "survey_or_position": 5,
+   "recsys_cold_start": 3,
+   "out_of_window": 1
+  },
+  "stage1_included": 199,
+  "fulltext_sought": 223,
+  "fulltext_not_accessible": 15,
+  "fulltext_assessed": 208,
+  "fulltext_excluded": 47,
+  "fulltext_excluded_by_reason": {
+   "no_reduced_label_experiment": 41,
+   "not_classification": 3,
+   "not_tabular": 2,
+   "duplicate": 1
+  },
+  "included": 161,
+  "included_from_prior_audit_only": 9
+ },
+ "agreement": {
+  "category": {
+   "n": 161,
+   "raw_agreement": 0.907,
+   "kappa": 0.886
+  },
+  "coverage_forced": {
+   "n": 161,
+   "raw_agreement": 0.919,
+   "kappa": 0.875
+  },
+  "few_shot": {
+   "n": 161,
+   "raw_agreement": 0.957,
+   "kappa": 0.865
+  },
+  "missed_class_reported": {
+   "n": 161,
+   "raw_agreement": 1.0,
+   "kappa": null
+  },
+  "budget_unit": {
+   "n": 161,
+   "raw_agreement": 0.95,
+   "kappa": 0.916
+  },
+  "main_metric": {
+   "n": 161,
+   "raw_agreement": 0.95,
+   "kappa": 0.933
+  }
+ },
+ "n_coded_by_both": 161,
+ "main": {
+  "n_reduced_label": 161,
+  "n_few_shot": 132,
+  "category_counts_all": {
+   "A": 40,
+   "A'": 38,
+   "E": 30,
+   "B": 24,
+   "D": 18,
+   "C": 11
+  },
+  "category_counts_few_shot": {
+   "A": 40,
+   "A'": 33,
+   "E": 26,
+   "B": 19,
+   "C": 8,
+   "D": 6
+  },
+  "AorAprime_few_shot": {
+   "k": 73,
+   "n": 132,
+   "pct": 55.3,
+   "wilson_lo": 46.8,
+   "wilson_hi": 63.5
+  },
+  "AorAprime_all": {
+   "k": 78,
+   "n": 161,
+   "pct": 48.4,
+   "wilson_lo": 40.9,
+   "wilson_hi": 56.1
+  },
+  "A_only_few_shot": {
+   "k": 40,
+   "n": 132,
+   "pct": 30.3,
+   "wilson_lo": 23.1,
+   "wilson_hi": 38.6
+  },
+  "A_only_all": {
+   "k": 40,
+   "n": 161,
+   "pct": 24.8,
+   "wilson_lo": 18.8,
+   "wilson_hi": 32.1
+  },
+  "coverage_forced_yes_few_shot": {
+   "k": 55,
+   "n": 132,
+   "pct": 41.7,
+   "wilson_lo": 33.6,
+   "wilson_hi": 50.2
+  },
+  "coverage_forced_yes_all": {
+   "k": 58,
+   "n": 161,
+   "pct": 36.0,
+   "wilson_lo": 29.0,
+   "wilson_hi": 43.7
+  },
+  "coverage_forced_counts_all": {
+   "unclear": 67,
+   "yes": 58,
+   "no": 36
+  },
+  "missed_class_reported_all": {
+   "k": 0,
+   "n": 161,
+   "pct": 0.0,
+   "wilson_lo": 0.0,
+   "wilson_hi": 2.3
+  },
+  "missed_class_reported_few_shot": {
+   "k": 0,
+   "n": 132,
+   "pct": 0.0,
+   "wilson_lo": 0.0,
+   "wilson_hi": 2.8
+  },
+  "AorAprime_among_stated_draw_few_shot": {
+   "k": 73,
+   "n": 100,
+   "pct": 73.0,
+   "wilson_lo": 63.6,
+   "wilson_hi": 80.7
+  },
+  "AorAprime_among_stated_draw_all": {
+   "k": 78,
+   "n": 113,
+   "pct": 69.0,
+   "wilson_lo": 60.0,
+   "wilson_hi": 76.8
+  }
+ },
+ "sensitivity_search_only": {
+  "n_reduced_label": 152,
+  "n_few_shot": 127,
+  "category_counts_all": {
+   "A": 39,
+   "A'": 37,
+   "E": 28,
+   "B": 23,
+   "D": 14,
+   "C": 11
+  },
+  "category_counts_few_shot": {
+   "A": 39,
+   "A'": 32,
+   "E": 24,
+   "B": 18,
+   "C": 8,
+   "D": 6
+  },
+  "AorAprime_few_shot": {
+   "k": 71,
+   "n": 127,
+   "pct": 55.9,
+   "wilson_lo": 47.2,
+   "wilson_hi": 64.2
+  },
+  "AorAprime_all": {
+   "k": 76,
+   "n": 152,
+   "pct": 50.0,
+   "wilson_lo": 42.1,
+   "wilson_hi": 57.9
+  },
+  "A_only_few_shot": {
+   "k": 39,
+   "n": 127,
+   "pct": 30.7,
+   "wilson_lo": 23.4,
+   "wilson_hi": 39.2
+  },
+  "A_only_all": {
+   "k": 39,
+   "n": 152,
+   "pct": 25.7,
+   "wilson_lo": 19.4,
+   "wilson_hi": 33.1
+  },
+  "coverage_forced_yes_few_shot": {
+   "k": 53,
+   "n": 127,
+   "pct": 41.7,
+   "wilson_lo": 33.5,
+   "wilson_hi": 50.4
+  },
+  "coverage_forced_yes_all": {
+   "k": 56,
+   "n": 152,
+   "pct": 36.8,
+   "wilson_lo": 29.6,
+   "wilson_hi": 44.7
+  },
+  "coverage_forced_counts_all": {
+   "unclear": 61,
+   "yes": 56,
+   "no": 35
+  },
+  "missed_class_reported_all": {
+   "k": 0,
+   "n": 152,
+   "pct": 0.0,
+   "wilson_lo": 0.0,
+   "wilson_hi": 2.5
+  },
+  "missed_class_reported_few_shot": {
+   "k": 0,
+   "n": 127,
+   "pct": 0.0,
+   "wilson_lo": 0.0,
+   "wilson_hi": 2.9
+  },
+  "AorAprime_among_stated_draw_few_shot": {
+   "k": 71,
+   "n": 97,
+   "pct": 73.2,
+   "wilson_lo": 63.6,
+   "wilson_hi": 81.0
+  },
+  "AorAprime_among_stated_draw_all": {
+   "k": 76,
+   "n": 110,
+   "pct": 69.1,
+   "wilson_lo": 59.9,
+   "wilson_hi": 77.0
+  }
+ },
+ "posthoc_excluding_anomaly_PU": {
+  "n_reduced_label": 152,
+  "n_few_shot": 125,
+  "category_counts_all": {
+   "A": 39,
+   "A'": 32,
+   "E": 30,
+   "B": 24,
+   "D": 18,
+   "C": 9
+  },
+  "category_counts_few_shot": {
+   "A": 39,
+   "A'": 28,
+   "E": 26,
+   "B": 19,
+   "C": 7,
+   "D": 6
+  },
+  "AorAprime_few_shot": {
+   "k": 67,
+   "n": 125,
+   "pct": 53.6,
+   "wilson_lo": 44.9,
+   "wilson_hi": 62.1
+  },
+  "AorAprime_all": {
+   "k": 71,
+   "n": 152,
+   "pct": 46.7,
+   "wilson_lo": 39.0,
+   "wilson_hi": 54.6
+  },
+  "A_only_few_shot": {
+   "k": 39,
+   "n": 125,
+   "pct": 31.2,
+   "wilson_lo": 23.7,
+   "wilson_hi": 39.8
+  },
+  "A_only_all": {
+   "k": 39,
+   "n": 152,
+   "pct": 25.7,
+   "wilson_lo": 19.4,
+   "wilson_hi": 33.1
+  },
+  "coverage_forced_yes_few_shot": {
+   "k": 53,
+   "n": 125,
+   "pct": 42.4,
+   "wilson_lo": 34.1,
+   "wilson_hi": 51.2
+  },
+  "coverage_forced_yes_all": {
+   "k": 55,
+   "n": 152,
+   "pct": 36.2,
+   "wilson_lo": 29.0,
+   "wilson_hi": 44.1
+  },
+  "coverage_forced_counts_all": {
+   "unclear": 66,
+   "yes": 55,
+   "no": 31
+  },
+  "missed_class_reported_all": {
+   "k": 0,
+   "n": 152,
+   "pct": 0.0,
+   "wilson_lo": 0.0,
+   "wilson_hi": 2.5
+  },
+  "missed_class_reported_few_shot": {
+   "k": 0,
+   "n": 125,
+   "pct": 0.0,
+   "wilson_lo": 0.0,
+   "wilson_hi": 3.0
+  },
+  "AorAprime_among_stated_draw_few_shot": {
+   "k": 67,
+   "n": 93,
+   "pct": 72.0,
+   "wilson_lo": 62.2,
+   "wilson_hi": 80.1
+  },
+  "AorAprime_among_stated_draw_all": {
+   "k": 71,
+   "n": 104,
+   "pct": 68.3,
+   "wilson_lo": 58.8,
+   "wilson_hi": 76.4
+  }
+ },
+ "posthoc_inherited_recoded_A": {
+  "n_reduced_label": 161,
+  "n_few_shot": 132,
+  "category_counts_all": {
+   "A": 42,
+   "A'": 38,
+   "E": 28,
+   "B": 24,
+   "D": 18,
+   "C": 11
+  },
+  "category_counts_few_shot": {
+   "A": 42,
+   "A'": 33,
+   "E": 24,
+   "B": 19,
+   "C": 8,
+   "D": 6
+  },
+  "AorAprime_few_shot": {
+   "k": 75,
+   "n": 132,
+   "pct": 56.8,
+   "wilson_lo": 48.3,
+   "wilson_hi": 65.0
+  },
+  "AorAprime_all": {
+   "k": 80,
+   "n": 161,
+   "pct": 49.7,
+   "wilson_lo": 42.1,
+   "wilson_hi": 57.3
+  },
+  "A_only_few_shot": {
+   "k": 42,
+   "n": 132,
+   "pct": 31.8,
+   "wilson_lo": 24.5,
+   "wilson_hi": 40.2
+  },
+  "A_only_all": {
+   "k": 42,
+   "n": 161,
+   "pct": 26.1,
+   "wilson_lo": 19.9,
+   "wilson_hi": 33.4
+  },
+  "coverage_forced_yes_few_shot": {
+   "k": 55,
+   "n": 132,
+   "pct": 41.7,
+   "wilson_lo": 33.6,
+   "wilson_hi": 50.2
+  },
+  "coverage_forced_yes_all": {
+   "k": 58,
+   "n": 161,
+   "pct": 36.0,
+   "wilson_lo": 29.0,
+   "wilson_hi": 43.7
+  },
+  "coverage_forced_counts_all": {
+   "unclear": 67,
+   "yes": 58,
+   "no": 36
+  },
+  "missed_class_reported_all": {
+   "k": 0,
+   "n": 161,
+   "pct": 0.0,
+   "wilson_lo": 0.0,
+   "wilson_hi": 2.3
+  },
+  "missed_class_reported_few_shot": {
+   "k": 0,
+   "n": 132,
+   "pct": 0.0,
+   "wilson_lo": 0.0,
+   "wilson_hi": 2.8
+  },
+  "AorAprime_among_stated_draw_few_shot": {
+   "k": 75,
+   "n": 102,
+   "pct": 73.5,
+   "wilson_lo": 64.2,
+   "wilson_hi": 81.1
+  },
+  "AorAprime_among_stated_draw_all": {
+   "k": 80,
+   "n": 115,
+   "pct": 69.6,
+   "wilson_lo": 60.6,
+   "wilson_hi": 77.2
+  }
+ },
+ "metrics_any_use": {
+  "accuracy": {
+   "k": 78,
+   "n": 161,
+   "pct": 48.4,
+   "wilson_lo": 40.9,
+   "wilson_hi": 56.1
+  },
+  "auc": {
+   "k": 78,
+   "n": 161,
+   "pct": 48.4,
+   "wilson_lo": 40.9,
+   "wilson_hi": 56.1
+  },
+  "other": {
+   "k": 56,
+   "n": 161,
+   "pct": 34.8,
+   "wilson_lo": 27.9,
+   "wilson_hi": 42.4
+  },
+  "f1-other": {
+   "k": 32,
+   "n": 161,
+   "pct": 19.9,
+   "wilson_lo": 14.4,
+   "wilson_hi": 26.7
+  },
+  "macro-f1": {
+   "k": 19,
+   "n": 161,
+   "pct": 11.8,
+   "wilson_lo": 7.7,
+   "wilson_hi": 17.7
+  },
+  "balanced-accuracy": {
+   "k": 9,
+   "n": 161,
+   "pct": 5.6,
+   "wilson_lo": 3.0,
+   "wilson_hi": 10.3
+  },
+  "log-loss": {
+   "k": 6,
+   "n": 161,
+   "pct": 3.7,
+   "wilson_lo": 1.7,
+   "wilson_hi": 7.9
+  }
+ },
+ "main_metric": {
+  "auc": {
+   "k": 59,
+   "n": 161,
+   "pct": 36.6,
+   "wilson_lo": 29.6,
+   "wilson_hi": 44.3
+  },
+  "accuracy": {
+   "k": 47,
+   "n": 161,
+   "pct": 29.2,
+   "wilson_lo": 22.7,
+   "wilson_hi": 36.6
+  },
+  "other": {
+   "k": 23,
+   "n": 161,
+   "pct": 14.3,
+   "wilson_lo": 9.7,
+   "wilson_hi": 20.5
+  },
+  "f1-other": {
+   "k": 14,
+   "n": 161,
+   "pct": 8.7,
+   "wilson_lo": 5.3,
+   "wilson_hi": 14.1
+  },
+  "macro-f1": {
+   "k": 10,
+   "n": 161,
+   "pct": 6.2,
+   "wilson_lo": 3.4,
+   "wilson_hi": 11.1
+  },
+  "balanced-accuracy": {
+   "k": 6,
+   "n": 161,
+   "pct": 3.7,
+   "wilson_lo": 1.7,
+   "wilson_hi": 7.9
+  },
+  "log-loss": {
+   "k": 2,
+   "n": 161,
+   "pct": 1.2,
+   "wilson_lo": 0.3,
+   "wilson_hi": 4.4
+  }
+ },
+ "metrics_any_use_few_shot": {
+  "accuracy": {
+   "k": 65,
+   "n": 132,
+   "pct": 49.2,
+   "wilson_lo": 40.9,
+   "wilson_hi": 57.7
+  },
+  "auc": {
+   "k": 63,
+   "n": 132,
+   "pct": 47.7,
+   "wilson_lo": 39.4,
+   "wilson_hi": 56.2
+  },
+  "other": {
+   "k": 45,
+   "n": 132,
+   "pct": 34.1,
+   "wilson_lo": 26.6,
+   "wilson_hi": 42.5
+  },
+  "f1-other": {
+   "k": 24,
+   "n": 132,
+   "pct": 18.2,
+   "wilson_lo": 12.5,
+   "wilson_hi": 25.6
+  },
+  "macro-f1": {
+   "k": 17,
+   "n": 132,
+   "pct": 12.9,
+   "wilson_lo": 8.2,
+   "wilson_hi": 19.7
+  },
+  "balanced-accuracy": {
+   "k": 8,
+   "n": 132,
+   "pct": 6.1,
+   "wilson_lo": 3.1,
+   "wilson_hi": 11.5
+  },
+  "log-loss": {
+   "k": 4,
+   "n": 132,
+   "pct": 3.0,
+   "wilson_lo": 1.2,
+   "wilson_hi": 7.5
+  }
+ },
+ "main_metric_few_shot": {
+  "auc": {
+   "k": 49,
+   "n": 132,
+   "pct": 37.1,
+   "wilson_lo": 29.4,
+   "wilson_hi": 45.6
+  },
+  "accuracy": {
+   "k": 38,
+   "n": 132,
+   "pct": 28.8,
+   "wilson_lo": 21.8,
+   "wilson_hi": 37.0
+  },
+  "other": {
+   "k": 16,
+   "n": 132,
+   "pct": 12.1,
+   "wilson_lo": 7.6,
+   "wilson_hi": 18.8
+  },
+  "f1-other": {
+   "k": 13,
+   "n": 132,
+   "pct": 9.8,
+   "wilson_lo": 5.8,
+   "wilson_hi": 16.1
+  },
+  "macro-f1": {
+   "k": 9,
+   "n": 132,
+   "pct": 6.8,
+   "wilson_lo": 3.6,
+   "wilson_hi": 12.5
+  },
+  "balanced-accuracy": {
+   "k": 6,
+   "n": 132,
+   "pct": 4.5,
+   "wilson_lo": 2.1,
+   "wilson_hi": 9.6
+  },
+  "log-loss": {
+   "k": 1,
+   "n": 132,
+   "pct": 0.8,
+   "wilson_lo": 0.1,
+   "wilson_hi": 4.2
+  }
+ },
+ "unseen_class_scoring_stated": [
+  {
+   "paper_id": "AX2406.12031",
+   "unseen_class_scoring": "code: test classes absent from k-shot sample remapped to new labels (baselines); not stated in text"
+  },
+  {
+   "paper_id": "AX2508.09263",
+   "unseen_class_scoring": "implicit: Eq. 4 with |S_c|=0 leaves the LLM-generated prototype only"
+  }
+ ],
+ "budget_unit": {
+  "total": 93,
+  "fraction": 41,
+  "per-class": 24,
+  "mixed": 2,
+  "not stated": 1
+ },
+ "n_seeds_stated": {
+  "k": 112,
+  "n": 161,
+  "pct": 69.6,
+  "wilson_lo": 62.1,
+  "wilson_hi": 76.1
+ },
+ "breakdown": {
+  "year_bin": {
+   "2019-21": {
+    "n": 9,
+    "AorAprime_all": {
+     "k": 3,
+     "n": 9,
+     "pct": 33.3,
+     "wilson_lo": 12.1,
+     "wilson_hi": 64.6
+    },
+    "n_few_shot": 7,
+    "AorAprime_few_shot": {
+     "k": 3,
+     "n": 7,
+     "pct": 42.9,
+     "wilson_lo": 15.8,
+     "wilson_hi": 75.0
+    }
+   },
+   "2022-23": {
+    "n": 34,
+    "AorAprime_all": {
+     "k": 13,
+     "n": 34,
+     "pct": 38.2,
+     "wilson_lo": 23.9,
+     "wilson_hi": 55.0
+    },
+    "n_few_shot": 25,
+    "AorAprime_few_shot": {
+     "k": 13,
+     "n": 25,
+     "pct": 52.0,
+     "wilson_lo": 33.5,
+     "wilson_hi": 70.0
+    }
+   },
+   "2024": {
+    "n": 23,
+    "AorAprime_all": {
+     "k": 12,
+     "n": 23,
+     "pct": 52.2,
+     "wilson_lo": 33.0,
+     "wilson_hi": 70.8
+    },
+    "n_few_shot": 21,
+    "AorAprime_few_shot": {
+     "k": 12,
+     "n": 21,
+     "pct": 57.1,
+     "wilson_lo": 36.5,
+     "wilson_hi": 75.5
+    }
+   },
+   "2025": {
+    "n": 24,
+    "AorAprime_all": {
+     "k": 9,
+     "n": 24,
+     "pct": 37.5,
+     "wilson_lo": 21.2,
+     "wilson_hi": 57.3
+    },
+    "n_few_shot": 21,
+    "AorAprime_few_shot": {
+     "k": 9,
+     "n": 21,
+     "pct": 42.9,
+     "wilson_lo": 24.5,
+     "wilson_hi": 63.5
+    }
+   },
+   "2026": {
+    "n": 62,
+    "AorAprime_all": {
+     "k": 39,
+     "n": 62,
+     "pct": 62.9,
+     "wilson_lo": 50.5,
+     "wilson_hi": 73.8
+    },
+    "n_few_shot": 53,
+    "AorAprime_few_shot": {
+     "k": 34,
+     "n": 53,
+     "pct": 64.2,
+     "wilson_lo": 50.7,
+     "wilson_hi": 75.7
+    }
+   }
+  },
+  "venue_type": {
+   "conference": {
+    "n": 71,
+    "AorAprime_all": {
+     "k": 32,
+     "n": 71,
+     "pct": 45.1,
+     "wilson_lo": 34.0,
+     "wilson_hi": 56.6
+    },
+    "n_few_shot": 59,
+    "AorAprime_few_shot": {
+     "k": 32,
+     "n": 59,
+     "pct": 54.2,
+     "wilson_lo": 41.7,
+     "wilson_hi": 66.3
+    }
+   },
+   "journal": {
+    "n": 14,
+    "AorAprime_all": {
+     "k": 6,
+     "n": 14,
+     "pct": 42.9,
+     "wilson_lo": 21.4,
+     "wilson_hi": 67.4
+    },
+    "n_few_shot": 9,
+    "AorAprime_few_shot": {
+     "k": 5,
+     "n": 9,
+     "pct": 55.6,
+     "wilson_lo": 26.7,
+     "wilson_hi": 81.1
+    }
+   },
+   "preprint": {
+    "n": 70,
+    "AorAprime_all": {
+     "k": 35,
+     "n": 70,
+     "pct": 50.0,
+     "wilson_lo": 38.6,
+     "wilson_hi": 61.4
+    },
+    "n_few_shot": 60,
+    "AorAprime_few_shot": {
+     "k": 32,
+     "n": 60,
+     "pct": 53.3,
+     "wilson_lo": 40.9,
+     "wilson_hi": 65.4
+    }
+   },
+   "workshop": {
+    "n": 6,
+    "AorAprime_all": {
+     "k": 5,
+     "n": 6,
+     "pct": 83.3,
+     "wilson_lo": 43.6,
+     "wilson_hi": 97.0
+    },
+    "n_few_shot": 4,
+    "AorAprime_few_shot": {
+     "k": 4,
+     "n": 4,
+     "pct": 100.0,
+     "wilson_lo": 51.0,
+     "wilson_hi": 100.0
+    }
+   }
+  }
+ }
+}

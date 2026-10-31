@@ -1,0 +1,55 @@
+## (a) required m per class, random, fm2 (median over 52 tables)
+eps                       0.02              0.05        
+ref                  at_last_m own_max at_last_m own_max
+metric                                                  
+auc_imp                   20.0    20.0      10.0    10.0
+auc_pre                   20.0    20.0      10.0    10.0
+neg_brier                 30.0    30.0      20.0    20.0
+neg_ll                    30.0    30.0      25.0    25.0
+st_accuracy               20.0    20.0      15.0    15.0
+st_balanced_accuracy      20.0    20.0      15.0    15.0
+st_macro_f1               25.0    25.0      15.0    15.0
+max feasible m for random: {30: 49, 20: 2, 10: 1}
+
+## (b) label-equivalence rho(1) medians (upper/Turnbull-style median; plain median)
+ fm             sel               metric  n   med  plain_median  ci_lo  ci_hi  share_gt1
+fm2 kmedoids_nested          st_accuracy 52 2.490         2.518  1.524  3.975      0.788
+fm2 kmedoids_nested st_balanced_accuracy 52 1.000         1.000  1.000  1.432      0.481
+fm2 kmedoids_nested          st_macro_f1 52 1.042         1.114  1.000  1.451      0.519
+fm2 kmedoids_nested              auc_imp 52 1.000         1.000  1.000  1.448      0.442
+fm2 kmedoids_nested              auc_pre 28 1.055         1.060  1.000  1.667      0.536
+fm2 kmedoids_nested               neg_ll 52 1.002         1.052  1.000  1.754      0.519
+fm2 kmedoids_nested            neg_brier 52 1.282         1.364  1.000  1.764      0.635
+fm2    lucos_nested          st_accuracy 52 2.313         2.421  1.473  5.220      0.731
+fm2    lucos_nested st_balanced_accuracy 52 1.000         1.000  1.000  1.259      0.462
+fm2    lucos_nested          st_macro_f1 52 1.000         1.000  1.000  1.268      0.481
+fm2    lucos_nested              auc_imp 52 1.000         1.000  1.000  1.750      0.442
+fm2    lucos_nested              auc_pre 28 1.894         1.948  1.150  2.980      0.714
+fm2    lucos_nested               neg_ll 52 1.103         1.144  1.000  1.402      0.538
+fm2    lucos_nested            neg_brier 52 1.450         1.565  1.038  1.855      0.673
+fm2      stratified          st_accuracy 52 1.025         1.058  1.000  1.311      0.519
+fm2      stratified st_balanced_accuracy 52 1.660         1.687  1.432  2.090      0.846
+fm2      stratified          st_macro_f1 52 1.953         1.955  1.572  2.173      0.865
+fm2      stratified              auc_imp 52 1.388         1.394  1.065  1.611      0.654
+fm2      stratified              auc_pre 52 1.000         1.000  1.000  1.055      0.404
+fm2      stratified               neg_ll 52 3.660         3.757  2.978  4.527      0.962
+fm2      stratified            neg_brier 52 1.658         1.671  1.459  1.943      0.827
+accuracy rho(1) range over FMs (selectors): {'min': 2.14, 'max': 2.96}
+macro-F1 rho(1) range over FMs (selectors): {'min': 1.0, 'max': 1.19}
+
+## (c) mechanism at m=1, fm2 (medians of per-table means)
+                 rec_maj  rec_min  lab_maj  pred_maj  cov_share
+strategy                                                       
+kmedoids_nested    0.968    0.000    0.583     0.791      0.528
+lucos_nested       0.939    0.000    0.500     0.802      0.550
+random             0.640    0.360    0.550     0.575      0.700
+stratified         0.572    0.537    0.500     0.489      1.000
+kmedoids_nested: Spearman(gap, d maj share)=+0.862 [+0.74,+0.93]; (gap, log IR pool)=-0.021; (gap, log IR full)=-0.019; d maj share mean=+0.111 p=0.0119; d min recall mean=-0.120 p=0.0114; d maj recall p=0.00052
+lucos_nested: Spearman(gap, d maj share)=+0.817 [+0.68,+0.90]; (gap, log IR pool)=+0.002; (gap, log IR full)=-0.003; d maj share mean=+0.098 p=0.0112; d min recall mean=-0.125 p=0.00868; d maj recall p=0.0005
+binary-only medians:
+                 rec_maj  rec_min
+strategy                         
+kmedoids_nested    1.000    0.000
+lucos_nested       1.000    0.000
+random             0.638    0.443
+stratified         0.624    0.564

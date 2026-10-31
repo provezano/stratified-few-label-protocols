@@ -1,0 +1,4 @@
+subset,draws,tables,errors,draws_absent_col_returned,max_absent_mass,max_absent_argmax_share,max_abs_decl_minus_stored,max_abs_std_minus_stored,max_abs_macro_f1_decl_minus_std,mean_absent_f1
+all,356,20,0,0,0.0,0.0,0.0,0.0,0.0,0.0
+multiclass,143,6,0,0,0.0,0.0,0.0,0.0,0.0,0.0
+binary one-class,213,14,0,0,0.0,0.0,0.0,0.0,0.0,0.0

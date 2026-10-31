@@ -1,0 +1,10 @@
+rec_id,old_decision,new_decision,new_reason,justification
+AX2106.06168,exclude/not_tabular,exclude,no_reduced_label_experiment,"latest arXiv text is NLP-only; v1 (read) has 4 UCI tabular tasks but trains on full labelled sets plus synthetic unlabelled data (v1 Sec. 5.4)"
+AX2309.15757,include,exclude,no_reduced_label_experiment,"naturally small datasets with 10-fold CV, no label subsampling, not framed as few-shot; consistent with RamanPFN/GeneICL/QuAIL/TabPFN v1 exclusions"
+AX2405.07662,include,exclude,no_reduced_label_experiment,"naturally small datasets (n<=500) used whole; no label subsampling; same consistency rule"
+AX2409.01635,include,exclude,no_reduced_label_experiment,"PMLBmini: naturally small datasets (n<=500) used whole; no label subsampling; same consistency rule"
+AX2409.18594,include,exclude,no_reduced_label_experiment,"naturally small datasets (n<=500) used whole; method zero-shot; same consistency rule"
+AX2602.14622,include,exclude,no_reduced_label_experiment,"naturally ~100-row datasets used whole; no label subsampling; same consistency rule"
+AX2505.20003,include,exclude,not_classification,"semi-supervised estimation of logistic-regression coefficients scored by coefficient error, not a classification evaluation"
+AX2503.06277,include,exclude,not_tabular,"image+tabular multimodal; no tabular-only classification experiment (stage-1 rule for multimodal)"
+AX2508.04746,include,exclude,not_tabular,"multimodal few-shot; tabular results not reported separately (stage-1 rule for multimodal)"

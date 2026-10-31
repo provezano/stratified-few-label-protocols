@@ -1,0 +1,80 @@
+{
+ "reproduced_means": {
+  "fm1": {
+   "dev": 0.059,
+   "heldout": 0.062,
+   "pmlb": 0.069,
+   "sf": 0.025
+  },
+  "fm2": {
+   "dev": 0.04,
+   "heldout": 0.03,
+   "pmlb": 0.037,
+   "sf": -0.003
+  },
+  "fm3": {
+   "dev": 0.048,
+   "heldout": 0.044,
+   "pmlb": 0.052,
+   "sf": 0.005
+  },
+  "fm5": {
+   "dev": 0.082,
+   "heldout": 0.075,
+   "pmlb": 0.088,
+   "sf": 0.047
+  }
+ },
+ "ordering_share": {
+  "dev": 0.225,
+  "heldout": 0.25,
+  "pmlb": 0.24,
+  "sf": 0.475
+ },
+ "ordering_share_r_below_0.6": {
+  "dev": 0.607,
+  "heldout": 0.625,
+  "pmlb": 0.612,
+  "sf": 0.792
+ },
+ "sf_median_pimin_all": 0.23973784585578495,
+ "sf_median_pimin_binary": 0.27547321788159485,
+ "median_stratified_macro_f1_m1": {
+  "dev": 0.539,
+  "heldout": 0.517,
+  "pmlb": 0.513,
+  "sf": 0.479
+ },
+ "q5": {
+  "counts_all_ok": true,
+  "degenerate_draw_share": 0.253625,
+  "near_chance_tables": [
+   "f33111881_frailty",
+   "f33868873_adherence",
+   "k11395735_malaria",
+   "z21713220_optiaged",
+   "z22065799_school",
+   "z22133098_trees",
+   "z22172178_perio",
+   "z22216010_pvt",
+   "z22705412_hpv",
+   "z22751055_fairtrade",
+   "z22767593_edmort",
+   "z22900584_foodwaste",
+   "z23168913_volunteer",
+   "z23318225_hlit"
+  ],
+  "max_abs_diff": 0.0,
+  "const_by_strategy_m": {
+   "random|1": 0.562,
+   "random|3": 0.287,
+   "random|5": 0.196,
+   "random|10": 0.223,
+   "stratified|1": 0.002,
+   "stratified|3": 0.0,
+   "stratified|5": 0.0,
+   "stratified|10": 0.0
+  },
+  "reencode_all_equal": true
+ }
+}

@@ -1,0 +1,456 @@
+datasets:
+- key: k11395735_malaria
+  did: 30011395735
+  source: Kaggle
+  record: '11395735'
+  first_public: '2026-07-28'
+  license: CC0-1.0
+  target: Result
+  tabpfn35_safe: false
+  n: 2190
+  d: 12
+  C: 2
+  class_counts:
+  - 1068
+  - 1122
+  sha256: cb6b02710a346af8be7e110bbc1914b40fa37c8ad0ec352df000242a3473849a
+  raw_files:
+  - name: archive.zip
+    url: https://www.kaggle.com/api/v1/datasets/download/mdtuhinalambijoy/malaria-associated-clinical-data-from-bangladesh
+    md5: 3068a32bdfea9e7353c098941eb6597e
+    md5_repo: null
+    sha256: 7a91968d77720afcb279c184ae8bcc39f0e27c13bf99e63cea6ae51a60755509
+  - name: Malaria Diseases dataset - .csv
+    url: https://www.kaggle.com/api/v1/datasets/download/mdtuhinalambijoy/malaria-associated-clinical-data-from-bangladesh
+      (zip member)
+    md5: 5b71df586bccfa9c38d764bb7ab2ef01
+    md5_repo: null
+    sha256: 17cd8a91139f08df375379ddd0f733c478c9de37c21e6e2a60a75e7943fac69b
+- key: f33111881_frailty
+  did: 20033111881
+  source: figshare
+  record: '33111881'
+  first_public: '2026-07-29'
+  license: CC BY 4.0
+  target: Frailty
+  tabpfn35_safe: false
+  n: 1498
+  d: 81
+  C: 2
+  class_counts:
+  - 295
+  - 1203
+  sha256: a6e42d4f5640307ef476afdc0c3981954e05592eaca9e0fe944500989bbe9120
+  raw_files:
+  - name: Heart failure frailty prediction testing dataset.xlsx
+    url: https://ndownloader.figshare.com/files/67087241
+    md5: 02151291647aaeb5ca5fbfae3c87acc4
+    md5_repo: null
+    sha256: b111b6770dd2be274fdbb2ca6fa73fcaac088d2e92dda1ba3f10dd6811bf7db2
+  - name: Heart failure frailty prediction training dataset.xlsx
+    url: https://ndownloader.figshare.com/files/67087244
+    md5: 380417e347197a504730e670ac85c830
+    md5_repo: null
+    sha256: d75de05a8eb4aced2b7ed008714c62c19d2dfeeb0b9ea942f92cf58e533ed846
+- key: f33126371_nonadh
+  did: 20033126371
+  source: figshare
+  record: '33126371'
+  first_public: '2026-07-30'
+  license: CC BY 4.0
+  target: Adherence
+  tabpfn35_safe: false
+  n: 270
+  d: 19
+  C: 2
+  class_counts:
+  - 117
+  - 153
+  sha256: 3becc74f24b92f7ebcd29578d7b5f6fa65aca213ad52271aac6d853531174e8c
+  raw_files:
+  - name: pone.0354682.s004.xlsx
+    url: https://ndownloader.figshare.com/files/67133465
+    md5: 4acdc87059a9aac5375b5d3ad3bd23e8
+    md5_repo: 4acdc87059a9aac5375b5d3ad3bd23e8
+    sha256: 6e49e2e3aa2535843448dc7fdcc1c0b7f57535a1573ec0808cd21ab7de9785b7
+- key: z21713220_optiaged
+  did: 10021713220
+  source: Zenodo
+  record: '21713220'
+  first_public: '2026-07-31'
+  license: CC-BY-4.0
+  target: CJP_COMPOSITE
+  tabpfn35_safe: false
+  n: 2483
+  d: 18
+  C: 2
+  class_counts:
+  - 1799
+  - 684
+  sha256: b14914c6f565ba3dd81b54e6648f14f23fb39a029145552a260899c9a0902a4c
+  raw_files:
+  - name: OPTIAGED DATA SHARE.xlsx
+    url: https://zenodo.org/api/records/21713220/files/OPTIAGED%20DATA%20SHARE.xlsx/content
+    md5: e3b63193d1a62d33a0e55fa7f11f57cf
+    md5_repo: e3b63193d1a62d33a0e55fa7f11f57cf
+    sha256: 988c03c6e8a98cc4dcd73099df59ce6d7d0d778cd5b83c7cc38ce5efdeeeefef
+- key: z21872549_vacc
+  did: 10021872549
+  source: Zenodo
+  record: '21872549'
+  first_public: '2026-08-10'
+  license: CC-BY-4.0
+  target: kierunek
+  tabpfn35_safe: false
+  n: 1096
+  d: 16
+  C: 2
+  class_counts:
+  - 530
+  - 566
+  sha256: dd17a7db49eaa0098ee62598a8dbd4d72c003099f7aa086467b652a8cdf2dc67
+  raw_files:
+  - name: views about vaccination in the medical students baza.xlsx
+    url: https://zenodo.org/api/records/21872549/files/views%20about%20vaccination%20in%20the%20medical%20students%20baza.xlsx/content
+    md5: e79bcd1a60a06cd6529a26357eb73c44
+    md5_repo: e79bcd1a60a06cd6529a26357eb73c44
+    sha256: 34e6ab9c2414e58c46c90d8d02d5d41b3ffd30ae7e1a2df77712216297544880
+- key: z22705412_hpv
+  did: 10022705412
+  source: Zenodo
+  record: '22705412'
+  first_public: '2026-08-13'
+  license: CC-BY-4.0
+  target: hpv_result
+  tabpfn35_safe: false
+  n: 1193
+  d: 30
+  C: 2
+  class_counts:
+  - 85
+  - 1108
+  sha256: 7847906906d4873e30c90a0416e4e96cff39fce8ac3d3711e0190a8f7d82067a
+  raw_files:
+  - name: HPV_CaMau_2026_dataset.xlsx
+    url: https://zenodo.org/api/records/22705412/files/HPV_CaMau_2026_dataset.xlsx/content
+    md5: 7ff3498120da5c7947e94fcd703e1ce8
+    md5_repo: 7ff3498120da5c7947e94fcd703e1ce8
+    sha256: 2925e17c9586d3f78f67fe46507c7cb7db768d68e23d77f12b73f51771247207
+- key: z22065799_school
+  did: 10022065799
+  source: Zenodo
+  record: '22065799'
+  first_public: '2026-08-23'
+  license: CC-BY-4.0
+  target: Q4. Current CGPA
+  tabpfn35_safe: false
+  n: 209
+  d: 63
+  C: 5
+  class_counts:
+  - 24
+  - 50
+  - 64
+  - 48
+  - 23
+  sha256: b79918fd94e44c86e4ad5ba57f640d94069aa3cec31815fec2808ddf57d1a909
+  raw_files:
+  - name: infra_academic_performance_survey.csv
+    url: https://zenodo.org/api/records/22065799/files/infra_academic_performance_survey.csv/content
+    md5: 728863fbd1cf056b035c09f63d70ebd6
+    md5_repo: 728863fbd1cf056b035c09f63d70ebd6
+    sha256: c2dab712d847fc5b0b21e2f58e23d89b7f2a5ea11de69bd765a0447f44eb81ec
+  - name: README.md
+    url: https://zenodo.org/api/records/22065799/files/README.md/content
+    md5: 71f2697221b21ff6402083bcd7fa2c49
+    md5_repo: 71f2697221b21ff6402083bcd7fa2c49
+    sha256: 848ce7884f0963a2c3485bcb330c5a03ed1de04d700efafb4d47cc5676e6ea6b
+- key: z22133098_trees
+  did: 10022133098
+  source: Zenodo
+  record: '22133098'
+  first_public: '2026-08-27'
+  license: CC-BY-4.0
+  target: Status_2026
+  tabpfn35_safe: false
+  n: 248
+  d: 3
+  C: 2
+  class_counts:
+  - 224
+  - 24
+  sha256: 6aa77295743cebc6adf5ff7045e8cd100fbda5731cc7f579bc55fac20d9d471e
+  raw_files:
+  - name: urban_forest_tree_dataset_2023_2026.xlsx
+    url: https://zenodo.org/api/records/22133098/files/urban_forest_tree_dataset_2023_2026.xlsx/content
+    md5: 7244ef69e3fa6be0505dc93f1cbd4706
+    md5_repo: 7244ef69e3fa6be0505dc93f1cbd4706
+    sha256: af15c0094a19a13323eb02433e8ac87ddfca2a918e0142015e541a8f35ea303d
+  - name: README_urban_forest_tree_dataset.txt
+    url: https://zenodo.org/api/records/22133098/files/README_urban_forest_tree_dataset.txt/content
+    md5: 3632d082ba495baf76b3762202f15751
+    md5_repo: 3632d082ba495baf76b3762202f15751
+    sha256: e92b0b5b75eaef07b1374e21e1c9880616c3898c56b9bddae19cac5fd8b93fe4
+- key: z22172178_perio
+  did: 10022172178
+  source: Zenodo
+  record: '22172178'
+  first_public: '2026-08-30'
+  license: CC-BY-4.0
+  target: Periodontal_status
+  tabpfn35_safe: false
+  n: 211
+  d: 12
+  C: 2
+  class_counts:
+  - 29
+  - 182
+  sha256: 33083fe9bb92d815d1b2b8bd2027ce9628bc93c9422d9077af0098d7cace5253
+  raw_files:
+  - name: S1_Dataset.xlsx
+    url: https://zenodo.org/api/records/22172178/files/S1_Dataset.xlsx/content
+    md5: e8efa748a5f7b6200c8cb5fa4f88eeb8
+    md5_repo: e8efa748a5f7b6200c8cb5fa4f88eeb8
+    sha256: 9c2726d313b705b1e592e1492e7e7b454df09fde230a71a75d974be107e1c6f3
+- key: z22216010_pvt
+  did: 10022216010
+  source: Zenodo
+  record: '22216010'
+  first_public: '2026-08-31'
+  license: CC-BY-4.0
+  target: PVT
+  tabpfn35_safe: false
+  n: 1463
+  d: 13
+  C: 2
+  class_counts:
+  - 1307
+  - 156
+  sha256: 494d904ab17f3c0b7d8ee48eb2507b47007d3c6834528dedb1bfc85ceeddf532
+  raw_files:
+  - name: database PVT.csv
+    url: https://zenodo.org/api/records/22216010/files/database%20PVT.csv/content
+    md5: d666e1a6d2fbbf86fbdd30d7713151cb
+    md5_repo: d666e1a6d2fbbf86fbdd30d7713151cb
+    sha256: 377754adb78d2045facc70ddb20e9937d0f81facbab7e1d3c4c45ccc7d9f5d73
+- key: z22751055_fairtrade
+  did: 10022751055
+  source: Zenodo
+  record: '22751055'
+  first_public: '2026-09-14'
+  license: CC-BY-4.0
+  target: credit_access
+  tabpfn35_safe: false
+  n: 284
+  d: 5
+  C: 2
+  class_counts:
+  - 130
+  - 154
+  sha256: 3ef6e0e0cb67e66adf129f8859819bc05008d56e5f6db389f5ce02a6d126b0d2
+  raw_files:
+  - name: fair_trade_credit_burundi_anonymized_data.csv
+    url: https://zenodo.org/api/records/22751055/files/fair_trade_credit_burundi_anonymized_data.csv/content
+    md5: 6af4aa99e3fd25cf74a9fb4eb073049f
+    md5_repo: 6af4aa99e3fd25cf74a9fb4eb073049f
+    sha256: d2bd64177fe91cf29c779bdb7ac40f8d9fa61297abd3f7048e4962b1ca5e5ada
+  - name: data_dictionary.csv
+    url: https://zenodo.org/api/records/22751055/files/data_dictionary.csv/content
+    md5: ebbe8f17841074f53318adc8a18f44eb
+    md5_repo: ebbe8f17841074f53318adc8a18f44eb
+    sha256: c91b8e77539c3434c1b5862e483a28215cc7c1b3f6e7c74db96f0f128658ac79
+- key: z22767593_edmort
+  did: 10022767593
+  source: Zenodo
+  record: '22767593'
+  first_public: '2026-09-15'
+  license: CC-BY-4.0
+  target: Mortality
+  tabpfn35_safe: false
+  n: 597
+  d: 52
+  C: 6
+  class_counts:
+  - 45
+  - 16
+  - 84
+  - 31
+  - 263
+  - 158
+  sha256: 962c8bfe9d90c27916aee577fccdd375e9fef69f0d96ce60986bf9be9f53f3bc
+  raw_files:
+  - name: clean data ML.csv
+    url: https://zenodo.org/api/records/22767593/files/clean%20data%20ML.csv/content
+    md5: a4b85687bab820b6d680fe6fac0940e4
+    md5_repo: a4b85687bab820b6d680fe6fac0940e4
+    sha256: 8a39ebe847973a95583bf8c3d920614db11bf63ff0594b0cd66fa4c406b4cf5f
+- key: f33868873_adherence
+  did: 20033868873
+  source: figshare
+  record: '33868873'
+  first_public: '2026-09-17'
+  license: CC BY 4.0
+  target: adherence
+  tabpfn35_safe: false
+  n: 597
+  d: 12
+  C: 2
+  class_counts:
+  - 463
+  - 134
+  sha256: 0ce98536c6c655ee42ecfed5d0b095c05232602e48944cb769cda111df7c074c
+  raw_files:
+  - name: S1_Data.xlsx
+    url: https://ndownloader.figshare.com/files/68754607
+    md5: d36cb0aa1a94e6e151316abf3413ad13
+    md5_repo: null
+    sha256: e73a62c67a7f2cb393c743c81946251ed0e162e1e76827ff060771390b85a4b6
+- key: z22900584_foodwaste
+  did: 10022900584
+  source: Zenodo
+  record: '22900584'
+  first_public: '2026-09-22'
+  license: CC-BY-4.0
+  target: waste_occurrence
+  tabpfn35_safe: false
+  n: 582
+  d: 24
+  C: 2
+  class_counts:
+  - 91
+  - 491
+  sha256: d9ffb0014c641d1b6885ee09e29df755b2b8d653d52617c46cc2450b57e5a4b9
+  raw_files:
+  - name: 01_Tulcan_Household_Food_Waste_2023.csv
+    url: https://zenodo.org/api/records/22900584/files/01_Tulcan_Household_Food_Waste_2023.csv/content
+    md5: b39c568fe748f5192f03cf8ffd457860
+    md5_repo: b39c568fe748f5192f03cf8ffd457860
+    sha256: a59baadc0600ae02285982143bf6852cdcacdbbc2f6fd99ce4f7fc3fd8f3768b
+- key: z23293577_pain
+  did: 10023293577
+  source: Zenodo
+  record: '23293577'
+  first_public: '2026-09-24'
+  license: CC-BY-4.0
+  target: pain
+  tabpfn35_safe: true
+  n: 3000
+  d: 24
+  C: 2
+  class_counts:
+  - 2567
+  - 433
+  sha256: fb0e1afdf6dc44de0ac504e1f78edbb7b2506e8b301d02d030855af60d10ca3c
+  raw_files:
+  - name: data set.xlsx
+    url: https://zenodo.org/api/records/23293577/files/data%20set.xlsx/content
+    md5: ca31e47327b0c932bec5bcc9a41ad194
+    md5_repo: ca31e47327b0c932bec5bcc9a41ad194
+    sha256: 0e5a285a1b82f814bc0ca914190132c546c7f212af42b89af5f79cb1a35bbabc
+- key: f33328002_tea
+  did: 20033328002
+  source: figshare
+  record: '33328002'
+  first_public: '2026-10-10'
+  license: CC BY 4.0
+  target: adoption
+  tabpfn35_safe: true
+  n: 896
+  d: 19
+  C: 2
+  class_counts:
+  - 447
+  - 449
+  sha256: ee217f22f5bd808b22c76b67ba3258765cd8db451bff9ce69aecefd324c62aa8
+  raw_files:
+  - name: tea_farmer_data.csv
+    url: https://ndownloader.figshare.com/files/67817394
+    md5: ab490cf56bdf2d0308f776d01de2f3da
+    md5_repo: null
+    sha256: 9d3df9f649d4055cee28f9372d5d18f226eeca3c274af7512bb118f4685fb96f
+- key: z23318225_hlit
+  did: 10023318225
+  source: Zenodo
+  record: '23318225'
+  first_public: '2026-10-12'
+  license: CC-BY-4.0
+  target: long_standing_condition
+  tabpfn35_safe: true
+  n: 448
+  d: 68
+  C: 2
+  class_counts:
+  - 258
+  - 190
+  sha256: 56450cc59f0ff66138c608d05bf5c6b738b8b9cf72321e3d1433f368ef1509ec
+  raw_files:
+  - name: iHF_health_literacy_survey_anonymised_v2.csv
+    url: https://zenodo.org/api/records/23318225/files/iHF_health_literacy_survey_anonymised_v2.csv/content
+    md5: 0896154ff1beeb43da54be4a5db7a4dc
+    md5_repo: 0896154ff1beeb43da54be4a5db7a4dc
+    sha256: 6213a3a2a8862b0b0e48aa00a536efba044837b4629f046963e12ec443a48a62
+- key: f34554682_pcos
+  did: 20034554682
+  source: figshare
+  record: '34554682'
+  first_public: '2026-10-15'
+  license: CC BY 4.0
+  target: group
+  tabpfn35_safe: true
+  n: 498
+  d: 20
+  C: 3
+  class_counts:
+  - 163
+  - 127
+  - 208
+  sha256: 9ea138402290d9b3b0dd7f1174b624d75418509e6a18b4d6c2c50dfc31f179ff
+  raw_files:
+  - name: pone.0358554.s001.xlsx
+    url: https://ndownloader.figshare.com/files/70201219
+    md5: 36b1a7b2926afd90ea9f1544cd2d147c
+    md5_repo: null
+    sha256: 6eeea1378574e4dd4e36e3274d95d8f1d17884b31894d5c20b57dc56ecb609de
+- key: z23168913_volunteer
+  did: 10023168913
+  source: Zenodo
+  record: '23168913'
+  first_public: '2026-10-19'
+  license: CC-BY-4.0
+  target: Nursing_Group
+  tabpfn35_safe: true
+  n: 388
+  d: 15
+  C: 2
+  class_counts:
+  - 276
+  - 112
+  sha256: b5baaaabe3e461a409e03339ada0b6b77bd59f363654c3884dd2419537c5a23a
+  raw_files:
+  - name: S1_Dataset_Predictors_of_Volunteer_Satisfaction.xlsx
+    url: https://zenodo.org/api/records/23168913/files/S1_Dataset_Predictors_of_Volunteer_Satisfaction.xlsx/content
+    md5: 963ba772bf3faa33f5bf63a5f9764f9f
+    md5_repo: 963ba772bf3faa33f5bf63a5f9764f9f
+    sha256: 10ff689752c2b1337a13c05a7edc898e1ebdc7fa839fb58222ad4d7b0309a148
+- key: f34737363_pneumonia
+  did: 20034737363
+  source: figshare
+  record: '34737363'
+  first_public: '2026-10-21'
+  license: CC BY 4.0
+  target: 分组
+  tabpfn35_safe: true
+  n: 234
+  d: 33
+  C: 2
+  class_counts:
+  - 154
+  - 80
+  sha256: 50b786ad0074b9f4a1d5f5a6ab63ca84738dbc80c7336c768fc11a5f505f4447
+  raw_files:
+  - name: occult_pneumonia.csv
+    url: https://ndownloader.figshare.com/files/70458786
+    md5: 100b6b940cb0bc160ac6eed098878776
+    md5_repo: 100b6b940cb0bc160ac6eed098878776
+    sha256: ced93a4bca5418650a2ee7cae3ef3cfe44a6dbd95912aa65611a3a433c824fd3
+excluded: []

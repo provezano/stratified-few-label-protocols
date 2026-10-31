@@ -1,0 +1,7 @@
+did,name,N,D,C,paper_N,paper_D,paper_C,n_missing_cells,min_class,max_class,match
+40966,protein,1080,77,8,1080,77,8,1396,105,150,True
+14,fourier,2000,76,10,2000,76,10,0,200,200,True
+841,stock,950,9,2,950,9,2,0,462,488,True
+1472,energy,698,9,23,698,9,23,0,10,74,True
+40971,collins,970,19,26,970,19,26,0,17,80,True
+40499,texture,5500,40,11,5500,40,11,0,500,500,True

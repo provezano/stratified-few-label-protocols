@@ -1,0 +1,16 @@
+{
+ "arxiv_raw_hits": 625,
+ "arxiv_unique": 261,
+ "s2_raw_hits": 491,
+ "s2_in_scope": 286,
+ "snowball_raw_citations": 1196,
+ "snowball_with_L_term_in_window": 236,
+ "snowball_in_scope": 177,
+ "openalex_raw_hits": 1677,
+ "openalex_in_scope": 696,
+ "prior_audit_records": 39,
+ "records_before_dedup": 1459,
+ "records_after_dedup": 367,
+ "duplicates_removed": 1092,
+ "only_prior_audit": 24
+}

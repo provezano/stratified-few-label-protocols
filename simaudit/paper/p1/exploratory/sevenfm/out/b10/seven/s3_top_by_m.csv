@@ -1,0 +1,9 @@
+variant,m,top_stratified,top_random,kendall_tau
+FFM,1,fm3,fm3,0.0
+FFM,3,fm3,fm2,-0.3333333333333334
+FFM,5,fm3,fm3,0.0
+FFM,10,fm3,fm3,0.6666666666666669
+SevenFFM,1,fm3,fm3,0.5238095238095238
+SevenFFM,3,fm3,fm2,0.04761904761904762
+SevenFFM,5,fm3,fm3,0.33333333333333337
+SevenFFM,10,fm3,fm3,0.6190476190476191

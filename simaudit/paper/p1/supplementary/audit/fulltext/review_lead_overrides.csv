@@ -1,0 +1,16 @@
+rec_id,table,field,old,new,reason
+AX2605.18635,screening,decision,include,exclude,"Consistency rule (same as BAPS AX2608.12989, TabDPT-Turbo, HyperFast, Mitra-v2 exclusions): context windows of 1K-50K rows built from a large fully labelled pool under a fixed context budget; motivation is context construction/latency for imbalance, not label scarcity or small-data performance"
+AX2605.18635,screening,reason,,no_reduced_label_experiment,see above
+AX2606.11473,screening,decision,include,exclude,"CRUMB: context compression for inference efficiency from a fully labelled pool (paper's stated motivation); same rule as BAPS AX2608.12989"
+AX2606.11473,screening,reason,,no_reduced_label_experiment,see above
+AX2610.17867,screening,decision,include,exclude,"RT-J: retrieval of context cells from a fully labelled relational database for context efficiency; same rule as TabDPT-Turbo retrieval"
+AX2610.17867,screening,reason,,no_reduced_label_experiment,see above
+AX2610.10321,screening,decision,include,exclude,"Contexts of 10K-60K rows (nested prefixes) from a 120K labelled pool to compare readers on throughput/memory/AUC; not a small-data or label-scarcity study"
+AX2610.10321,screening,reason,,no_reduced_label_experiment,see above
+AX2606.26432,screening,decision,include,exclude,"Ablation A4 'degraded foundation model' retrains FM on 10-50% of context to stress-test the adapter, not to study small-data performance; consistent with exclusion of AX2610.19814 'half training samples' robustness check"
+AX2606.26432,screening,reason,,no_reduced_label_experiment,see above
+AX2502.08978,screening,decision,include,exclude,"Only reduced-label experiment is on MNIST/CIFAR-10 pixels (images); main protocol rule (a) excludes images; tabular cancer datasets used whole"
+AX2502.08978,screening,reason,,not_tabular,see above
+AX2606.06458,screening,decision,include,exclude,"Multiple-instance learning over bags of image/CT-slice embeddings; qualifying experiment not tabular"
+AX2606.06458,screening,reason,,not_tabular,see above
+AX2605.18147,coding,few_shot,no,yes,"Smallest capped dataset is 100 rows before 5-fold split (80 training rows), <= 100 labelled rows in total"

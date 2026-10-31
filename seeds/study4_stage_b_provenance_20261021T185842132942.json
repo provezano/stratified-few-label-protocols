@@ -1,0 +1,63 @@
+{
+  "base_seed": 20261020,
+  "seed_namespace": 5,
+  "mults": [
+    1,
+    3,
+    5,
+    10
+  ],
+  "strategies": [
+    "usl",
+    "rdss",
+    "zcore"
+  ],
+  "order": [
+    "stratified",
+    "random",
+    "kmedoids",
+    "typiclust",
+    "probcover",
+    "kcenter",
+    "outlier_filtered",
+    "sigma_opt",
+    "stratified_medoids",
+    "kmeans_central",
+    "lucos",
+    "usl",
+    "rdss",
+    "zcore"
+  ],
+  "reps": {
+    "random": 10,
+    "default": 5
+  },
+  "llgc": {
+    "alpha": 0.9,
+    "k": 10
+  },
+  "datasets": [
+    827,
+    931,
+    46562,
+    860,
+    46875,
+    45615,
+    841,
+    46544,
+    1510,
+    42544,
+    337,
+    1063,
+    782,
+    40496,
+    47155,
+    801,
+    694,
+    46336,
+    41511,
+    1071
+  ],
+  "learner": "fm1",
+  "source_sha256": "0ee38f1bc12437530e0abf18f529fa0023c6b846e28f8facc9f954856c7324b7"
+}

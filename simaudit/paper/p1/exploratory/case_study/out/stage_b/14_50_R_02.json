@@ -1,0 +1,1 @@
+{"task": "14_50_R_02", "rows": [{"arm": "baseline", "predictor": "tabpfn", "ba": 0.722, "macro_f1": 0.7171944807029752, "acc": 0.722}, {"arm": "smote", "predictor": "tabpfn", "ba": 0.698, "macro_f1": 0.6887923932462803, "acc": 0.698}, {"arm": "tabebm", "predictor": "tabpfn", "ba": 0.712, "macro_f1": 0.7009830243770543, "acc": 0.712}]}

@@ -1,0 +1,10 @@
+% Hand-filled HELD-OUT macros that the joint analysis does not produce (J-8).
+% Inputs: repro/supplement/revisions.yaml (R018), logs/joint_restarts.log, exploratory/heldout/s3_bstar.py.
+\def\HOOpeningRev{R018}% revisions.yaml id of prereg/JOINT_OPENING_2026-10-30.md (commit R018)
+\def\HONResumed{at most six}% logs/joint_restarts.log: Study 13 and Study 10 runners stopped once each, at most 3 jobs in progress per runner
+\input{exploratory/heldout/out/heldout_s3_numbers.tex}% \HOSThreeBstarAgree (S-3, descriptive)
+% Count wording: "all four" when every pre-registered FM is confirmed cross-study, else "k of the four".
+\def\HOINRepXOfFour{\ifnum\HOINRepX=4 all four\else\HOINRepX{} of the four\fi}%
+% S-6 wording: "all four FMs" when no prediction interval lies above 0 (\HOSSixPIAboveList = none), else the straddle list.
+\def\HOnoneword{none}%
+\def\HOSSixPIZeroWords{\ifx\HOSSixPIAboveList\HOnoneword all four FMs\else\HOSSixPIStraddleList\fi}%

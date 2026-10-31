@@ -1,0 +1,3 @@
+protocol,baseline,smote,tabebm,blocks
+S,2.36,2.22,1.42,50
+R,2.44,2.2,1.36,50

@@ -1,0 +1,9 @@
+m=1: macro-precision gap +0.1444 p=3.5e-10 n=52
+m=2: macro-precision gap +0.0735 p=1.3e-08 n=52
+m=3: macro-precision gap +0.0454 p=1.3e-07 n=52
+m=5: macro-precision gap +0.0255 p=3.7e-06 n=52
+m=7: macro-precision gap +0.0144 p=0.0011 n=52
+m=10: macro-precision gap +0.0034 p=0.21 n=52
+m=15: macro-precision gap -0.0110 p=0.39 n=49
+m=20: macro-precision gap -0.0111 p=0.039 n=44
+m=30: macro-precision gap -0.0034 p=0.11 n=40

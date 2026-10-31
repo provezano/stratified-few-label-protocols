@@ -1,0 +1,37 @@
+[
+  {
+    "repo": "tabpfn",
+    "file": "tabpfn-v2-classifier-finetuned-zk73skhh.ckpt",
+    "revision": null,
+    "sha256": "cf8c519c01eaf1613ee91239006d57b1c806ff5f23ac1aeb1315ba1015210e49",
+    "bytes": 29009539
+  },
+  {
+    "repo": "tabpfn",
+    "file": "tabpfn-v3.5-20260909.safetensors",
+    "revision": null,
+    "sha256": "ece4d67eadfea42eb0e610df5189bea60cb7f31073d81e9c7a019b76eacf0be3",
+    "bytes": 876027932
+  },
+  {
+    "repo": "jingang/TabICL",
+    "file": "tabicl-classifier-v2-20260212.ckpt",
+    "revision": "4dcd344ece2c00be9e831fdd35bed57b5ad83e19",
+    "sha256": "bdc7dbd5e4ff21f8f0456fcf90c6b7cdf72dbea960f2d05b19bec19f9b3d4ed0",
+    "bytes": 110368038
+  },
+  {
+    "repo": "nvidia/Kumo-Tabular",
+    "file": "config.json",
+    "revision": "3c3e10bbdb590ace29e7026847f92db3c603096d",
+    "sha256": "de7d618ec4019293e976e37371612ff9b8e71c22336c463a7225b0f130e78318",
+    "bytes": 423
+  },
+  {
+    "repo": "nvidia/Kumo-Tabular",
+    "file": "large/classifier.pt",
+    "revision": "3c3e10bbdb590ace29e7026847f92db3c603096d",
+    "sha256": "cc21484316949641cc3d65a7bb6c36cdea854cc569435755ff23b850018ec613",
+    "bytes": 854850034
+  }
+]

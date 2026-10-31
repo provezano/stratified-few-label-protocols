@@ -1,0 +1,21 @@
+key,did,n,C,class_counts,id_columns,flag_id,flag_conflict,flagged,kappa,class_sorted,id_like,drop_columns,dup_rows,conflict_groups,conflict_rows,conflict_share,decision
+k11395735_malaria,30011395735,2190,2,1068;1122,,False,False,False,0.2375,False,,,0,0,0,0.0,keep
+f33111881_frailty,20033111881,1498,2,295;1203,,False,False,False,0.0074,False,,,0,0,0,0.0,keep
+f33126371_nonadh,20033126371,270,2,117;153,,False,False,False,-0.0067,False,,,0,0,0,0.0,keep
+z21713220_optiaged,10021713220,2483,2,1799;684,0,True,False,True,0.0532,False,0,,0,0,0,0.0,keep
+z21872549_vacc,10021872549,1096,2,530;566,,False,True,True,0.9232,True,,,117,3,11,0.01,keep
+z22705412_hpv,10022705412,1193,2,85;1108,,False,False,False,0.0048,False,,,0,0,0,0.0,keep
+z22065799_school,10022065799,209,5,24;50;64;48;23,,False,False,False,0.0147,False,,,1,0,0,0.0,keep
+z22133098_trees,10022133098,248,2,224;24,,False,True,True,0.1663,False,,,91,10,38,0.1532,exclude: conflicting duplicates
+z22172178_perio,10022172178,211,2,29;182,,False,False,False,0.036,False,,,0,0,0,0.0,keep
+z22216010_pvt,10022216010,1463,2,1307;156,,False,True,True,0.9964,True,,,1,1,2,0.0014,keep
+z22751055_fairtrade,10022751055,284,2,130;154,,False,False,False,0.4377,False,3,,0,0,0,0.0,keep
+z22767593_edmort,10022767593,597,6,45;16;84;31;263;158,,False,False,False,0.625,True,,,1,0,0,0.0,keep
+f33868873_adherence,20033868873,597,2,463;134,,False,False,False,0.1132,False,,,0,0,0,0.0,keep
+z22900584_foodwaste,10022900584,582,2,91;491,,False,True,True,-0.0308,False,,,126,19,38,0.0653,exclude: conflicting duplicates
+z23293577_pain,10023293577,3000,2,2567;433,,False,False,False,0.028,False,,,9,0,0,0.0,keep
+f33328002_tea,20033328002,896,2,447;449,,False,False,False,0.0346,False,,,0,0,0,0.0,keep
+z23318225_hlit,10023318225,448,2,258;190,,False,False,False,0.0978,False,,,0,0,0,0.0,keep
+f34554682_pcos,20034554682,498,3,163;127;208,,False,False,False,0.9938,True,,,0,0,0,0.0,keep
+z23168913_volunteer,10023168913,388,2,276;112,,False,True,True,0.3645,False,,,5,2,5,0.0129,keep
+f34737363_pneumonia,20034737363,234,2,154;80,,False,False,False,0.0176,False,,,0,0,0,0.0,keep

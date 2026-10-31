@@ -1,0 +1,144 @@
+{
+  "fm": "fm7",
+  "name": "Mitra-v2",
+  "timing": [
+    {
+      "dataset": 46562,
+      "n": 1000,
+      "d": 33,
+      "C": 2,
+      "B": 2,
+      "K": 2,
+      "seconds": 19.358,
+      "first_call": true,
+      "rowsum_ok": true
+    },
+    {
+      "dataset": 46562,
+      "n": 1000,
+      "d": 33,
+      "C": 2,
+      "B": 2,
+      "K": 2,
+      "seconds": 9.164,
+      "first_call": false,
+      "rowsum_ok": true
+    },
+    {
+      "dataset": 46562,
+      "n": 1000,
+      "d": 33,
+      "C": 2,
+      "B": 10,
+      "K": 2,
+      "seconds": 18.063,
+      "first_call": false,
+      "rowsum_ok": true
+    },
+    {
+      "dataset": 46562,
+      "n": 1000,
+      "d": 33,
+      "C": 2,
+      "B": 50,
+      "K": 2,
+      "seconds": 23.103,
+      "first_call": false,
+      "rowsum_ok": true
+    },
+    {
+      "dataset": 46562,
+      "n": 1000,
+      "d": 33,
+      "C": 2,
+      "B": 100,
+      "K": 2,
+      "seconds": 28.877,
+      "first_call": false,
+      "rowsum_ok": true
+    },
+    {
+      "dataset": 46562,
+      "n": 1000,
+      "d": 33,
+      "C": 2,
+      "B": 300,
+      "K": 2,
+      "seconds": 40.394,
+      "first_call": false,
+      "rowsum_ok": true
+    },
+    {
+      "dataset": 40496,
+      "n": 500,
+      "d": 7,
+      "C": 10,
+      "B": 2,
+      "K": 2,
+      "seconds": 3.388,
+      "first_call": false,
+      "rowsum_ok": true
+    },
+    {
+      "dataset": 40496,
+      "n": 500,
+      "d": 7,
+      "C": 10,
+      "B": 10,
+      "K": 10,
+      "seconds": 4.187,
+      "first_call": false,
+      "rowsum_ok": true
+    },
+    {
+      "dataset": 40496,
+      "n": 500,
+      "d": 7,
+      "C": 10,
+      "B": 50,
+      "K": 10,
+      "seconds": 5.188,
+      "first_call": false,
+      "rowsum_ok": true
+    },
+    {
+      "dataset": 40496,
+      "n": 500,
+      "d": 7,
+      "C": 10,
+      "B": 100,
+      "K": 10,
+      "seconds": 5.739,
+      "first_call": false,
+      "rowsum_ok": true
+    },
+    {
+      "dataset": 40496,
+      "n": 500,
+      "d": 7,
+      "C": 10,
+      "B": 300,
+      "K": 10,
+      "seconds": 9.105,
+      "first_call": false,
+      "rowsum_ok": true
+    }
+  ],
+  "unseen": {
+    "table": 47155,
+    "context_labels": [
+      0,
+      2
+    ],
+    "missing_class": 1,
+    "raw_labels": {
+      "ok": false,
+      "error": "ValueError('expected 3 columns, got 2')"
+    },
+    "head_units": 10,
+    "forced_C": 3,
+    "mean_p_unused": 0.05719955574139021,
+    "mean_p_unused_on_true_class1": 0.06846049012139786,
+    "share_argmax_unused": 0.0
+  }
+}

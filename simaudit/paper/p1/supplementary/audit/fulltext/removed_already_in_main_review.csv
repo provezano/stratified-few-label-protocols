@@ -1,0 +1,75 @@
+arxiv_id,title,sources
+2610.20462,Learning by Examples: Power Grid Steady State Analysis with a Tabular Foundation Model,S1_cites_tabpfn_v1;S1_cites_tabpfn_v2;S3_openalex;S3_s2bulk
+2610.07996,TICDA: Tabular In-Context Data Attribution,S1_cites_tabpfn_v1;S1_cites_tabpfn_v2;S3_s2bulk
+2610.06679,Closing the Context Gap: Activation Alignment for Tabular In-Context Learning,S1_cites_tabpfn_v1;S1_cites_tabpfn_v2;S3_openalex;S3_s2bulk
+2608.28980,The Illusion of Replacement: Rethinking Specialized Machine Learning Models in the Foundation Model Era,S1_cites_tabpfn_v1;S1_cites_tabpfn_v2
+2609.25013,Do Existing Preconditioners Improve Biomedical Tabular Foundation Learning? An Empirical Study on TabPFN Optimization,S1_cites_tabpfn_v1;S1_cites_tabpfn_v2;S3_openalex;S3_s2bulk
+2609.20218,Is It Still Worth Training a Classical Model in the Era of LLMs? A Crossover Benchmark on Tabular Data,S1_cites_tabpfn_v1;S1_cites_tabpfn_v2;S3_openalex;S3_s2bulk
+2608.19735,RecPFN: Prior-Fitted Networks for In-Context-Based Recommendations,S1_cites_tabpfn_v1;S1_cites_tabpfn_v2;S3_openalex
+2607.11374,Surprisingly Simple and Effective Multi-Domain Graph Foundation Model through Graph-to-Table Alignment,S1_cites_tabpfn_v1;S1_cites_tabpfn_v2;S3_s2bulk
+2607.11007,TabPFN beyond Tabular Data: Calibration and Accuracy on Multimodal Embeddings,S1_cites_tabpfn_v1;S1_cites_tabpfn_v2;S3_openalex;S3_s2bulk
+2606.31474,TabPATE: Differentially Private Tabular In-Context Learning Without Public Data,S1_cites_tabpfn_v1;S1_cites_tabpfn_v2;S3_openalex;S3_s2bulk
+2606.31126,Can Tabular In-Context Learners Generalize to Biomolecular Property Prediction?,S1_cites_tabpfn_v1;S1_cites_tabpfn_v2;S3_s2bulk
+2606.05481,Towards Unified and Data-Efficient Prognostics and Health Management with Tabular Foundation Models,S1_cites_tabpfn_v1;S1_cites_tabpfn_v2;S3_openalex;S3_s2bulk
+2606.00872,Images as Tables: In-Context Learning with TabPFN for Low-Data Detection of AI-Generated Images,S1_cites_tabpfn_v1;S1_cites_tabpfn_v2;S3_openalex;S3_s2bulk
+2605.27254,LUCoS: Latent Unsupervised Context Selection for Tabular Foundation Models,S1_cites_tabpfn_v1;S1_cites_tabpfn_v2;S3_openalex;S3_s2bulk
+2605.18979,TabQL: In-Context Q-Learning with Tabular Foundation Models,S1_cites_tabpfn_v1;S3_openalex;S3_s2bulk
+2604.27195,Evaluating TabPFN for Mild Cognitive Impairment to Alzheimer's Disease Conversion in Data Limited Settings,S1_cites_tabpfn_v1;S3_openalex
+2604.12596,KumoRFM-2: Scaling Foundation Models for Relational Learning,S1_cites_tabpfn_v1;S1_cites_tabpfn_v2
+2604.01841,Retrieval-aligned Tabular Foundation Models Enable Robust Clinical Risk Prediction in Electronic Health Records Under Real-world Constraints,S1_cites_tabpfn_v1;S1_cites_tabpfn_v2;S3_openalex;S3_s2bulk
+2603.27385,Active In-Context Learning for Tabular Foundation Models,S1_cites_tabpfn_v1;S1_cites_tabpfn_v2;S3_openalex;S3_s2bulk
+2603.19497,ICLAD: In-Context Learning for Unified Tabular Anomaly Detection Across Supervision Regimes,S1_cites_tabpfn_v1;S1_cites_tabpfn_v2;S3_openalex;S3_s2bulk
+2603.03805,Relational In-Context Learning via Synthetic Pre-training with Structural Prior,S1_cites_tabpfn_v1;S1_cites_tabpfn_v2
+2602.14622,Tabular Foundation Models Can Learn Association Rules,S1_cites_tabpfn_v1;S1_cites_tabpfn_v2;S3_openalex;S3_s2bulk
+2601.23068,ExplainerPFN: Towards tabular foundation models for model-free zero-shot feature importance estimations,S1_cites_tabpfn_v1;S1_cites_tabpfn_v2;S3_openalex;S3_s2bulk
+2601.20987,Pre-trained Encoders for Global Child Development: Transfer Learning Enables Deployment in Data-Scarce Settings,S1_cites_tabpfn_v1
+2601.17301,Tabular Foundation Models are Strong Graph Anomaly Detectors,S1_cites_tabpfn_v1;S1_cites_tabpfn_v2;S3_openalex;S3_s2bulk
+2601.04110,Causal Data Augmentation for Robust Fine-Tuning of Tabular Foundation Models,S1_cites_tabpfn_v1;S1_cites_tabpfn_v2;S3_openalex;S3_s2bulk
+2512.00181,Orion-Bix: Bi-Axial Attention for Tabular In-Context Learning,S1_cites_tabpfn_v1;S1_cites_tabpfn_v2;S3_openalex;S3_s2bulk
+2511.08667,TabPFN-2.5: Advancing the State of the Art in Tabular Foundation Models,S1_cites_tabpfn_v1;S1_cites_tabpfn_v2;S2_list_tabarena;S2_list_talent;S3_openalex;S3_s2bulk
+2510.21204,Mitra: Mixed Synthetic Priors for Enhancing Tabular Foundation Models,S1_cites_tabpfn_v1;S1_cites_tabpfn_v2;S2_list_tabarena;S2_list_talent;S3_openalex;S3_s2bulk
+2510.12624,Learning-To-Measure: In-context Active Feature Acquisition,S1_cites_tabpfn_v1;S1_cites_tabpfn_v2
+2509.03191,Tabular foundation model for GEOAI benchmark problems BM/AirportSoilProperties/2/2025,S1_cites_tabpfn_v1;S1_cites_tabpfn_v2;S3_openalex;S3_s2bulk
+,Range-limited Augmentation for Few-shot Learning in Tabular Data with Comprehensive Benchmark,S1_cites_tabpfn_v1;S1_cites_tabpfn_v2;S3_openalex;S3_s2bulk
+2506.15329,When and How Unlabeled Data Provably Improve In-Context Learning,S1_cites_tabpfn_v1;S1_cites_tabpfn_v2
+2505.20003,TabPFN: One Model to Rule Them All?,S1_cites_tabpfn_v1;S1_cites_tabpfn_v2;S3_openalex
+2505.05568,Griffin: Towards a Graph-Centric Relational Database Foundation Model,S1_cites_tabpfn_v1;S1_cites_tabpfn_v2
+2502.17361,A Closer Look at TabPFN v2: Understanding Its Strengths and Extending Its Capabilities,S1_cites_tabpfn_v1;S1_cites_tabpfn_v2;S3_openalex
+2502.05564,TabICL: A Tabular Foundation Model for In-Context Learning on Large Data,S1_cites_tabpfn_v1;S1_cites_tabpfn_v2;S2_list_tabarena;S2_list_talent;S3_openalex;S3_s2bulk
+2410.18164,TabDPT: Scaling Tabular Foundation Models on Real Data,S1_cites_tabpfn_v1;S1_cites_tabpfn_v2;S2_list_tabarena;S2_list_talent;S3_openalex;S3_s2bulk
+2409.01635,PMLBmini: A Tabular Classification Benchmark Suite for Data-Scarce Applications,S1_cites_tabpfn_v1;S3_openalex;S3_s2bulk
+2406.17322,ALPBench: A Benchmark for Active Learning Pipelines on Tabular Data,S1_cites_tabpfn_v1;S3_openalex;S3_s2bulk
+2406.05207,Retrieval & Fine-Tuning for In-Context Tabular Models,S1_cites_tabpfn_v1;S3_s2bulk
+2405.01147,Why Tabular Foundation Models Should Be a Research Priority,S1_cites_tabpfn_v1;S3_openalex;S3_s2bulk
+2403.20208,Unlock the Potential of Large Language Models for Predictive Tabular Tasks in Data Science With Table-Specific Pretraining,S1_cites_tabpfn_v1;S3_openalex;S3_s2bulk
+2403.10923,Interpretable Machine Learning for TabPFN,S1_cites_tabpfn_v1;S3_openalex;S3_s2bulk
+2402.16785,CARTE: pretraining and transfer for tabular learning,S1_cites_tabpfn_v1;S3_openalex;S3_s2bulk
+2507.17066,Risk In Context: Benchmarking Privacy Leakage of Foundation Models in Synthetic Tabular Data Generation,S1_cites_tabpfn_v1;S1_cites_tabpfn_v2;S3_openalex;S3_s2bulk
+2610.08694,GeneICL: A Tabular Foundation Model for Bulk Transcriptomics,S1_cites_tabpfn_v2;S3_openalex;S3_s2bulk
+2609.30789,Feature Selection for Tabular Foundation Models: Exploring Feature Utility in Low-Data Molecular Prediction,S1_cites_tabpfn_v2;S3_openalex;S3_s2bulk
+2608.30392,Foundation Models Meet Agriculture: Challenges Beyond Pretraining,S1_cites_tabpfn_v2
+2608.26758,HOLMES: In-Context Failure-Center Localization for High-Dimensional Yield Estimation,S1_cites_tabpfn_v2
+2608.06559,Bootstrap-Conditioned Action Selection with Tabular Foundation Models,S1_cites_tabpfn_v2;S3_openalex;S3_s2bulk
+2608.02157,RamanPFN: learning from Raman spectral structure with a tabular foundation model,S1_cites_tabpfn_v2;S3_openalex;S3_s2bulk
+2607.19234,In-Context Time Series Classification with Random Convolutional Features,S1_cites_tabpfn_v2
+2607.16031,Revisiting data-driven dynamic security assessment with a tabular foundation model,S1_cites_tabpfn_v2;S3_openalex;S3_s2bulk
+2607.04013,When Does Small Data Work? Accuracy and Efficiency Trade-offs Between Tabular Foundation Models and Conventional Methods for Crowd-State Classification at Hajj and Umrah,S1_cites_tabpfn_v2;S3_openalex;S3_s2bulk
+2606.07674,"Simultaneous hyperkinetic movement disorders phenotyping: a cross-cohort pediatric transfer study using routine videos, markerless pose estimation and a tabular foundation model",S1_cites_tabpfn_v2;S3_openalex;S3_s2bulk
+2606.04320,OpenRFM: Dissecting Relational In-Context Learning,S1_cites_tabpfn_v2
+2605.26589,Few-shot Cross-country Generalization of Tabular Machine Learning and Foundation Models for Childhood Anemia Prediction under Distribution Shift,S1_cites_tabpfn_v2;S3_openalex;S3_s2bulk
+2605.05591,In-Context Positive-Unlabeled Learning,S1_cites_tabpfn_v2
+2604.06758,Multilingual Cognitive Impairment Detection in the Era of Foundation Models,S1_cites_tabpfn_v2
+2602.11139,"TabICLv2: A better, faster, scalable, and open tabular foundation model",S2_list_talent;S3_openalex;S3_s2bulk
+2412.04642,Improving LLM Group Fairness on Tabular Data via In-Context Learning,S3_openalex;S3_s2bulk
+2207.01848,TabPFN: A Transformer That Solves Small Tabular Classification Problems in a Second,S2_list_talent;S3_openalex;S3_s2bulk;S4_seed
+2306.08954,An Expanded Benchmark that Rediscovers and Affirms the Edge of Uncertainty Sampling for Active Learning in Tabular Datasets,S3_openalex;S3_s2bulk
+2608.24381,When Does Self-Supervised Pretraining Help Tabular Models? A Study of Label Scarcity and Missing Data,S3_openalex;S3_s2bulk
+2405.13396,Fine-tuned In-Context Learning Transformers are Excellent Tabular Data Classifiers,S3_openalex;S3_s2bulk
+,Few-shot and Zero-shot Audience Expansion with User and Task Model Pre-training on Tabular Data,S3_s2bulk
+2506.16791,TabArena: A Living Benchmark for Machine Learning on Tabular Data,S2_benchmark;S3_openalex;S3_s2bulk
+2502.03147,Scalable In-Context Learning on Tabular Data via Retrieval-Augmented Large Language Models,S3_openalex;S3_s2bulk
+2305.13062,Table Meets LLM: Can Large Language Models Understand Structured Table Data? A Benchmark and Empirical Study,S3_s2bulk
+2209.08060,PTab: Using the Pre-trained Language Model for Modeling Tabular Data,S3_s2bulk
+2402.13741,Unlocking Instructive In-Context Learning with Tabular Prompting for Relational Triple Extraction,S3_openalex;S3_s2bulk
+,A multi-fidelity tabular prior-data fitted network model for accurate prediction and uncertainty quantification,S3_openalex
+2509.03505,LimiX,S2_list_tabarena;S2_list_talent

@@ -1,0 +1,413 @@
+{
+ "prisma": {
+  "identification": {
+   "S1_tabpfn_v1_raw": 1079,
+   "S1_tabpfn_v1_title_filter_in_window": 427,
+   "S1_tabpfn_v2_raw": 1712,
+   "S1_tabpfn_v2_title_filter_in_window": 562,
+   "S3_s2bulk_raw": 3133,
+   "S3_s2bulk_title_filter_in_window": 496,
+   "S3_openalex_raw": 1130,
+   "S2_S4_manual_records": 30,
+   "S2_models_without_paper": "Kumo Tabular (blog), Nori (repo), LightPFN (repo)",
+   "records_after_title_filters_total": 2645,
+   "records_after_dedup": 1342,
+   "duplicates_removed": 1303,
+   "out_of_scope_removed": 658,
+   "in_scope": 684,
+   "already_in_main_review_removed": 74,
+   "candidates": 610,
+   "candidates_by_stratum": {
+    "C": 22,
+    "R": 588
+   }
+  },
+  "stage1_screened": 610,
+  "stage1_excluded": 339,
+  "stage1_excluded_by_reason": {
+   "not_in_frame": 23,
+   "not_classification": 148,
+   "table_QA_or_text2sql": 30,
+   "not_tabular": 129,
+   "survey_or_position": 8,
+   "not_a_paper": 1
+  },
+  "stage1_included": 271,
+  "stage1_included_C": 22,
+  "stage1_included_R": 249,
+  "R_sampled": 80,
+  "fulltext_sought": 102,
+  "not_accessible": 1,
+  "fulltext_assessed": 101,
+  "stage2_excluded": 86,
+  "stage2_excluded_by_reason": {
+   "no_reduced_label_experiment": 81,
+   "not_tabular": 2,
+   "survey_or_position": 1,
+   "regression_only": 2
+  },
+  "included": 15,
+  "included_C": 3,
+  "included_R": 12,
+  "coded": 15,
+  "review_lead_overrides": 15
+ },
+ "all": {
+  "n": 15,
+  "category": {
+   "A": 1,
+   "A'": 4,
+   "E": 4,
+   "D": 3,
+   "B": 1,
+   "C": 2
+  },
+  "coverage_forced": {
+   "yes": 5,
+   "unclear": 8,
+   "no": 2
+  },
+  "missed_class_reported": {
+   "no": 15
+  },
+  "main_metric": {
+   "accuracy": 7,
+   "AUC": 7,
+   "macro-F1": 1
+  },
+  "few_shot": {
+   "yes": 12,
+   "no": 3
+  },
+  "budget_unit": {
+   "per-class": 2,
+   "total": 8,
+   "fraction": 4,
+   "mixed": 1
+  },
+  "code_checked": {
+   "no": 13,
+   "yes": 2
+  },
+  "quote_check": {
+   "verified_in_text": 12,
+   "none_found": 3
+  },
+  "A_or_Aprime": [
+   5,
+   [
+    0.152,
+    0.583
+   ]
+  ],
+  "coverage_forced_yes": [
+   5,
+   [
+    0.152,
+    0.583
+   ]
+  ],
+  "missed_class_reported_yes": [
+   0,
+   [
+    -0.0,
+    0.204
+   ]
+  ],
+  "B_D_E_draw_not_using_labels_or_unstated": [
+   8,
+   [
+    0.301,
+    0.752
+   ]
+  ],
+  "E_unspecified": [
+   4,
+   [
+    0.109,
+    0.52
+   ]
+  ],
+  "metric_any_use": {
+   "accuracy": 7,
+   "AUC": 8,
+   "other": 4,
+   "F1-other": 1,
+   "macro-F1": 2,
+   "balanced-accuracy": 1
+  },
+  "few_shot_subset_n": 12,
+  "few_shot_subset_category": {
+   "A": 1,
+   "A'": 4,
+   "E": 3,
+   "B": 1,
+   "C": 2,
+   "D": 1
+  }
+ },
+ "census": {
+  "n": 3,
+  "category": {
+   "A": 1,
+   "E": 1,
+   "D": 1
+  },
+  "coverage_forced": {
+   "yes": 1,
+   "unclear": 2
+  },
+  "missed_class_reported": {
+   "no": 3
+  },
+  "main_metric": {
+   "accuracy": 2,
+   "AUC": 1
+  },
+  "few_shot": {
+   "yes": 1,
+   "no": 2
+  },
+  "budget_unit": {
+   "per-class": 1,
+   "total": 1,
+   "fraction": 1
+  },
+  "code_checked": {
+   "no": 3
+  },
+  "quote_check": {
+   "verified_in_text": 1,
+   "none_found": 2
+  },
+  "A_or_Aprime": [
+   1,
+   [
+    0.061,
+    0.792
+   ]
+  ],
+  "coverage_forced_yes": [
+   1,
+   [
+    0.061,
+    0.792
+   ]
+  ],
+  "missed_class_reported_yes": [
+   0,
+   [
+    0.0,
+    0.562
+   ]
+  ],
+  "B_D_E_draw_not_using_labels_or_unstated": [
+   2,
+   [
+    0.208,
+    0.939
+   ]
+  ],
+  "E_unspecified": [
+   1,
+   [
+    0.061,
+    0.792
+   ]
+  ],
+  "metric_any_use": {
+   "accuracy": 2,
+   "other": 2,
+   "AUC": 1
+  },
+  "few_shot_subset_n": 1,
+  "few_shot_subset_category": {
+   "A": 1
+  }
+ },
+ "sample": {
+  "n": 12,
+  "category": {
+   "A'": 4,
+   "E": 3,
+   "D": 2,
+   "B": 1,
+   "C": 2
+  },
+  "coverage_forced": {
+   "unclear": 6,
+   "no": 2,
+   "yes": 4
+  },
+  "missed_class_reported": {
+   "no": 12
+  },
+  "main_metric": {
+   "accuracy": 5,
+   "AUC": 6,
+   "macro-F1": 1
+  },
+  "few_shot": {
+   "yes": 11,
+   "no": 1
+  },
+  "budget_unit": {
+   "total": 7,
+   "fraction": 3,
+   "per-class": 1,
+   "mixed": 1
+  },
+  "code_checked": {
+   "no": 10,
+   "yes": 2
+  },
+  "quote_check": {
+   "verified_in_text": 11,
+   "none_found": 1
+  },
+  "A_or_Aprime": [
+   4,
+   [
+    0.138,
+    0.609
+   ]
+  ],
+  "coverage_forced_yes": [
+   4,
+   [
+    0.138,
+    0.609
+   ]
+  ],
+  "missed_class_reported_yes": [
+   0,
+   [
+    0.0,
+    0.243
+   ]
+  ],
+  "B_D_E_draw_not_using_labels_or_unstated": [
+   6,
+   [
+    0.254,
+    0.746
+   ]
+  ],
+  "E_unspecified": [
+   3,
+   [
+    0.089,
+    0.532
+   ]
+  ],
+  "metric_any_use": {
+   "accuracy": 5,
+   "AUC": 7,
+   "other": 2,
+   "F1-other": 1,
+   "macro-F1": 2,
+   "balanced-accuracy": 1
+  },
+  "few_shot_subset_n": 11,
+  "few_shot_subset_category": {
+   "A'": 4,
+   "E": 3,
+   "B": 1,
+   "C": 2,
+   "D": 1
+  }
+ },
+ "sensitivity_no_review_lead_overrides": {
+  "n": 22,
+  "category": {
+   "A": 2,
+   "A'": 4,
+   "B": 3,
+   "E": 5,
+   "D": 4,
+   "C": 4
+  },
+  "coverage_forced": {
+   "yes": 6,
+   "unclear": 10,
+   "no": 6
+  },
+  "missed_class_reported": {
+   "no": 22
+  },
+  "main_metric": {
+   "accuracy": 10,
+   "AUC": 11,
+   "macro-F1": 1
+  },
+  "few_shot": {
+   "yes": 15,
+   "no": 7
+  },
+  "budget_unit": {
+   "per-class": 2,
+   "total": 13,
+   "fraction": 6,
+   "mixed": 1
+  },
+  "code_checked": {
+   "no": 20,
+   "yes": 2
+  },
+  "quote_check": {
+   "": 22
+  },
+  "A_or_Aprime": [
+   6,
+   [
+    0.132,
+    0.482
+   ]
+  ],
+  "coverage_forced_yes": [
+   6,
+   [
+    0.132,
+    0.482
+   ]
+  ],
+  "missed_class_reported_yes": [
+   0,
+   [
+    0.0,
+    0.149
+   ]
+  ],
+  "B_D_E_draw_not_using_labels_or_unstated": [
+   12,
+   [
+    0.347,
+    0.731
+   ]
+  ],
+  "E_unspecified": [
+   5,
+   [
+    0.101,
+    0.434
+   ]
+  ],
+  "metric_any_use": {
+   "accuracy": 11,
+   "AUC": 12,
+   "other": 6,
+   "F1-other": 2,
+   "balanced-accuracy": 2,
+   "macro-F1": 2
+  },
+  "few_shot_subset_n": 15,
+  "few_shot_subset_category": {
+   "A": 1,
+   "A'": 3,
+   "B": 3,
+   "E": 3,
+   "C": 4,
+   "D": 1
+  }
+ }
+}

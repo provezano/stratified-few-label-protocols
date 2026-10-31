@@ -1,0 +1,27 @@
+Results, documents and figures: Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Copyright (c) 2026 Felipe Provezano Coutinho
+
+Except for the source code (licensed under the MIT licence, see LICENSE), the
+contents of this repository are licensed under the Creative Commons Attribution
+4.0 International licence. This covers the stored results and derived outputs
+(parquet, CSV, JSON and YAML files, LaTeX macro files), the pre-registrations,
+reports and other documents, and the figures.
+
+You are free to share (copy and redistribute the material in any medium or
+format) and adapt (remix, transform and build upon the material) for any
+purpose, even commercially, under the following term:
+
+  Attribution: you must give appropriate credit, provide a link to the licence,
+  and indicate if changes were made. Please cite the paper as given in
+  README.md and CITATION.cff.
+
+Full licence text: https://creativecommons.org/licenses/by/4.0/legalcode
+Summary: https://creativecommons.org/licenses/by/4.0/
+
+Third-party material keeps its own terms. The public tables that fetch_data.py
+downloads are not part of this repository and remain under the licences of their
+providers (listed per table in datasets/t1prime.csv and
+simaudit/data/pool_second_frame.yaml). Bibliographic records of the audited papers
+(titles, identifiers, venues) are factual metadata; the papers themselves are not
+included. Model weights are not included and remain under their providers' licences.
