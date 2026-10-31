@@ -63,8 +63,13 @@ jobs:
           (cd simaudit/paper/p1/exploratory/prop5 && $PY make_prop5_numbers.py)
           (cd simaudit && $PY paper/p1/exploratory/kumo_unused/summarize.py)
 
+      # make_tables.py sorts tables_p1.tex by C with an unstable sort, so the order of
+      # rows with equal C can differ across platforms; that file is compared as a set
+      # of lines, every other file byte for byte.
       - name: Check that the regenerated files match the committed ones
         run: |
           git status --short
           git diff --stat
-          git diff --exit-code
+          T=simaudit/paper/p1/tables_p1.tex
+          diff <(git show HEAD:$T | sort) <(sort $T)
+          git diff --exit-code -- . ":(exclude)$T"
