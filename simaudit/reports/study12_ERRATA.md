@@ -1,0 +1,5 @@
+# Errata to STUDY12_REPORT.md and prereg/STUDY12_PROTOCOL_T1PRIME.md (Study 12)
+
+The prereg is frozen at R007 (erratum 1 at R010) and the report at R043. Neither is edited. Corrections are recorded here.
+
+- E1 (2026-10-29): The prereg (Sec. 2.1, "For n ≤ 2000 (39 of 52 tables)") and the report ("Deviations and notes": "the 13 tables with n > 2000") count 13 T1′ tables with n > 2000. The frozen pool `data/pool_t1prime.yaml` (R003, unchanged since 2026-10-21) has 11 tables with n > 2000 and 41 with n ≤ 2000. pmlb:mfeat_fourier has n = 2000 exactly, so its panel is the full complement. The stored Study 12 results agree: 11 tables have a row index ≥ 2000 (`paper/p1/exploratory/review_reanalysis/r8_checks.py`). The pre-registration of Study 10, frozen on the same pool, also gives 11. No pool version and no threshold in the code gives 13 with the 2000-row cap; the nearest match is n > 1600 or n ≥ 1700, which no study uses. The count in the text is a counting slip. The rule is unchanged: `src/simaudit/runner/study12.py` applies e = min(n, 2000) (`PANEL_MAX = 2000`), as pre-registered. The design, the panels and every result are unchanged. The paper says 11.

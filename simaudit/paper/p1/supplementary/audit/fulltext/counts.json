@@ -1,0 +1,22 @@
+{
+ "S1_tabpfn_v1_raw": 1079,
+ "S1_tabpfn_v1_title_filter_in_window": 427,
+ "S1_tabpfn_v2_raw": 1712,
+ "S1_tabpfn_v2_title_filter_in_window": 562,
+ "S3_s2bulk_raw": 3133,
+ "S3_s2bulk_title_filter_in_window": 496,
+ "S3_openalex_raw": 1130,
+ "S2_S4_manual_records": 30,
+ "S2_models_without_paper": "Kumo Tabular (blog), Nori (repo), LightPFN (repo)",
+ "records_after_title_filters_total": 2645,
+ "records_after_dedup": 1342,
+ "duplicates_removed": 1303,
+ "out_of_scope_removed": 658,
+ "in_scope": 684,
+ "already_in_main_review_removed": 74,
+ "candidates": 610,
+ "candidates_by_stratum": {
+  "C": 22,
+  "R": 588
+ }
+}

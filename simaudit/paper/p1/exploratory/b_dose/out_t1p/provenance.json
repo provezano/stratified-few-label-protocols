@@ -1,0 +1,46 @@
+{
+  "started": "2026-10-28T20:09:18",
+  "base_seed": 20261020,
+  "seed_namespace": 41,
+  "perm_namespace": 33,
+  "panel_max": 1000,
+  "mults": [
+    3,
+    5,
+    10
+  ],
+  "reps": 5,
+  "levels": [
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9
+  ],
+  "fms": [
+    "fm2",
+    "fm1",
+    "fm5",
+    "fm3"
+  ],
+  "tables": [
+    "uci:519",
+    "pmlb:biomed",
+    "pmlb:glass2",
+    "pmlb:ionosphere",
+    "pmlb:molecular_biology_promoters",
+    "pmlb:corral",
+    "pmlb:bupa",
+    "uci:267",
+    "pmlb:saheart",
+    "pmlb:Hill_Valley_with_noise",
+    "pmlb:mofn_3_7_10",
+    "pmlb:ecoli",
+    "pmlb:led24",
+    "pmlb:new_thyroid",
+    "uci:212",
+    "pmlb:cars"
+  ],
+  "deadline_hours": 30.0,
+  "prereg": "paper/p1/exploratory/b_dose/PREREG_T1P_SUBSET.md"
+}

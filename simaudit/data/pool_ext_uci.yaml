@@ -1,0 +1,326 @@
+source: uci
+api: https://archive.ics.uci.edu/api
+snapshot_sha256: 1f523469b00b0eaec11695f8b437131fcb638eb0c955dd8f194ec0bd5683de46
+n_snapshot: 208
+heldout_signature_check: pending
+tier1_duplicate_check: pending
+counts:
+  C2|IR<2: 5
+  C2|IR2-5: 1
+  C2|IR>5: 1
+  C3-4|IR<2: 1
+  C3-4|IR2-5: 2
+  C3-4|IR>5: 1
+  C5-10|IR<2: 2
+  C5-10|IR2-5: 0
+  C5-10|IR>5: 1
+datasets:
+- key: uci:519
+  did: -1000000519
+  uci_id: 519
+  name: Heart Failure Clinical Records
+  version: 0
+  doi: 10.24432/C5Z89R
+  last_updated: Mon Feb 26 2024
+  licence: CC BY 4.0
+  sha256: 832b0237b67e56a8a72c0534d20dee9968a0902da97a2780bc96a3029da12b7e
+  file_sha256: 54349729933cffdde5c92068572a89761bb53df50cc28250b0915fd18066976c
+  stratum: C2|IR2-5
+  n: 299
+  d: 12
+  C: 2
+  majority: 203
+  minority: 96
+  ir: 2.1146
+  tier: 4
+  subtier: '4'
+  source: uci
+  suites: []
+  priorsel_overlap: false
+- key: uci:70
+  did: -1000000070
+  uci_id: 70
+  name: MONK's Problems
+  version: 0
+  doi: 10.24432/C5R30R
+  last_updated: Mon Feb 26 2024
+  licence: CC BY 4.0
+  sha256: 3137f2350299b24dbc12705e80eeebd55bd7cf15677aacd5614b5d8f15dd207d
+  file_sha256: a4110c251fb863e48f4afa56c6747a5fad35e6f0cbe736eb6f81c74960369a72
+  stratum: C2|IR<2
+  n: 432
+  d: 6
+  C: 2
+  majority: 216
+  minority: 216
+  ir: 1.0
+  tier: 4
+  subtier: '4'
+  source: uci
+  suites: []
+  priorsel_overlap: false
+- key: uci:267
+  did: -1000000267
+  uci_id: 267
+  name: Banknote Authentication
+  version: 0
+  doi: 10.24432/C55P57
+  last_updated: Fri Feb 16 2024
+  licence: CC BY 4.0
+  sha256: f0f047f2559dac6be48e6d243bd5abbc9f79c913dbb9cebee013766dcc0dbbda
+  file_sha256: 0787e50299c198e919276660edf98dd5dcb94951ad81435b3ab61afb666936c9
+  stratum: C2|IR<2
+  n: 1372
+  d: 4
+  C: 2
+  majority: 762
+  minority: 610
+  ir: 1.2492
+  tier: 4
+  subtier: '4'
+  source: uci
+  suites: []
+  priorsel_overlap: false
+- key: uci:451
+  did: -1000000451
+  uci_id: 451
+  name: Breast Cancer Coimbra
+  version: 0
+  doi: 10.24432/C52P59
+  last_updated: Sat Mar 16 2024
+  licence: CC BY 4.0
+  sha256: ca19ed60159e03ed30847c099e3261c60ba1322b7cc6418a8024cf348f6de141
+  file_sha256: 68c56c7e7a38dfff1046a8b35e5b3afc17229eff7fb9d8dca7053442b1c37e7e
+  stratum: C2|IR<2
+  n: 116
+  d: 9
+  C: 2
+  majority: 64
+  minority: 52
+  ir: 1.2308
+  tier: 4
+  subtier: '4'
+  source: uci
+  suites: []
+  priorsel_overlap: false
+- key: uci:545
+  did: -1000000545
+  uci_id: 545
+  name: Rice (Cammeo and Osmancik)
+  version: 0
+  doi: 10.24432/C5MW4Z
+  last_updated: Fri Nov 03 2023
+  licence: CC BY 4.0
+  sha256: 1e0f0c77305ed5cd8bc73d32aa9fb65b1defc221c68b5b449d125d23d52cd237
+  file_sha256: a0d9b19693f0bde9a59a6a6e886df0456008fab1c3a406178a76e7c4440e95b3
+  stratum: C2|IR<2
+  n: 3810
+  d: 7
+  C: 2
+  majority: 2180
+  minority: 1630
+  ir: 1.3374
+  tier: 4
+  subtier: '4'
+  source: uci
+  suites: []
+  priorsel_overlap: false
+- key: uci:850
+  did: -1000000850
+  uci_id: 850
+  name: Raisin
+  version: 0
+  doi: 10.24432/C5660T
+  last_updated: Fri Jan 05 2024
+  licence: CC BY 4.0
+  sha256: 6b1288499ca46c4c418867ed652ef41b67e754a940ed6343f013a5baed24ccdb
+  file_sha256: 175ecbc52d351e0e0d9aa00605de09425b3a4826c5db294fabcbc24bcba955ab
+  stratum: C2|IR<2
+  n: 900
+  d: 7
+  C: 2
+  majority: 450
+  minority: 450
+  ir: 1.0
+  tier: 4
+  subtier: '4'
+  source: uci
+  suites: []
+  priorsel_overlap: false
+- key: uci:563
+  did: -1000000563
+  uci_id: 563
+  name: Iranian Churn
+  version: 0
+  doi: 10.24432/C5JW3Z
+  last_updated: Sat Mar 09 2024
+  licence: CC BY 4.0
+  sha256: fd1322cd2c84c37e4d3818096fb672077464373ab3b6c63fbead674a4b3a17c4
+  file_sha256: 90d5fb6bd1630cd4de4b4d28fcf8b4cb92a8f6ab7484605b0799d47386f7dbe1
+  stratum: C2|IR>5
+  n: 3150
+  d: 13
+  C: 2
+  majority: 2655
+  minority: 495
+  ir: 5.3636
+  tier: 4
+  subtier: '4'
+  source: uci
+  suites: []
+  priorsel_overlap: false
+- key: uci:212
+  did: -1000000212
+  uci_id: 212
+  name: Vertebral Column
+  version: 0
+  doi: 10.24432/C5K89B
+  last_updated: Fri Mar 29 2024
+  licence: CC BY 4.0
+  sha256: 1592d86433977a9cf734bd2426d0c424389f9c230e4ee23511c9d3680835344b
+  file_sha256: 7b98e6802c824d4c20a97f86174ef47db9171875888775a3884245443f7432d5
+  stratum: C3-4|IR2-5
+  n: 310
+  d: 6
+  C: 3
+  majority: 150
+  minority: 60
+  ir: 2.5
+  tier: 4
+  subtier: '4'
+  source: uci
+  suites: []
+  priorsel_overlap: false
+- key: uci:697
+  did: -1000000697
+  uci_id: 697
+  name: Predict Students' Dropout and Academic Success
+  version: 0
+  doi: 10.24432/C5MC89
+  last_updated: Mon Feb 26 2024
+  licence: CC BY 4.0
+  sha256: a55807aa9f722d9fea3e748dce3d1eaf69219c798b72dccf8f0350ccfd26eaee
+  file_sha256: a1b1a6531bbb93a5c7fdf0093b47172776652a4ffb12342fb79655c85b74801b
+  stratum: C3-4|IR2-5
+  n: 4424
+  d: 36
+  C: 3
+  majority: 2209
+  minority: 794
+  ir: 2.7821
+  tier: 4
+  subtier: '4'
+  source: uci
+  suites: []
+  priorsel_overlap: false
+- key: uci:863
+  did: -1000000863
+  uci_id: 863
+  name: Maternal Health Risk
+  version: 0
+  doi: 10.24432/C5DP5D
+  last_updated: Fri Nov 03 2023
+  licence: CC BY 4.0
+  sha256: f4cdc153d0ec7dfc8d9c21507eb8f7329e3f4b51ffdd69aa91d13bf66ba6aa4b
+  file_sha256: a1f7025719f84715096e0d1f95ae2e56b57809b9b15449e1836c96a7d976ae9b
+  stratum: C3-4|IR<2
+  n: 1014
+  d: 6
+  C: 3
+  majority: 406
+  minority: 272
+  ir: 1.4926
+  tier: 4
+  subtier: '4'
+  source: uci
+  suites: []
+  priorsel_overlap: false
+- key: uci:379
+  did: -1000000379
+  uci_id: 379
+  name: Website Phishing
+  version: 0
+  doi: 10.24432/C5B301
+  last_updated: Thu Mar 21 2024
+  licence: CC BY 4.0
+  sha256: 1e0632e619f64339bb0b504e70ec8fde967da4e91153e7a757be975ff9a6a37e
+  file_sha256: 1c9970fb1eb7f4efa3621c18646c2f5e96cab5d82688794356d5bea4b6626e2d
+  stratum: C3-4|IR>5
+  n: 1353
+  d: 9
+  C: 3
+  majority: 702
+  minority: 103
+  ir: 6.8155
+  tier: 4
+  subtier: '4'
+  source: uci
+  suites: []
+  priorsel_overlap: false
+- key: uci:50
+  did: -1000000050
+  uci_id: 50
+  name: Image Segmentation
+  version: 0
+  doi: 10.24432/C5GP4N
+  last_updated: Fri Oct 27 2023
+  licence: CC BY 4.0
+  sha256: bf8a789274cf028061e9279bfd080156924c5c1a65616e73d841b42cf28e1f23
+  file_sha256: fddc213b8d668a7da006ff93d5f01ec099c2c2c2496770ef85cb185215c5f44e
+  stratum: C5-10|IR<2
+  n: 210
+  d: 19
+  C: 7
+  majority: 30
+  minority: 30
+  ir: 1.0
+  tier: 4
+  subtier: '4'
+  source: uci
+  suites: []
+  priorsel_overlap: false
+- key: uci:763
+  did: -1000000763
+  uci_id: 763
+  name: Land Mines
+  version: 0
+  doi: 10.24432/C54C8Z
+  last_updated: Thu Mar 07 2024
+  licence: CC BY 4.0
+  sha256: 8be1f43a95708cfc57bbac5f9eff99f5f58487eaff7dbd56b1f1f1a49895438e
+  file_sha256: 5572ef6c3e465789b67da121b77e9a790d3c44701cc9491aca948634842ca812
+  stratum: C5-10|IR<2
+  n: 338
+  d: 3
+  C: 5
+  majority: 71
+  minority: 65
+  ir: 1.0923
+  tier: 4
+  subtier: '4'
+  source: uci
+  suites: []
+  priorsel_overlap: false
+- key: uci:257
+  did: -1000000257
+  uci_id: 257
+  name: User Knowledge Modeling
+  version: 0
+  doi: 10.24432/C5231X
+  last_updated: Tue Apr 09 2024
+  licence: CC BY 4.0
+  sha256: ebe6e36431d5295b40e83c64d362d59298ed5f1e10aba587abda4368abfcaa42
+  file_sha256: e26c15a18c7c36074a0108e630f3181edd4e6065715a778aac5c517f23af7b41
+  stratum: C5-10|IR>5
+  n: 403
+  d: 5
+  C: 5
+  majority: 129
+  minority: 24
+  ir: 5.375
+  tier: 4
+  subtier: '4'
+  source: uci
+  suites: []
+  priorsel_overlap: false
+audit_file: pool_ext_uci_audit.csv

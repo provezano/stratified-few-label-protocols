@@ -1,0 +1,73 @@
+set,dataset,name,C,n,kind
+t1prime,pmlb_402875677,Hill_Valley_without_noise,2,1212,binary
+t1prime,pmlb_1000000267,Banknote Authentication,2,1372,binary
+t1prime,pmlb_776526808,glass2,2,163,binary
+t1prime,pmlb_1000000451,Breast Cancer Coimbra,2,116,binary
+t1prime,pmlb_1000000545,Rice (Cammeo and Osmancik),2,3810,binary
+t1prime,pmlb_899643728,spambase,2,4601,binary
+t1prime,pmlb_612078220,sonar,2,208,binary
+t1prime,pmlb_70999782,Hill_Valley_with_noise,2,1212,binary
+t1prime,pmlb_771782289,prnn_crabs,2,200,binary
+t1prime,pmlb_190478228,threeOf9,2,512,binary
+t1prime,pmlb_196466410,analcatdata_boxing2,2,132,binary
+t1prime,pmlb_158349848,bupa,2,345,binary
+t1prime,pmlb_321653624,corral,2,160,binary
+t1prime,pmlb_1000000850,Raisin,2,900,binary
+t1prime,pmlb_629865933,saheart,2,462,binary
+t1prime,pmlb_891171204,congressional_voting_records,2,435,binary
+t1prime,pmlb_696605717,chess,2,3196,binary
+t1prime,pmlb_140070728,molecular_biology_promoters,2,106,binary
+t1prime,pmlb_216388530,tic_tac_toe,2,958,binary
+t1prime,pmlb_471213511,irish,2,500,binary
+t1prime,pmlb_51679336,tokyo1,2,959,binary
+t1prime,pmlb_452957568,GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1,2,1600,binary
+t1prime,pmlb_298032972,biomed,2,209,binary
+t1prime,pmlb_285622297,ionosphere,2,351,binary
+t1prime,pmlb_33590086,mofn_3_7_10,2,1324,binary
+t1prime,pmlb_1000000519,Heart Failure Clinical Records,2,299,binary
+t1prime,pmlb_148263816,haberman,2,306,binary
+t1prime,pmlb_675884895,breast_cancer,2,286,binary
+t1prime,pmlb_536739196,hepatitis,2,155,binary
+t1prime,pmlb_760627086,profb,2,672,binary
+t1prime,pmlb_147524437,analcatdata_lawsuit,2,264,binary
+t1prime,pmlb_1000000563,Iranian Churn,2,3150,binary
+t1prime,pmlb_112947990,hypothyroid,2,3163,binary
+t1prime,pmlb_52156669,churn,2,5000,binary
+t1prime,pmlb_814233394,backache,2,180,binary
+t1prime,pmlb_844895957,cloud,4,108,unknown
+t1prime,pmlb_1000000212,Vertebral Column,3,310,nominal
+t1prime,pmlb_842065541,new_thyroid,3,215,ordinal_broad
+t1prime,pmlb_403982248,schizo,3,340,unknown
+t1prime,pmlb_1000000697,Predict Students' Dropout and Academic Success,3,4424,ordinal_broad
+t1prime,pmlb_512854293,cars,3,392,nominal
+t1prime,pmlb_153261989,splice,3,3188,nominal
+t1prime,pmlb_570174309,car_evaluation,4,1728,ordinal_strict
+t1prime,pmlb_434692359,allbp,3,3772,ordinal_broad
+t1prime,pmlb_352495961,led24,10,3200,nominal
+t1prime,pmlb_211571049,mfeat_fourier,10,2000,nominal
+t1prime,pmlb_1000000763,Land Mines,5,338,nominal
+t1prime,pmlb_197305078,segmentation,7,2310,nominal
+t1prime,pmlb_1000000257,User Knowledge Modeling,5,403,ordinal_strict
+t1prime,pmlb_611798166,yeast,9,1479,nominal
+t1prime,pmlb_13510280,ecoli,5,327,nominal
+t1prime,pmlb_203521824,dermatology,6,366,nominal
+dev,dev_827,disclosure_x_noise,2,662,binary
+dev,dev_931,disclosure_z,2,662,binary
+dev,dev_46562,German-Credit-Data-Creditability-Preprocessed-Dataset,2,1000,binary
+dev,dev_860,vinnie,2,380,binary
+dev,dev_46875,divorce_prediction,2,170,binary
+dev,dev_45615,appendicitis_test_edsa,2,106,binary
+dev,dev_841,stock,2,950,binary
+dev,dev_46544,dataset_analcatdata_creditscore,2,100,binary
+dev,dev_1510,wdbc,2,569,binary
+dev,dev_42544,Touch2,8,265,nominal
+dev,dev_337,SPECTF,2,349,binary
+dev,dev_1063,kc2,2,522,binary
+dev,dev_782,rabe_266,2,120,binary
+dev,dev_40496,LED-display-domain-7digit,10,500,nominal
+dev,dev_47155,waveform,3,800,nominal
+dev,dev_801,chscase_funds,2,185,binary
+dev,dev_694,diggle_table_a2,9,310,unknown
+dev,dev_46336,hayes-roth_clean,3,160,nominal
+dev,dev_41511,iris,3,150,nominal
+dev,dev_1071,mw1,2,403,binary

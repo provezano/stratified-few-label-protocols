@@ -1,0 +1,344 @@
+rec_id,decision,reason,note
+AX1904.09521,exclude,not_classification,few-shot table-to-text generation
+AX1912.13025,include,include,SSL with tabular experiments
+AX2001.06545,exclude,survey_or_position,review of ligand discovery
+AX2005.11450,exclude,not_tabular,few-shot image classification
+AX2006.04097,include,include,tabular SSL on UCI
+AX2007.01135,exclude,no_reduced_label_experiment,curriculum learning on full training data
+AX2007.12100,include,include,deep active learning on tabular data
+AX2010.04230,include,include,JEM semi-supervised classification on tabular data
+AX2010.09359,include,include,SSL incl. tabular data
+AX2012.06678,include,include,semi-supervised setting evaluated
+AX2102.04145,exclude,no_reduced_label_experiment,post-training rectification; no reduced label set
+AX2106.15147,include,include,semi-supervised fraction labelled on OpenML-CC18
+AX2108.12296,include,include,tabular SSL limited labels
+AX2110.05442,exclude,not_tabular,reinforcement learning environments
+AX2111.02599,exclude,not_tabular,longitudinal time-segment data
+AX2112.02770,exclude,not_classification,few-shot data-to-text generation
+AX2112.10510,include,include,PFN small tabular classification
+AX2203.02034,include,include,semi-supervised AD with few labelled anomalies; doubt
+AX2203.08568,exclude,not_tabular,dialogue state tracking
+AX2203.09410,exclude,not_classification,active learning for regression only
+AX2205.09229,exclude,not_tabular,few-shot text classification
+AX2206.05880,include,include,pseudo-labeling SSL for tabular data
+AX2207.09061,include,include,semi-supervised feature selection with 1/10 labels
+AX2207.12086,include,include,active learning on tabular; doubt about label budget
+AX2208.00206,exclude,not_classification,regression of plasma density
+AX2208.14417,include,include,fraud benchmark incl. semi-supervised learning
+AX2208.14834,include,include,semi-supervised AD with partial labels; doubt
+AX2209.08060,include,include,semi-supervised tabular classification
+AX2209.14610,exclude,table_QA_or_text2sql,tabular math word problems
+AX2210.00825,include,include,multi-omics semi-supervised cancer classification
+AX2210.03822,include,include,active learning on OpenML-CC18
+AX2210.10723,include,include,few-shot tabular classification with LLMs
+AX2210.12496,exclude,not_classification,Bayesian optimization and ranking
+AX2210.12719,exclude,not_tabular,reinforcement learning
+AX2210.17284,exclude,table_QA_or_text2sql,table question answering
+AX2211.01446,include,include,"semi-supervised fair representations, data-scarce tabular"
+AX2211.04128,exclude,table_QA_or_text2sql,NER in spreadsheet cells (table understanding)
+AX2212.00173,include,include,"semi-supervised AD, tabular, limited labels; doubt"
+AX2212.00892,include,include,tabular SSL
+AX2301.11856,include,include,active learning on tabular data
+AX2302.04415,exclude,not_classification,few-shot table-to-text generation
+AX2302.05444,include,include,SSL pretraining; label efficiency on tabular
+AX2302.05807,include,include,active learning on tabular task
+AX2302.07832,include,include,AD under labelling budget incl. tabular; doubt
+AX2302.12468,exclude,not_classification,few-shot table-to-text generation
+AX2302.12692,include,include,few-shot clinical prediction with LMs
+AX2303.00918,include,include,few-shot semi-supervised tabular learning
+AX2303.16270,include,include,semi-supervised VFL on tabular; doubt
+AX2304.08911,exclude,not_classification,table-to-text generation
+AX2304.10428,exclude,not_tabular,named entity recognition in text
+AX2304.10946,include,include,few-shot drug synergy prediction with LLMs
+AX2305.11377,include,include,customs fraud with label scarcity; doubt
+AX2305.13062,exclude,table_QA_or_text2sql,table understanding benchmark for LLMs
+AX2305.17812,exclude,not_tabular,chain-of-thought text reasoning
+AX2306.00745,exclude,table_QA_or_text2sql,column type annotation (table understanding)
+AX2306.08954,include,include,tabular active learning benchmark
+AX2306.14101,include,include,LLM boosting on tabular few data points
+AX2306.14321,exclude,table_QA_or_text2sql,table QA robustness
+AX2307.02491,include,include,few-shot tabular learning
+AX2307.12198,exclude,no_reduced_label_experiment,general architecture; no label-scarcity experiment
+AX2308.00177,exclude,not_classification,"learning-to-rank, not classification"
+AX2308.08469,exclude,not_tabular,time-series forecasting
+AX2308.08872,exclude,not_tabular,image SSL (ICCV)
+AX2309.00855,exclude,not_classification,real estate appraisal regression
+AX2309.11268,exclude,not_tabular,chart understanding
+AX2309.15757,include,include,SSL on biomedical tabular data
+AX2310.03266,include,include,few-shot tabular classification with LLM
+AX2310.07652,include,include,few-shot vis-type prediction from dataset features; doubt
+AX2310.08523,exclude,not_tabular,comparative text classification
+AX2310.19573,include,include,active learning tabular incl. classification
+AX2311.02216,exclude,table_QA_or_text2sql,tabular NLI reasoning
+AX2311.09962,include,include,low-label omics classification
+AX2311.10051,include,include,tabular few-shot learning
+AX2311.11628,include,include,LLM priors for few-shot tabular classification
+AX2311.18356,include,include,AL benchmark incl. tabular
+AX2312.04142,exclude,not_tabular,multivariate time series
+AX2312.12112,include,include,LLM augmentation in low-data tabular regime
+AX2312.12464,include,include,few-shot tabular classification with LLMs
+AX2401.07128,exclude,table_QA_or_text2sql,EHR multi-table reasoning via code
+AX2402.03921,exclude,not_classification,Bayesian optimization / HPO
+AX2402.13741,exclude,not_tabular,relational triple extraction from text
+AX2402.14840,exclude,not_tabular,medical document images QA
+AX2403.10923,exclude,no_reduced_label_experiment,interpretability for TabPFN
+AX2403.15464,include,include,few-shot LLM disease prediction from structured EHR
+AX2403.19116,exclude,table_QA_or_text2sql,table question answering
+AX2403.20208,include,include,zero/few-shot tabular classification with LLM
+AX2404.06209,include,include,few-shot LLM learning on tabular datasets
+AX2404.09491,include,include,few-shot tabular learning
+AX2404.14451,exclude,not_classification,unsupervised outlier detection
+AX2404.17136,exclude,table_QA_or_text2sql,NL-to-visualization over tables
+AX2404.17489,include,include,semi-supervised contrastive tabular classification
+AX2405.01147,exclude,survey_or_position,position paper
+AX2405.02845,exclude,not_tabular,molecular generation
+AX2405.05618,include,include,few-shot entity matching/error detection; doubt
+AX2405.06270,include,include,few-shot ICL on clinical tabular data
+AX2405.07662,include,include,data-scarce tabular classification n<=500; doubt
+AX2405.16413,include,include,few-shot LLM risk prediction on EHR; doubt
+AX2406.12031,include,include,few-shot tabular prediction 1-32 shots
+AX2406.13733,include,include,pseudo-labeling with scarce labels on tabular
+AX2406.16349,exclude,no_reduced_label_experiment,dataset annotation; TabPFN eval without label reduction
+AX2406.17316,exclude,survey_or_position,review of unsupervised learning
+AX2406.17322,include,include,tabular active learning benchmark
+AX2406.17673,exclude,not_classification,tabular generative model
+AX2407.03080,exclude,not_classification,synthetic data generation
+AX2407.16313,exclude,not_tabular,pancreas segmentation review
+AX2408.00426,include,include,AL benchmark incl. tabular
+AX2408.09785,exclude,table_QA_or_text2sql,LLM agent over test tables
+AX2408.11063,include,include,tabular transfer with limited labels
+AX2408.11854,include,include,few-shot LLM embeddings for EHR classification; doubt
+AX2408.11878,include,include,multimodal incl. tabular few-shot; doubt
+AX2409.01635,include,include,data-scarce tabular classification benchmark
+AX2409.09704,exclude,not_tabular,PICO extraction from clinical trial text
+AX2409.10069,include,include,semi-supervised AD with labeled anomalies on tabular; doubt
+AX2409.15027,include,include,LLM few-shot fine-tuning vs tabular classifiers; low-data regime
+AX2409.18594,include,include,zero-shot trees but low-data regime comparisons; doubt
+AX2410.01795,include,include,genotype tabular phenotype prediction; low-shot regimes
+AX2410.02512,include,include,augmentation incl. tabular; few-shot learning
+AX2410.03585,exclude,not_tabular,medical device digital twins; not tabular classification
+AX2410.07395,include,include,tabular Y|X shift adaptation with 32 labeled target rows
+AX2410.12606,exclude,not_tabular,multivariate time series
+AX2411.01093,exclude,table_QA_or_text2sql,table fact verification
+AX2411.01807,exclude,table_QA_or_text2sql,in-context database CRUD
+AX2411.04324,include,include,GBDT vs TabLLM few-shot tabular
+AX2411.18926,exclude,not_tabular,colonoscopy images
+AX2412.04642,include,include,LLM fairness on tabular; few-shot examples
+AX2412.12864,include,include,tabular SSL with limited labels
+AX2501.04547,exclude,no_reduced_label_experiment,ML toolbox; no label-budget experiment
+AX2501.13864,exclude,not_classification,autoencoder anomaly detection
+AX2501.16125,exclude,not_classification,tabular data synthesis for recsys
+AX2501.16247,exclude,no_reduced_label_experiment,zero-shot-only LLM decision trees
+AX2502.00305,exclude,not_tabular,cold-start AL for text classification
+AX2502.02672,include,include,performance across dataset sizes; TabPFN/LLM + GBDT
+AX2502.02869,exclude,not_tabular,tabular MDPs for in-context RL
+AX2502.03147,include,include,LLM TabICL scaling over data size; doubt
+AX2502.11877,include,include,low-shot tabular classification with LLMs
+AX2502.12584,exclude,not_tabular,vision and language SSL benchmarks
+AX2502.20268,include,include,few-shot tabular with LLM attribution regularizer
+AX2503.01215,exclude,not_classification,exchangeable sequence modeling; synthetic decision tasks
+AX2503.06277,include,include,semi-supervised tabular-image classification; multimodal doubt
+AX2503.06444,exclude,not_classification,tabular data synthesis
+AX2503.09850,include,include,tabular model with few-shot experiments
+AX2503.12062,exclude,table_QA_or_text2sql,NL queries via text-to-SQL
+AX2503.20903,exclude,not_classification,synthetic data quality assessment
+AX2503.21735,exclude,table_QA_or_text2sql,LLM agent tabular analytics queries
+AX2504.20862,exclude,not_classification,unsupervised outlier detection weak labels
+AX2505.05237,include,include,few-shot tabular learning with LLM knowledge
+AX2505.05568,include,include,RDB foundation model low-data; relational doubt
+AX2505.07853,include,include,crash severity classification; few-shot baselines; doubt
+AX2505.08816,exclude,not_tabular,raw packet sequences
+AX2505.11584,exclude,not_classification,LLM agent decision-making nudges
+AX2505.17918,exclude,no_reduced_label_experiment,full-data setting emphasized
+AX2505.18234,include,include,few-shot attack classes on tabular IDS; doubt
+AX2505.20003,include,include,TabPFN semi-supervised estimation; classification unclear; doubt
+AX2506.05746,exclude,table_QA_or_text2sql,temporal table QA
+AX2506.11812,exclude,not_classification,house price regression
+AX2506.12092,include,include,tabular+text accident classification with few-shot; doubt
+AX2506.15329,include,include,semi-supervised tabular ICL with missing labels
+AX2506.17847,exclude,not_classification,synthetic data generation; regression utility
+AX2506.21718,exclude,not_classification,text-to-text regression
+AX2507.00032,exclude,recsys_cold_start,exercise recommendation personalization
+AX2507.05403,exclude,table_QA_or_text2sql,programming by example table transformations
+AX2507.08280,include,include,tabular missingness; semi-supervised extension
+AX2507.17066,exclude,not_classification,synthetic data privacy benchmark
+AX2507.23227,include,include,few-shot AD diagnosis on tabular biomarkers
+AX2508.00758,exclude,not_classification,tabular anomaly detection (one-class/unsupervised)
+AX2508.00922,exclude,not_tabular,image SSL benchmarks
+AX2508.02601,exclude,not_classification,low-data tabular synthesis
+AX2508.04219,exclude,not_tabular,hierarchical text classification
+AX2508.04746,include,include,multimodal FSL incl. tabular classification tasks
+AX2508.09100,include,include,tabular FM zero- and few-shot F1
+AX2508.09263,include,include,zero and few-shot tabular prototypes
+AX2508.11258,include,include,fair LLM classifiers on tabular; data-efficient
+AX2508.17391,include,include,LLM few-shot classification on small tabular datasets
+AX2508.21561,include,include,few-shot tabular classification with LLMs
+AX2509.00362,include,include,tabular datasets and few-shot settings
+AX2509.03191,exclude,not_classification,geotechnical regression and imputation
+AX2509.09960,exclude,not_classification,low-data tabular generation
+AX2509.10572,exclude,not_classification,data quality rule generation
+AX2509.16354,exclude,no_reduced_label_experiment,deep tabular architecture; standard benchmarks
+AX2509.19220,include,include,federated tabular label-scarce regimes
+AX2509.20113,exclude,not_classification,association rule mining
+AX2509.23522,include,include,traffic classification with limited labels; tabular features
+AX2509.25207,include,include,LLM feature engineering improves few-shot prediction
+AX2510.06217,exclude,table_QA_or_text2sql,tabular reasoning PRM
+AX2510.11926,exclude,not_classification,indoor localization regression
+AX2510.12624,include,include,tabular active feature acquisition under scarce labels; doubt
+AX2510.17883,include,include,LLM few-shot on UNSW-NB15 flows
+AX2510.18328,exclude,not_classification,semi-supervised (one-class) anomaly detection
+AX2510.19014,exclude,not_classification,treatment recommendation bandits
+AX2510.19248,include,include,clustering features; gains in low-data regimes incl. tabular
+AX2511.00964,include,include,few labeled samples for error estimation; doubt
+AX2511.05704,include,include,few-shot tabular classification distillation
+AX2511.06961,include,include,low-label tabular classification
+AX2511.13338,exclude,no_reduced_label_experiment,positional encodings; standard supervised
+AX2512.00163,exclude,no_reduced_label_experiment,zero-shot prompting only
+AX2512.00181,include,include,tabular FM for few-shot tabular learning
+AX2512.08950,exclude,not_tabular,RL in tabular MDP environments
+AX2601.04110,include,include,TFM fine-tuning under data scarcity; classification
+AX2601.05683,exclude,not_classification,multivariate distributional regression
+AX2601.11311,include,include,few-shot tabular classification
+AX2601.13763,include,include,travel mode few-shot with varying sample sizes
+AX2601.17301,exclude,not_tabular,graph anomaly detection
+AX2601.20987,include,include,child development with 50 training samples
+AX2601.23068,exclude,not_classification,feature attribution estimation
+AX2602.03686,include,include,tabular corruption robustness in low-data settings
+AX2602.08519,exclude,not_tabular,attributed graph clustering
+AX2602.11700,include,include,tabular prediction across shot budgets
+AX2602.14622,include,include,ARM with downstream classification in low-data; doubt
+AX2602.15844,include,include,few-shot tabular classification k<=32
+AX2602.17641,exclude,no_reduced_label_experiment,automated feature engineering
+AX2602.22280,include,include,heart disease LLM few-shot vs ML
+AX2603.03805,include,include,relational FM few-shot; relational doubt
+AX2603.04321,include,include,few-shot class-incremental tabular
+AX2603.10823,exclude,not_classification,tabular data synthesis
+AX2603.12567,exclude,not_classification,AL for materials regression
+AX2603.13303,exclude,not_classification,polymer property regression
+AX2603.13308,include,include,zero/few/many-shot tabular conditional modeling
+AX2603.13673,exclude,not_tabular,clinical notes phenotype extraction
+AX2603.14894,exclude,not_classification,post-hoc explanation perturbation selection
+AX2603.17191,include,include,few-shot AD classification tabular LLM
+AX2603.19497,include,include,tabular AD incl. limited anomaly labels; doubt
+AX2603.27385,include,include,cold-start active learning tabular FMs
+AX2604.01841,include,include,EHR TICL in low-data regimes
+AX2604.05865,exclude,table_QA_or_text2sql,"serialization format; LLM comprehension tests, not classification budgets"
+AX2604.06758,include,include,few-shot embedding experiments with supervised tabular models
+AX2604.12596,include,include,relational tables; cold-start and few-shot evaluated
+AX2604.16412,include,include,SSL with 1/5/10% labelled fractions on OpenML
+AX2604.24796,exclude,no_reduced_label_experiment,omics pipeline; no labelled-set size experiment
+AX2604.27195,include,include,training sizes N=50..1000 learning curve
+AX2604.27606,include,include,gains under label scarcity reported
+AX2605.01810,include,include,"tabular EHR SSL, 10-80% missing labels"
+AX2605.02519,exclude,no_reduced_label_experiment,NIDS representation benchmark; no label budget
+AX2605.05591,include,include,PU in-context learning; labelled positives only
+AX2605.06117,include,include,"few-shot LLM tabular classification, shot counts"
+AX2605.06955,exclude,not_classification,anomaly detection trained on normal data
+AX2605.08519,include,include,semi-supervised few-shot tabular
+AX2605.12411,include,include,K-shot text-tabular adaptation with TFM
+AX2605.16446,include,include,fair SSL with limited labels on Adult/COMPAS
+AX2605.17406,include,include,borderline: time-series features fed to TFM few-shot
+AX2605.18979,exclude,not_classification,reinforcement learning Q-values
+AX2605.24417,include,include,zero-shot vs up to 16-shot tabular classification
+AX2605.24680,include,include,difficulty-driven active learning
+AX2605.24903,include,include,"malware features, 20% labelled, active learning"
+AX2605.26068,include,include,WSAD benchmark varying label quantity incl. tabular
+AX2605.26589,include,include,few-shot/low-data TabPFN vs classical
+AX2605.27254,include,include,cold-start label budgets for TFM context
+AX2605.28198,exclude,not_classification,synthetic tabular data generation
+AX2606.00872,exclude,not_tabular,image embeddings as rows; source data are images
+AX2606.03640,exclude,not_classification,"SE optimization tasks, not classification"
+AX2606.04320,include,include,borderline: relational ICL under label scarcity
+AX2606.05481,include,include,borderline: time series as tabular rows; low-data diagnostics
+AX2606.07674,include,include,borderline: video-derived kinematic features; small labelled calibration
+AX2606.07908,include,include,Pima 5%-100% training data
+AX2606.08736,exclude,not_classification,outcome-conformant data synthesis
+AX2606.11640,include,include,few-shot tabular learning
+AX2606.19509,include,include,"clinical tabular, few-shot LLM examples"
+AX2606.22817,exclude,not_classification,private structured text synthesis
+AX2606.31126,include,include,few-shot small-molecule classification on descriptor tables
+AX2606.31474,include,include,doubt: TFM ICL from small labelled sets
+AX2607.00113,include,include,"SSL at 10% labels, label-rate comparisons"
+AX2607.04013,include,include,TFMs vs ML across label budgets
+AX2607.08347,exclude,not_classification,tabular part is regression; image classification only
+AX2607.11007,exclude,not_tabular,image/text/audio embeddings
+AX2607.11374,exclude,not_tabular,graph node/graph classification
+AX2607.11826,exclude,no_reduced_label_experiment,NAS; cold-start refers to search
+AX2607.16031,include,include,120 and 10 labelled samples per contingency
+AX2607.16685,exclude,not_classification,conditional generative modelling
+AX2607.18072,include,include,doubt: small labelled target set; augmentation for classification
+AX2607.19234,exclude,not_tabular,time series classification
+AX2607.20530,exclude,not_classification,anomaly detection on normal data
+AX2608.01879,exclude,not_classification,few-shot tabular generation
+AX2608.02157,include,include,"doubt: spectra as tabular, limited labels, 21 classification tasks"
+AX2608.03565,include,include,low-data regimes on tabular benchmarks
+AX2608.06559,exclude,not_classification,contextual bandits
+AX2608.13601,include,include,active learning budgets 20-120 on tabular
+AX2608.16039,include,include,volumetric features; few-shot foundation models
+AX2608.17796,exclude,no_reduced_label_experiment,synthesis/adversarial training; no labelled-size experiment
+AX2608.17856,include,include,doubt: shot selection for TFM context
+AX2608.19735,exclude,recsys_cold_start,sequential recommendation
+AX2608.21386,include,include,clinical few-shot classification vs TabPFN
+AX2608.22429,exclude,not_tabular,chart/visual table images VQA
+AX2608.24381,include,include,1/5/10/20% labels
+AX2608.26758,include,include,few-shot binary classification with TFM
+AX2608.26844,include,include,LLM few-shot prompting on tabular IDS
+AX2608.28980,exclude,survey_or_position,review
+AX2608.30086,include,include,few-shot LLM on credit tabular data
+AX2608.30392,include,include,doubt: label-efficient FMs incl. tabular crop classification
+AX2609.04013,include,include,zero/few-shot LLM on tabular CKD
+AX2609.20218,include,include,learning curves vs labelled set size
+AX2609.25013,exclude,no_reduced_label_experiment,optimizer comparison for TabPFN fine-tuning
+AX2609.30789,include,include,few-shot molecular classification with TabPFN
+AX2609.32764,include,include,20% labelled training records
+AX2609.36368,include,include,scarce-label budgets incl. tabular measurements
+AX2610.06679,include,include,context budgets on TabArena classification
+AX2610.07996,include,include,active learning acquisition with TFM
+AX2610.08694,include,include,"doubt: transcriptomic tables, limited labelled data"
+AX2610.10227,include,include,few-shot tabular classification
+AX2610.20462,include,include,"doubt: contingency screening classification, limited labels"
+AX2610.23765,include,include,eight labelled anomalies; tabular
+AX2610.23923,include,include,zero-shot compared with few-shot baselines
+AX2610.24920,include,include,linear probe at 1% labels
+AX2610.27703,include,include,1/5/10% labelled SSL
+H062f8653,exclude,recsys_cold_start,CTR cold items
+H0daf400f,include,include,few-shot tabular benchmark
+H15ee84b2,exclude,not_tabular,graph node classification
+H185b7b6c,exclude,table_QA_or_text2sql,tabular QA via SQL
+H23b8ec38,include,include,semi-supervised feature selection on tabular data
+H24fbd01a,include,include,active learning on tabular datasets
+H25a79ac4,include,include,"few labelled examples, extreme sparsity"
+H2db305dd,include,include,zero-/few-shot LLM fraud detection
+H31360e1c,exclude,table_QA_or_text2sql,QA on tabular data
+H4213a61c,include,include,no abstract; few-shot tabular
+H48c0f89d,exclude,not_tabular,no abstract; GNN title
+H4cefd411,include,include,tabular SSL
+H4fa1b9aa,exclude,survey_or_position,tutorial
+H59578e24,include,include,doubt: active learning; tasks may be regression
+H59ff8d35,include,include,varying labelled amounts on 90 datasets
+H60521065,exclude,not_tabular,text/web information extraction tutorial
+H62ba8705,exclude,not_tabular,tables as text; column type annotation
+H704ce1cf,include,include,doubt: one-class AD as labelled clean data shrinks
+H7f06f9b0,exclude,no_reduced_label_experiment,OOD detection; no label budget
+H8219aaf7,include,include,active AD querying limited labels incl. tabular
+H8f2099ed,include,include,relational DB SSL with handful of labels
+H9506f45b,include,include,doubt: few-shot enrichment of tabular datasets
+H983ea732,include,include,"doubt: entity matching on tabular records, few-shot"
+H9a443b39,include,include,label availability 1% to 100%
+H9fa5535a,include,include,few-shot clinical prediction
+Ha82f4cc3,include,include,tabular SSL
+Hc63c3c85,exclude,not_classification,semi-supervised regression
+Hd70e5123,include,include,tabular few-shot classification
+Hdaa2fb38,include,include,no abstract; tabular SSL
+Hde9c1e9b,include,include,no abstract; tabular SSL
+He7ee6c41,exclude,not_classification,online learning to rank
+He83a097a,include,include,few-shot on tabular+text benchmarks
+Hfd680d3d,include,include,active DA incl. tabular dataset
+AX1705.08716,exclude,out_of_window,arXiv v1 2017; graph SSL with node features
+AX2106.06168,include,include,doubt: SSL/KD framework; tabular tasks plausible
+AX2205.09617,include,include,doubt: no abstract; topological SSL
+AX2312.00819,include,include,LLMs vs TabPFN on travel survey tables under label budgets
+AX2406.10521,exclude,not_classification,tabular data synthesis
+AX2506.08700,exclude,not_tabular,scientific charts fact-checking
+H556a0489,exclude,table_QA_or_text2sql,table understanding (TU) with prompts
+Hed088232,include,include,tabular SSL across varying labelled amounts

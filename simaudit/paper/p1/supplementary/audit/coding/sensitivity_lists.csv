@@ -1,0 +1,12 @@
+paper_id,list,reason
+AX2203.02034,anomaly_or_PU,semi-supervised anomaly detection: labels drawn from anomaly class
+AX2208.14834,anomaly_or_PU,semi-supervised anomaly detection: labelled anomalies only
+AX2212.00173,anomaly_or_PU,semi-supervised anomaly detection
+AX2302.07832,anomaly_or_PU,anomaly detection under labeling budget
+AX2409.10069,anomaly_or_PU,semi-supervised anomaly detection: labelled anomalies only
+AX2603.19497,anomaly_or_PU,semi-supervised anomaly detection: labelled anomalies only
+AX2605.05591,anomaly_or_PU,positive-unlabelled learning
+AX2605.26068,anomaly_or_PU,weakly supervised anomaly detection benchmark
+AX2610.23765,anomaly_or_PU,weakly supervised anomaly detection: labelled anomalies only
+AX2411.04324,inherited_A,"replicates TabLLM k-shot protocol (TabLLM: class-balanced draw, coded A)"
+AX2502.11877,inherited_A,uses TabLLM pre-sampled shot files (per both coders' notes)

@@ -1,0 +1,3 @@
+condition,cells,fitted_cells,max_abs_dp,mean_max_abs_dp,max_share_argmax_changed,max_abs_dmacro_f1,bit_identical_cells
+seeded,8,7,0.0,0.0,0.0,0.0,8
+unseeded,8,7,0.42468397319316864,0.1669387724250555,0.26848249027237353,0.06840087809379258,1

@@ -1,0 +1,111 @@
+{
+  "n_sample": 32,
+  "verdicts": [
+    [
+      "AX2306.08954",
+      "final right"
+    ],
+    [
+      "AX2311.09962",
+      "final right"
+    ],
+    [
+      "AX2312.12112",
+      "final right"
+    ],
+    [
+      "AX2403.15464",
+      "final right"
+    ],
+    [
+      "AX2404.09491",
+      "final right"
+    ],
+    [
+      "AX2406.17322",
+      "final right"
+    ],
+    [
+      "AX2508.17391",
+      "both defensible"
+    ],
+    [
+      "AX2601.11311",
+      "final right"
+    ],
+    [
+      "AX2604.16412",
+      "final right"
+    ],
+    [
+      "AX2610.23765",
+      "codebook ambiguous"
+    ],
+    [
+      "H24fbd01a",
+      "final right"
+    ]
+  ],
+  "error_rates": {
+    "adjudicated": {
+      "over_k": 0,
+      "over_n": 18,
+      "over_rate": 0.0,
+      "over_ci": [
+        0.0,
+        0.1853019681378522
+      ],
+      "under_k": 0,
+      "under_n": 14,
+      "under_rate": 0.0,
+      "under_ci": [
+        0.0,
+        0.23163576165011646
+      ],
+      "sensitivity": 1.0,
+      "specificity": 1.0
+    },
+    "adjudicated_alt": {
+      "over_k": 1,
+      "over_n": 18,
+      "over_rate": 0.05555555555555555,
+      "over_ci": [
+        0.0014055561673694222,
+        0.27294359967336845
+      ],
+      "under_k": 0,
+      "under_n": 14,
+      "under_rate": 0.0,
+      "under_ci": [
+        0.0,
+        0.23163576165011646
+      ],
+      "sensitivity": 1.0,
+      "specificity": 0.9333333333333333
+    },
+    "human": {
+      "over_k": 9,
+      "over_n": 18,
+      "over_rate": 0.5,
+      "over_ci": [
+        0.26019058289509706,
+        0.7398094171049029
+      ],
+      "under_k": 0,
+      "under_n": 14,
+      "under_rate": 0.0,
+      "under_ci": [
+        0.0,
+        0.23163576165011646
+      ],
+      "sensitivity": 1.0,
+      "specificity": 0.6086956521739131
+    }
+  },
+  "rogan_gladen_all161": {
+    "adjudicated": 0.484472049689441,
+    "adjudicated_alt": 0.44764862466725824,
+    "human": 0.153061224489796
+  },
+  "p_obs_all161": 0.484472049689441
+}

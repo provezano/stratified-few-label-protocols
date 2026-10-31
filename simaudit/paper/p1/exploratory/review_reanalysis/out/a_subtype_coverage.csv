@@ -1,0 +1,6 @@
+subtype,no,unclear,yes
+min_fill,0,0,8
+other,3,1,1
+prop,1,11,2
+prop_min,0,1,4
+reject,0,0,1

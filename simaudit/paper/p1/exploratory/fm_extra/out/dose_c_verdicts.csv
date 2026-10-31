@@ -1,0 +1,7 @@
+fm,scoring,trend_both,verdict,point_rule
+fm6,com,True,inconclusive,beyond
+fm6,comp,True,inconclusive,beyond
+fm7,com,True,not beyond,not beyond
+fm7,comp,True,not beyond,not beyond
+fm8,com,True,inconclusive,not beyond
+fm8,comp,True,inconclusive,not beyond

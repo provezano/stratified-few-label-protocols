@@ -1,0 +1,11 @@
+paper_id,variable,coder3,final,coder3_quote,final_quote
+AX2206.05880,category,B,E,none found,none found
+AX2411.04324,category,A,E,"we replicate previous work [43], but apply our recommended methodology",none found
+AX2206.05880,coverage_forced,no,unclear,none found,none found
+AX2411.04324,coverage_forced,yes,unclear,"we replicate previous work [43], but apply our recommended methodology",none found
+AX2106.15147,few_shot,no,yes,only 25% of the original split remains labeled,so that only 25% of the original split remains labeled
+AX2302.05807,main_metric,accuracy,other,"we randomly sample as small subset as the initial labelled dataset (2,500 out of 32,561",we randomly sample as small subset as the initial labelled dataset
+AX2306.08954,main_metric,accuracy,other,skip any seed that lacks labels in the training or test set,skip any seed that lacks labels in the training or test set
+AX2406.17322,main_metric,accuracy,other,we additionally randomly sample one instance from DU per missing class and add them,we additionally randomly sample one instance from DU per missing class
+AX2408.00426,main_metric,accuracy,other,fixed size for the seed set L(0) of 1 sample per class,a fixed size for the seed set L(0) of 1 sample per class
+AX2508.17391,main_metric,accuracy,F1-other,"Fractions of 25%, 50%, 75%, and 100% of the training split are evaluated","Fractions of 25%, 50%, 75%, and 100% of the training split are evaluated"

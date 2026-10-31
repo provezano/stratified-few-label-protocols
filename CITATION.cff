@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this code or these results, please cite the paper below."
+title: "Code and results for: Stratified Few-Label Protocols Can Overstate Macro-Averaged Metrics for Tabular Foundation Models"
+type: software
+authors:
+  - family-names: Coutinho
+    given-names: Felipe Provezano
+    email: fpcoutinho@alumni.usp.br
+    affiliation: Independent Researcher
+repository-code: "https://github.com/provezano/stratified-few-label-protocols"
+license: MIT
+date-released: "2026-10-31"
+keywords:
+  - tabular foundation models
+  - few-label learning
+  - evaluation protocols
+  - macro-averaged metrics
+  - pre-registration
+preferred-citation:
+  type: article
+  title: "Stratified Few-Label Protocols Can Overstate Macro-Averaged Metrics for Tabular Foundation Models"
+  authors:
+    - family-names: Coutinho
+      given-names: Felipe Provezano
+      email: fpcoutinho@alumni.usp.br
+      affiliation: Independent Researcher
+  year: 2026
+  journal: "Transactions on Machine Learning Research"
+  status: submitted
+  notes: "Under review at TMLR. arXiv:XXXX.XXXXX (placeholder; to be filled in once the arXiv identifier is assigned)."
+  repository-code: "https://github.com/provezano/stratified-few-label-protocols"

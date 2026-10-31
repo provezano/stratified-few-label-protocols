@@ -1,0 +1,95 @@
+[
+ {
+  "key": "k11395735_malaria",
+  "target": "Result",
+  "raw_levels": {
+   "Positive": 1,
+   "negative": 1122,
+   "positive": 1067
+  },
+  "y_equal": true,
+  "X_equal": true,
+  "counts": [
+   1068,
+   1122
+  ]
+ },
+ {
+  "key": "f33111881_frailty",
+  "target": "Frailty",
+  "raw_levels": {
+   "0": 295,
+   "1": 1203
+  },
+  "y_equal": true,
+  "X_equal": true,
+  "counts": [
+   295,
+   1203
+  ]
+ },
+ {
+  "key": "z22705412_hpv",
+  "target": "hpv_result",
+  "raw_levels": {
+   "Detected": 85,
+   "Not detected": 1108
+  },
+  "y_equal": true,
+  "X_equal": true,
+  "counts": [
+   85,
+   1108
+  ]
+ },
+ {
+  "key": "z22216010_pvt",
+  "target": "PVT",
+  "raw_levels": {
+   "NO": 1307,
+   "YES": 156
+  },
+  "y_equal": true,
+  "X_equal": true,
+  "counts": [
+   1307,
+   156
+  ]
+ },
+ {
+  "key": "z22767593_edmort",
+  "target": "Mortality",
+  "raw_levels": {
+   "Alive": 45,
+   "Ed Mortality": 16,
+   "In-Hospital Mortality (>7 Days)": 84,
+   "Left Against Medical Advice": 31,
+   "None": 263,
+   "Within 7 Days Mortality": 158
+  },
+  "y_equal": true,
+  "X_equal": true,
+  "counts": [
+   45,
+   16,
+   84,
+   31,
+   263,
+   158
+  ]
+ },
+ {
+  "key": "f33328002_tea",
+  "target": "adoption",
+  "raw_levels": {
+   "0": 447,
+   "1": 449
+  },
+  "y_equal": true,
+  "X_equal": true,
+  "counts": [
+   447,
+   449
+  ]
+ }
+]

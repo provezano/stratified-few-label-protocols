@@ -1,0 +1,121 @@
+kind,set,family,metric,pair_flip,top_flip
+null_split_half,dev,F1 prevalence-weighted,accuracy,0.30833333333333335,0.5789473684210527
+null_split_half,dev,F1 prevalence-weighted,top2_accuracy,0.13148148148148148,0.2777777777777778
+null_split_half,dev,F1 prevalence-weighted,weighted_f1,0.29276315789473684,0.5657894736842105
+null_split_half,dev,F2 chance-corrected,kappa,0.30811403508771934,0.631578947368421
+null_split_half,dev,F2 chance-corrected,mcc,0.3366228070175438,0.631578947368421
+null_split_half,dev,F3 class-averaged,balanced_accuracy,0.2774122807017544,0.5789473684210527
+null_split_half,dev,F3 class-averaged,macro_f05,0.2817982456140351,0.5394736842105263
+null_split_half,dev,F3 class-averaged,macro_f1,0.2708333333333333,0.5789473684210527
+null_split_half,dev,F3 class-averaged,macro_f2,0.2445175438596491,0.5657894736842105
+null_split_half,dev,F3 class-averaged,macro_jaccard,0.27521929824561403,0.5789473684210527
+null_split_half,dev,F3 class-averaged,macro_precision,0.356359649122807,0.5657894736842105
+null_split_half,dev,F3 class-averaged,macro_recall,0.2774122807017544,0.5789473684210527
+null_split_half,dev,F4 ranking (all classes),ap_macro_all,0.29605263157894735,0.4473684210526316
+null_split_half,dev,F4 ranking (all classes),auc_ovo_macro_all,0.2894736842105263,0.5
+null_split_half,dev,F4 ranking (all classes),auc_ovr_macro_all,0.2807017543859649,0.5
+null_split_half,dev,F4 ranking (all classes),auc_ovr_weighted_all,0.28728070175438597,0.5131578947368421
+null_split_half,dev,F5 ranking (seen classes),ap_macro_seen,0.293859649122807,0.4473684210526316
+null_split_half,dev,F5 ranking (seen classes),auc_ovo_macro_seen,0.2807017543859649,0.5263157894736842
+null_split_half,dev,F5 ranking (seen classes),auc_ovr_macro_seen,0.28289473684210525,0.5131578947368421
+null_split_half,dev,F5 ranking (seen classes),auc_ovr_weighted_seen,0.28728070175438597,0.5131578947368421
+null_split_half,dev,F6 proper scoring,brier,0.2077922077922078,0.4675324675324675
+null_split_half,dev,F6 proper scoring,d2_brier,0.2056277056277056,0.4675324675324675
+null_split_half,dev,F6 proper scoring,d2_log_loss,0.18831168831168832,0.38961038961038963
+null_split_half,dev,F6 proper scoring,log_loss,0.18831168831168832,0.38961038961038963
+null_split_half,dev,F7 calibration,citl_l1,0.3939393939393939,0.5714285714285714
+null_split_half,dev,F7 calibration,ece,0.31385281385281383,0.5844155844155844
+null_split_half,dev,F7 calibration,ece_classwise,0.24675324675324675,0.5454545454545454
+null_split_half,dev,F7 calibration,kl_prior,0.35497835497835495,0.5194805194805194
+null_split_half,dev,F8 binary LR,log_lr_neg,0.3317307692307692,0.5192307692307693
+null_split_half,dev,F8 binary LR,log_lr_pos,0.3189102564102564,0.5192307692307693
+null_split_half,t1prime,F1 prevalence-weighted,accuracy,0.2890226112326769,0.5207877461706784
+null_split_half,t1prime,F1 prevalence-weighted,top2_accuracy,0.2521303258145363,0.43609022556390975
+null_split_half,t1prime,F1 prevalence-weighted,weighted_f1,0.2695113056163384,0.5032822757111597
+null_split_half,t1prime,F2 chance-corrected,kappa,0.26761487964989056,0.49015317286652077
+null_split_half,t1prime,F2 chance-corrected,mcc,0.2882567469000729,0.5098468271334792
+null_split_half,t1prime,F3 class-averaged,balanced_accuracy,0.24762946754194018,0.487964989059081
+null_split_half,t1prime,F3 class-averaged,macro_f05,0.25485047410649164,0.474835886214442
+null_split_half,t1prime,F3 class-averaged,macro_f1,0.23843909555069293,0.4726477024070022
+null_split_half,t1prime,F3 class-averaged,macro_f2,0.23559445660102113,0.474835886214442
+null_split_half,t1prime,F3 class-averaged,macro_jaccard,0.27031363967906635,0.5076586433260394
+null_split_half,t1prime,F3 class-averaged,macro_precision,0.34434719183078044,0.5667396061269147
+null_split_half,t1prime,F3 class-averaged,macro_recall,0.24762946754194018,0.487964989059081
+null_split_half,t1prime,F4 ranking (all classes),ap_macro_all,0.29047619047619044,0.4967032967032967
+null_split_half,t1prime,F4 ranking (all classes),auc_ovo_macro_all,0.2868131868131868,0.4835164835164835
+null_split_half,t1prime,F4 ranking (all classes),auc_ovr_macro_all,0.2864468864468865,0.4901098901098901
+null_split_half,t1prime,F4 ranking (all classes),auc_ovr_weighted_all,0.2857142857142857,0.4879120879120879
+null_split_half,t1prime,F5 ranking (seen classes),ap_macro_seen,0.28937728937728935,0.49230769230769234
+null_split_half,t1prime,F5 ranking (seen classes),auc_ovo_macro_seen,0.2879120879120879,0.4857142857142857
+null_split_half,t1prime,F5 ranking (seen classes),auc_ovr_macro_seen,0.28608058608058606,0.4857142857142857
+null_split_half,t1prime,F5 ranking (seen classes),auc_ovr_weighted_seen,0.2853479853479854,0.4835164835164835
+null_split_half,t1prime,F6 proper scoring,brier,0.21397379912663755,0.4039301310043668
+null_split_half,t1prime,F6 proper scoring,d2_brier,0.21324599708879183,0.4017467248908297
+null_split_half,t1prime,F6 proper scoring,d2_log_loss,0.2059679767103348,0.4126637554585153
+null_split_half,t1prime,F6 proper scoring,log_loss,0.2052401746724891,0.4126637554585153
+null_split_half,t1prime,F7 calibration,citl_l1,0.3406113537117904,0.5698689956331878
+null_split_half,t1prime,F7 calibration,ece,0.3082241630276565,0.5480349344978166
+null_split_half,t1prime,F7 calibration,ece_classwise,0.2514556040756914,0.4606986899563319
+null_split_half,t1prime,F7 calibration,kl_prior,0.3387918486171761,0.5676855895196506
+null_split_half,t1prime,F8 binary LR,log_lr_neg,0.30768398268398267,0.5487012987012987
+null_split_half,t1prime,F8 binary LR,log_lr_pos,0.36038961038961037,0.5811688311688312
+protocol,dev,F1 prevalence-weighted,accuracy,0.28504273504273503,0.46153846153846156
+protocol,dev,F1 prevalence-weighted,top2_accuracy,0.21746031746031744,0.3333333333333333
+protocol,dev,F1 prevalence-weighted,weighted_f1,0.3329059829059829,0.5512820512820513
+protocol,dev,F2 chance-corrected,kappa,0.335042735042735,0.5128205128205128
+protocol,dev,F2 chance-corrected,mcc,0.32179487179487176,0.5641025641025641
+protocol,dev,F3 class-averaged,balanced_accuracy,0.34658119658119657,0.5384615384615384
+protocol,dev,F3 class-averaged,macro_f05,0.3645299145299145,0.5512820512820513
+protocol,dev,F3 class-averaged,macro_f1,0.37777777777777777,0.6025641025641025
+protocol,dev,F3 class-averaged,macro_f2,0.37564102564102564,0.5897435897435898
+protocol,dev,F3 class-averaged,macro_jaccard,0.355982905982906,0.5769230769230769
+protocol,dev,F3 class-averaged,macro_precision,0.3004273504273504,0.5769230769230769
+protocol,dev,F3 class-averaged,macro_recall,0.34658119658119657,0.5384615384615384
+protocol,dev,F4 ranking (all classes),ap_macro_all,0.27426160337552746,0.46835443037974683
+protocol,dev,F4 ranking (all classes),auc_ovo_macro_all,0.2767932489451477,0.5569620253164557
+protocol,dev,F4 ranking (all classes),auc_ovr_macro_all,0.2767932489451477,0.5569620253164557
+protocol,dev,F4 ranking (all classes),auc_ovr_weighted_all,0.2767932489451477,0.5569620253164557
+protocol,dev,F5 ranking (seen classes),ap_macro_seen,0.27637130801687765,0.4810126582278481
+protocol,dev,F5 ranking (seen classes),auc_ovo_macro_seen,0.2810126582278481,0.5569620253164557
+protocol,dev,F5 ranking (seen classes),auc_ovr_macro_seen,0.2767932489451477,0.5569620253164557
+protocol,dev,F5 ranking (seen classes),auc_ovr_weighted_seen,0.27468354430379743,0.5569620253164557
+protocol,dev,F6 proper scoring,brier,0.15833333333333333,0.3875
+protocol,dev,F6 proper scoring,d2_brier,0.15833333333333333,0.3875
+protocol,dev,F6 proper scoring,d2_log_loss,0.1375,0.2875
+protocol,dev,F6 proper scoring,log_loss,0.1375,0.2875
+protocol,dev,F7 calibration,citl_l1,0.38958333333333334,0.6375
+protocol,dev,F7 calibration,ece,0.2791666666666667,0.475
+protocol,dev,F7 calibration,ece_classwise,0.19166666666666665,0.3125
+protocol,dev,F7 calibration,kl_prior,0.39375,0.6
+protocol,dev,F8 binary LR,log_lr_neg,0.40484848484848485,0.6
+protocol,dev,F8 binary LR,log_lr_pos,0.35757575757575755,0.7090909090909091
+protocol,t1prime,F1 prevalence-weighted,accuracy,0.3252059925093633,0.5460674157303371
+protocol,t1prime,F1 prevalence-weighted,top2_accuracy,0.30205128205128207,0.5461538461538461
+protocol,t1prime,F1 prevalence-weighted,weighted_f1,0.36232209737827714,0.597752808988764
+protocol,t1prime,F2 chance-corrected,kappa,0.3724344569288389,0.6
+protocol,t1prime,F2 chance-corrected,mcc,0.35745318352059924,0.597752808988764
+protocol,t1prime,F3 class-averaged,balanced_accuracy,0.37277153558052434,0.5752808988764045
+protocol,t1prime,F3 class-averaged,macro_f05,0.3799250936329588,0.5775280898876405
+protocol,t1prime,F3 class-averaged,macro_f1,0.38741573033707866,0.5955056179775281
+protocol,t1prime,F3 class-averaged,macro_f2,0.3844194756554307,0.5865168539325842
+protocol,t1prime,F3 class-averaged,macro_jaccard,0.36644194756554305,0.5865168539325842
+protocol,t1prime,F3 class-averaged,macro_precision,0.35183520599250934,0.5640449438202247
+protocol,t1prime,F3 class-averaged,macro_recall,0.37277153558052434,0.5752808988764045
+protocol,t1prime,F4 ranking (all classes),ap_macro_all,0.26267870579382996,0.48081264108352145
+protocol,t1prime,F4 ranking (all classes),auc_ovo_macro_all,0.2675696012039127,0.4582392776523702
+protocol,t1prime,F4 ranking (all classes),auc_ovr_macro_all,0.26869826937547026,0.46275395033860045
+protocol,t1prime,F4 ranking (all classes),auc_ovr_weighted_all,0.27622272385252067,0.48306997742663654
+protocol,t1prime,F5 ranking (seen classes),ap_macro_seen,0.2611738148984199,0.47404063205417607
+protocol,t1prime,F5 ranking (seen classes),auc_ovo_macro_seen,0.26982693754702786,0.4650112866817156
+protocol,t1prime,F5 ranking (seen classes),auc_ovr_macro_seen,0.2724604966139955,0.4717832957110609
+protocol,t1prime,F5 ranking (seen classes),auc_ovr_weighted_seen,0.27697516930022575,0.4853273137697517
+protocol,t1prime,F6 proper scoring,brier,0.2344569288389513,0.4786516853932584
+protocol,t1prime,F6 proper scoring,d2_brier,0.2348314606741573,0.4786516853932584
+protocol,t1prime,F6 proper scoring,d2_log_loss,0.22097378277153557,0.4606741573033708
+protocol,t1prime,F6 proper scoring,log_loss,0.22097378277153557,0.4606741573033708
+protocol,t1prime,F7 calibration,citl_l1,0.4704119850187266,0.7078651685393258
+protocol,t1prime,F7 calibration,ece,0.27752808988764044,0.49887640449438203
+protocol,t1prime,F7 calibration,ece_classwise,0.3089887640449438,0.5056179775280899
+protocol,t1prime,F7 calibration,kl_prior,0.48389513108614235,0.750561797752809
+protocol,t1prime,F8 binary LR,log_lr_neg,0.38985976267529665,0.5889967637540453
+protocol,t1prime,F8 binary LR,log_lr_pos,0.3575512405609493,0.6019417475728155

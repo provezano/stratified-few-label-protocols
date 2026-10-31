@@ -1,0 +1,144 @@
+{
+  "fm": "fm6",
+  "name": "TabDPT v1.3",
+  "timing": [
+    {
+      "dataset": 46562,
+      "n": 1000,
+      "d": 33,
+      "C": 2,
+      "B": 2,
+      "K": 2,
+      "seconds": 9.592,
+      "first_call": true,
+      "rowsum_ok": true
+    },
+    {
+      "dataset": 46562,
+      "n": 1000,
+      "d": 33,
+      "C": 2,
+      "B": 2,
+      "K": 2,
+      "seconds": 7.621,
+      "first_call": false,
+      "rowsum_ok": true
+    },
+    {
+      "dataset": 46562,
+      "n": 1000,
+      "d": 33,
+      "C": 2,
+      "B": 10,
+      "K": 2,
+      "seconds": 7.851,
+      "first_call": false,
+      "rowsum_ok": true
+    },
+    {
+      "dataset": 46562,
+      "n": 1000,
+      "d": 33,
+      "C": 2,
+      "B": 50,
+      "K": 2,
+      "seconds": 7.742,
+      "first_call": false,
+      "rowsum_ok": true
+    },
+    {
+      "dataset": 46562,
+      "n": 1000,
+      "d": 33,
+      "C": 2,
+      "B": 100,
+      "K": 2,
+      "seconds": 8.716,
+      "first_call": false,
+      "rowsum_ok": true
+    },
+    {
+      "dataset": 46562,
+      "n": 1000,
+      "d": 33,
+      "C": 2,
+      "B": 300,
+      "K": 2,
+      "seconds": 10.909,
+      "first_call": false,
+      "rowsum_ok": true
+    },
+    {
+      "dataset": 40496,
+      "n": 500,
+      "d": 7,
+      "C": 10,
+      "B": 2,
+      "K": 2,
+      "seconds": 3.407,
+      "first_call": false,
+      "rowsum_ok": true
+    },
+    {
+      "dataset": 40496,
+      "n": 500,
+      "d": 7,
+      "C": 10,
+      "B": 10,
+      "K": 10,
+      "seconds": 3.538,
+      "first_call": false,
+      "rowsum_ok": true
+    },
+    {
+      "dataset": 40496,
+      "n": 500,
+      "d": 7,
+      "C": 10,
+      "B": 50,
+      "K": 10,
+      "seconds": 4.292,
+      "first_call": false,
+      "rowsum_ok": true
+    },
+    {
+      "dataset": 40496,
+      "n": 500,
+      "d": 7,
+      "C": 10,
+      "B": 100,
+      "K": 10,
+      "seconds": 5.066,
+      "first_call": false,
+      "rowsum_ok": true
+    },
+    {
+      "dataset": 40496,
+      "n": 500,
+      "d": 7,
+      "C": 10,
+      "B": 300,
+      "K": 10,
+      "seconds": 7.424,
+      "first_call": false,
+      "rowsum_ok": true
+    }
+  ],
+  "unseen": {
+    "table": 47155,
+    "context_labels": [
+      0,
+      2
+    ],
+    "missing_class": 1,
+    "raw_labels": {
+      "ok": false,
+      "error": "IndexError('index 2 is out of bounds for dimension 0 with size 2')"
+    },
+    "head_units": 16,
+    "forced_C": 3,
+    "mean_p_unused": 0.0005532576350037033,
+    "mean_p_unused_on_true_class1": 0.0005701016353816877,
+    "share_argmax_unused": 0.0
+  }
+}

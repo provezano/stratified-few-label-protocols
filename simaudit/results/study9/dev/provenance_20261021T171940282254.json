@@ -1,0 +1,56 @@
+{
+  "base_seed": 20261020,
+  "seed_namespace": 12,
+  "perm_namespace": 13,
+  "grid": [
+    1,
+    2,
+    3,
+    5,
+    7,
+    10,
+    15,
+    20,
+    30
+  ],
+  "strategies": [
+    "random",
+    "stratified",
+    "kmedoids_nested",
+    "lucos_nested"
+  ],
+  "reps": {
+    "random": 10,
+    "stratified": 5,
+    "kmedoids_nested": 3,
+    "lucos_nested": 3
+  },
+  "stop_max": 500,
+  "panel_max": 2000,
+  "learners": [
+    "fm2"
+  ],
+  "datasets": [
+    827,
+    931,
+    46562,
+    860,
+    46875,
+    45615,
+    841,
+    46544,
+    1510,
+    42544,
+    337,
+    1063,
+    782,
+    40496,
+    47155,
+    801,
+    694,
+    46336,
+    41511,
+    1071
+  ],
+  "source_sha256": "c4df2871281cab853bfa60120e4b39ead6a39430468a9900a18988f4677478e9"
+}

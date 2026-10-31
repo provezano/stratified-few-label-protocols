@@ -1,0 +1,101 @@
+paper_id,cat,subtype,coverage_forced,quote
+AX1912.13025,A',prop,yes,UCI datasets with a small number of labeled examples
+AX2006.04097,A',prop,unclear,we split the training data in a stratified fashion to obtain a labeled data set
+AX2010.04230,A,,yes,Accuracy of semi-supervised learning on tabular data with 10 labeled examples per class.
+AX2012.06678,B,,no,the first p observations in the training data are marked as the labeled data
+AX2112.10510,B,,no,Within each subset we provide labels for the first 30 samples
+AX2203.02034,A',prop,yes,positives and the corresponding negatives to have the same anomaly ratio
+AX2205.09617,A,,yes,we have selected 25 samples per class using them as labelled data
+AX2208.14834,A',other,no,Anomaly dataset Da: a small dataset containing only anomalies.
+AX2209.08060,B,,no,we sample a fixed amount of labeled examples from the training set
+AX2210.00825,B,,no,Performance metrics of cancer type classification using 1% training data during downstream training.
+AX2210.10723,A,,yes,The k labeled examples Dk were sampled in a class-balanced manner
+AX2211.01446,A,,yes,the level of supervision ranged from 4 to 256 labeled examples per class
+AX2302.05444,B,,no,we only use one-percent of the original labels for downstream training
+AX2302.07832,C,,no,"there is one round of querying, in which 10 samples are labeled"
+AX2303.00918,A,,yes,"the cardinality of the given labeled set is very small, e.g., one sample per class"
+AX2304.10946,A',prop_min,yes,with at least one positive and one negative sample included in each set
+AX2306.08954,A',reject,yes,skip any seed that lacks labels in the training or test set
+AX2306.14101,C,,unclear,The support set was chosen from the training set through the stratified cluster sampling
+AX2307.02491,A,,yes,"N-way-K-shot classification refers to a train set composed of N classes, each with K examples"
+AX2310.07652,C,,no,we use a clustering algorithm to select a representative subset of examples
+AX2311.09962,A',prop,unclear,All splits were stratified to keep the proportion of classes preserved in the splits.
+AX2311.10051,A',min_fill,yes,we require that Dmeta contains at least one example of each class
+AX2311.11628,A,,yes,We evaluate our method using the same few-shot setup as TabLLM
+AX2311.18356,A,,yes,Every dataset has a fixed size for the seed set of 1 sample per class
+AX2312.00819,A,,yes,"we use balanced sampling to randomly select 1,000 entries for the large training set"
+AX2312.12112,A,,yes,"|Dtrain| = n, and each target class has the same number of samples"
+AX2402.16785,B,,no,"GroupShuffleSplit(n_splits=1, test_size=int(num_groups - num_train), random_state=random_state)"
+AX2403.01570,A',prop_min,yes,randomly sample eight training examples and control the same positive-negative ratio
+AX2403.15464,A,,yes,We randomly select a small number of positive and negative samples
+AX2404.06209,A',prop,unclear,We select 20 few-shot examples randomly and stratify the labels of the few-shot examples
+AX2404.09491,A,,yes,"From the remaining data, k-shot samples were selected, constructing a balanced training set."
+AX2405.05618,C,,no,The validation split is used as the pool P for selecting few-shot examples
+AX2405.06270,A,,yes,we introduce a balanced few-shot ICL setup
+AX2405.16413,C,,no,We select the top-k similar samples for each x
+AX2406.12031,B,,no,drawing separate training sets of size k shots
+AX2406.13733,B,,no,with a fixed proportion of Dlab : Dunlab of 0.1:0.9
+AX2406.17322,A',min_fill,yes,we additionally randomly sample one instance from DU per missing class
+AX2408.00426,A,,yes,a fixed size for the seed set L(0) of 1 sample per class
+AX2408.11063,A,,yes,# shot indicates the number of labeled samples per class
+AX2409.10069,A',other,unclear,randomly selecting the ground-truth anomalous samples with a ratio of γ
+AX2409.15027,A,,yes,maintain a balanced ratio of positive (yi = 1) and negative (yi = 0) samples
+AX2410.07395,B,,no,"When doing finetuning, we sample another 32 labeled target samples to finetune the model."
+AX2410.18164,A,,yes,only 10 labeled rows are provided for each class in each training table
+AX2502.02672,B,,no,we randomly sub-sample train/val splits as well as sample HPO initilization
+AX2502.20268,A,,yes,All models were trained using k-shot examples as the training set
+AX2505.05237,A,,yes,none found
+AX2505.07853,A,,yes,"presenting the model with two exemplar traffic crashes, one in each severity category"
+AX2506.15329,A',min_fill,yes,ensuring that the labeled set includes at least one example from each class
+AX2507.23227,B,,no,k labeled rows are randomly drawn from the corresponding ICL pool as examples
+AX2508.09263,A,,yes,The remaining data are balanced by sampling K instances per class
+AX2508.11258,B,,no,"all datasets are randomly split into train, validation, and test sets"
+AX2508.21561,B,,no,randomly sampling some instances from the training split as the training set
+AX2509.25207,A,,yes,"shot_per_class = shot // len(setup_info[""label_list""])"
+AX2511.05704,A,,yes,DN is chosen to be class-wise balanced.
+AX2512.00181,A',min_fill,yes,k examples are sampled from the training set (all classes represented)
+AX2601.11311,A,,yes,selecting examples in a class-balanced manner whenever possible
+AX2601.13763,A',prop_min,unclear,first sampling at least one example per travel mode
+AX2602.11700,B,,no,construct the in-context support set by sampling rows from the same table
+AX2602.15844,A',prop,unclear,we maintain the class balance of the original dataset when sampling the support set
+AX2603.03805,B,,no,the context examples are sampled uniformly at random from the training split
+AX2603.04321,A,,yes,"in a 5-shot experiment, the support set contains 5 examples per class"
+AX2603.17191,B,,no,k labeled examples are randomly sampled from the corresponding ICL pool
+AX2603.19497,A',other,no,a fraction ra of anomalous samples is randomly selected and assigned anomaly labels
+AX2603.27385,A',min_fill,yes,The initial labeled context L0 contains one randomly sampled instance per class.
+AX2604.06758,A,,yes,we sample k examples per class uniformly at random from the remaining
+AX2604.12596,C,,no,global context from the most recent database snapshots
+AX2604.16412,A',min_fill,yes,"The labeled set size is determined by labeled fractions L={0.01, 0.05, 0.10}"
+AX2604.27195,A',prop,unclear,generated 10 stratified training subsets to preserve class proportions
+AX2605.01810,A',prop,unclear,of training labels uniformly at random (stratified by class)
+AX2605.08519,A,,yes,the support set contains K examples of each of N classes
+AX2605.12411,B,,no,we randomly select K of the agent's games as the K-shot pool
+AX2605.17406,A,,unclear,"Each target event is triggered 50 times, resulting in N=50 samples per event"
+AX2605.24417,A',prop,unclear,Every few-shot setting uses five independent stratified demonstration draws.
+AX2605.26068,A',other,no,where a fixed percentage of anomalies are labeled
+AX2605.27254,C,,no,with the number of medoids fixed to the labeling budget K
+AX2606.05481,B,,no,windows are sampled uniformly without replacement from the N eligible training windows
+AX2606.07674,C,,unclear,selected by the movement-disorder specialists as collectively representative of the cohort's phenotypic spectrum
+AX2606.11640,A,,yes,sampling k labeled instances per task (or per class)
+AX2606.19509,A,,yes,"Few-shot (FS), incorporating four class-balanced labeled examples"
+AX2607.16031,A',prop_min,yes,We set a minimum of 1 sample per target class
+AX2608.03565,B,,no,account for the inherent variance of random context selection
+AX2608.13601,A',prop_min,yes,Each trial began with the same stratified set of 20 trusted clean labels
+AX2608.16039,A,,yes,the few-shot variable k is always an even class to have equal number
+AX2608.21386,A,,yes,a task is a small balanced support set
+AX2608.24381,A',prop,no,"stratified; counts follow Table 5, without guaranteed class coverage"
+AX2608.26758,A',other,yes,"failure samples are allocated budget first, with non-failures filling the remainder"
+AX2608.26844,A,,yes,"two labeled examples, one benign and one malicious, sampled from the validation set"
+AX2608.30086,A,,yes,"k=12 balanced labeled few-shot examples (6 default, 6 non-default)"
+AX2609.04013,A,,yes,"low-data training subsets of size 4, 8, 16, and 32"
+AX2609.30789,A',prop,unclear,"ten stratified support/query draws at support sizes of 16, 32, 64, 128"
+AX2610.06679,A',prop,unclear,The student context Cstudent is a stratified random subset of Cfull
+AX2610.07996,A',min_fill,yes,"n0 = 32 demonstrations of P, one per class and the others drawn uniformly"
+AX2610.10227,A,,yes,Table 2 reports the results with #shots=2 per class
+AX2610.23765,A,,yes,we fed the model only |M| = 8 labeled anomalies
+AX2610.23923,A,,yes,"outperforms existing zero-shot and 4-, 8-, and 16-shot tabular learning methods"
+AX2610.27703,A',min_fill,yes,"For each random seed, DL is obtained using ρ∈{0.01,0.05,0.10}"
+H24fbd01a,A,,yes,We start training with two fully observed samples per class
+H59ff8d35,A',prop,unclear,The selection of labeled and unlabeled examples was done in a stratified manner
+Hd70e5123,A,,yes,"randomly selecting N × K samples, with K samples from each of the N classes"
+Hed088232,A',prop,unclear,labeled examples are sampled in a stratified manner according to the class distribution

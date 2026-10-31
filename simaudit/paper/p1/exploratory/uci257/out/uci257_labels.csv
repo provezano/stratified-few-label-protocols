@@ -1,0 +1,6 @@
+code,raw,normalised,merged_code,count,first_row,last_row,rows_0_257,rows_258_402
+0,High,high,0,102,1,399,63,39
+1,Low,low,1,129,2,400,83,46
+2,Middle,middle,2,122,3,402,88,34
+3,Very Low,very low,3,26,258,386,0,26
+4,very_low,very low,3,24,0,208,24,0

@@ -1,0 +1,19 @@
+{
+  "n": 32,
+  "category": {
+    "raw_agreement": 0.938,
+    "cohen_kappa": 0.918
+  },
+  "coverage_forced": {
+    "raw_agreement": 0.938,
+    "cohen_kappa": 0.898
+  },
+  "few_shot": {
+    "raw_agreement": 0.969,
+    "cohen_kappa": 0.871
+  },
+  "main_metric": {
+    "raw_agreement": 0.844,
+    "cohen_kappa": 0.79
+  }
+}

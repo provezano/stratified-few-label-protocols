@@ -1,0 +1,25 @@
+{
+  "pmlb": {
+    "commit": "7c1f4bdc00136dc2e55c87fa6b8ba6e8af6d1a68",
+    "summary_sha256": "d658820a844a555776273a2c1b6766eba983bb078e3bcc539141b1ac2cc33960"
+  },
+  "uci": {
+    "api": "https://archive.ics.uci.edu/api",
+    "snapshot_sha256": "1f523469b00b0eaec11695f8b437131fcb638eb0c955dd8f194ec0bd5683de46",
+    "n_snapshot": 208,
+    "snapshot_file_sha256": "1f523469b00b0eaec11695f8b437131fcb638eb0c955dd8f194ec0bd5683de46"
+  },
+  "t1prime_selection": {
+    "seed": [
+      20261020,
+      8,
+      2
+    ],
+    "quota": 8,
+    "target": 72,
+    "n_t1prime": 52,
+    "n_balanced": 36,
+    "sum_n": 63418
+  },
+  "dev_selection_seed": 20261020
+}

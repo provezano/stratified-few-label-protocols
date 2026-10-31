@@ -1,0 +1,12 @@
+paper_id,category_adj,coverage_adj,verdict,alt_category,alt_coverage,decisive_source
+AX2306.08954,A',yes,final right,,,"main text p.9 Sec 3 + official code src/main.py"
+AX2311.09962,A',unclear,final right,,yes,"main text p.3 Sec 2 and p.5 Sec 3.1"
+AX2312.12112,A,yes,final right,,,"App. B (dataset splits) p.17"
+AX2403.15464,A,yes,final right,,,"main text p.3 (Few-Shot paragraph)"
+AX2404.09491,A,yes,final right,,,"App. C p.18 + official code utils.py get_dataset"
+AX2406.17322,A',yes,final right,,,"App. A.4 (Active Learning Setting) p.22"
+AX2508.17391,D,unclear,both defensible,E,,"main text p.11 Sec 4.4"
+AX2601.11311,A,yes,final right,,,"App. B (Data Preparation) p.12"
+AX2604.16412,A',yes,final right,,,"official code cc_ssl_openml.py make_ssl_splits (text alone gives D)"
+AX2610.23765,A,yes,codebook ambiguous,E,no,"main text p.4 Sec 3.1 and p.10 Sec 4.1"
+H24fbd01a,A,yes,final right,,,"main text p.8 Sec 4 + codebook rule for active learning"

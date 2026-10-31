@@ -1,0 +1,70 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  OMP_NUM_THREADS: "1"
+  OPENBLAS_NUM_THREADS: "1"
+  NUMBA_NUM_THREADS: "1"
+  PYTHONHASHSEED: "0"
+
+jobs:
+  reproduce:
+    name: Lock, compile and regenerate macro files
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up uv and Python 3.12
+        uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.6.5"  # the uv release that wrote uv.lock (lock revision 1)
+          python-version: "3.12"
+
+      - name: Check that uv.lock matches pyproject.toml
+        working-directory: simaudit
+        run: uv lock --locked
+
+      - name: Check that the package metadata builds
+        working-directory: simaudit
+        run: uv build --wheel --out-dir "$RUNNER_TEMP/dist"
+
+      # The full environment (uv sync --frozen) pulls PyTorch with CUDA wheels on Linux.
+      # Regenerating numbers from stored results needs only the scientific stack, so CI
+      # installs that subset at the exact versions pinned in uv.lock.
+      - name: Install the analysis subset at the versions of uv.lock
+        working-directory: simaudit
+        run: |
+          uv export --frozen --no-hashes --no-emit-project -o "$RUNNER_TEMP/constraints.txt"
+          uv venv --python 3.12 "$RUNNER_TEMP/venv"
+          uv pip install --python "$RUNNER_TEMP/venv/bin/python" \
+            -c "$RUNNER_TEMP/constraints.txt" numpy pandas scipy pyarrow tabulate
+          echo "PY=$RUNNER_TEMP/venv/bin/python" >> "$GITHUB_ENV"
+
+      - name: Byte-compile all Python sources
+        run: $PY -m compileall -q simaudit/src simaudit/paper simaudit/reports fetch_data.py
+
+      - name: Regenerate macro files from the stored results
+        run: |
+          (cd simaudit/paper/p1 && $PY make_numbers.py)
+          (cd simaudit/paper/p1 && $PY make_tables.py)
+          (cd simaudit/paper/p1/exploratory/human_check && $PY hc_analysis.py)
+          (cd simaudit/paper/p1/exploratory/prop5 && $PY make_prop5_numbers.py)
+          (cd simaudit && $PY paper/p1/exploratory/kumo_unused/summarize.py)
+
+      - name: Check that the regenerated files match the committed ones
+        run: |
+          git status --short
+          git diff --stat
+          git diff --exit-code

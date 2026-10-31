@@ -1,0 +1,11 @@
+group,k,n,share,wilson_lo,wilson_hi,coding_file
+A,40,100,0.4,0.3094012857712627,0.4979974139825367,paper/p1/exploratory/human_check/data/final_coding.csv
+A',33,100,0.33,0.24563122674486615,0.4269465628365927,paper/p1/exploratory/human_check/data/final_coding.csv
+B,19,100,0.19,0.12514751467908536,0.27778845455769235,paper/p1/exploratory/human_check/data/final_coding.csv
+C,8,100,0.08,0.04109346127318457,0.1499810776927723,paper/p1/exploratory/human_check/data/final_coding.csv
+A':prop,14,100,0.14,0.08526343626497376,0.2213718828487036,paper/p1/exploratory/human_check/data/final_coding.csv
+A':prop_min,5,100,0.05,0.021543679017992173,0.1117504698741045,paper/p1/exploratory/human_check/data/final_coding.csv
+A':min_fill,8,100,0.08,0.04109346127318457,0.1499810776927723,paper/p1/exploratory/human_check/data/final_coding.csv
+A':reject,1,100,0.01,0.0017674320446096452,0.05448619674900669,paper/p1/exploratory/human_check/data/final_coding.csv
+A':other,5,100,0.05,0.021543679017992173,0.1117504698741045,paper/p1/exploratory/human_check/data/final_coding.csv
+A':unsubtyped,0,100,0.0,0.0,0.03699349876899627,paper/p1/exploratory/human_check/data/final_coding.csv

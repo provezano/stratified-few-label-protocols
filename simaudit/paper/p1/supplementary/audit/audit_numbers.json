@@ -1,0 +1,82 @@
+{
+ "description": "Values of the systematic review that are not in analysis_output.json. Extracted once by extract_numbers.py from the internal review report, the protocol and the human-check sample; read by paper/p1/make_numbers.py.",
+ "values": {
+  "disagreement_pairs": {
+   "value": 80,
+   "source": "internal review report, Section 2, 'Disagreements' (pairs of paper and variable)"
+  },
+  "disagreement_papers": {
+   "value": 54,
+   "source": "internal review report, Section 2, 'Disagreements' (papers)"
+  },
+  "postcheck_corrections": {
+   "value": 1,
+   "source": "internal review report, Section 2, 'Post-check correction' (papers; see coding/adjudication_log_3_postcheck.csv)"
+  },
+  "code_read_papers": {
+   "value": 22,
+   "source": "internal review report, Section 2, 'Code read' (papers, by at least one coder)"
+  },
+  "human_check_sample_size": {
+   "value": 32,
+   "source": "human-check sample file (rows; the same number is stated in Section 2 of the internal review report)"
+  },
+  "human_check_percent": {
+   "value": 20,
+   "source": "internal review report, Section 2 (planned human check of a random share)"
+  },
+  "report_n_few_shot": {
+   "value": 132,
+   "source": "internal review report, Section 3 (few-shot count; checked against analysis_output.json)"
+  },
+  "inaccessible_worst_case_percent": {
+   "value": "44.3",
+   "source": "internal review report, Section 3 (share of A + A' among all reduced-label papers if no inaccessible paper is A/A')"
+  },
+  "inaccessible_best_case_percent": {
+   "value": "52.8",
+   "source": "internal review report, Section 3 (share of A + A' among all reduced-label papers if every inaccessible paper is A/A')"
+  },
+  "old_audit_total_papers": {
+   "value": 39,
+   "source": "internal review report, Section 6 heading (papers in the earlier audit)"
+  },
+  "old_audit_reduced_label_papers": {
+   "value": 26,
+   "source": "internal review report, Section 6 heading (earlier-audit papers with reduced labels)"
+  },
+  "old_audit_few_shot_k": {
+   "value": 12,
+   "source": "internal review report, Section 6, item 2 (earlier estimate, A + A' few-shot papers)"
+  },
+  "old_audit_few_shot_n": {
+   "value": 16,
+   "source": "internal review report, Section 6, item 2 (earlier estimate, few-shot papers)"
+  },
+  "old_audit_few_shot_percent": {
+   "value": 75,
+   "source": "internal review report, Section 6, item 2 (earlier estimate, percent)"
+  },
+  "date_window_start": {
+   "value": "2019-01-01",
+   "source": "00_PROTOCOL.md, Section 2 (date window)"
+  },
+  "date_window_end": {
+   "value": "2026-10-27",
+   "source": "00_PROTOCOL.md, Section 2 (date window)"
+  },
+  "n_label_scarcity_terms": {
+   "value": 27,
+   "source": "00_PROTOCOL.md, Section 4 (terms L)"
+  },
+  "snowball_seed_papers": {
+   "value": [
+    "VIME (NeurIPS 2020)",
+    "SCARF (ICLR 2022)",
+    "STUNT (ICLR 2023)",
+    "TabLLM (AISTATS 2023)"
+   ],
+   "source": "00_PROTOCOL.md, Section 3, item 5 (forward snowballing)"
+  }
+ }
+}

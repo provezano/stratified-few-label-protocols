@@ -1,0 +1,17 @@
+key,did,n,d,C
+uci:519,-1000000519,299,12,2
+pmlb:biomed,-298032972,209,8,2
+pmlb:glass2,-776526808,163,9,2
+pmlb:ionosphere,-285622297,351,34,2
+pmlb:molecular_biology_promoters,-140070728,106,57,2
+pmlb:corral,-321653624,160,6,2
+pmlb:bupa,-158349848,345,5,2
+uci:267,-1000000267,1372,4,2
+pmlb:saheart,-629865933,462,9,2
+pmlb:Hill_Valley_with_noise,-70999782,1212,100,2
+pmlb:mofn_3_7_10,-33590086,1324,10,2
+pmlb:ecoli,-13510280,327,7,5
+pmlb:led24,-352495961,3200,24,10
+pmlb:new_thyroid,-842065541,215,5,3
+uci:212,-1000000212,310,6,3
+pmlb:cars,-512854293,392,8,3

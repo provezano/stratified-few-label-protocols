@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.eggs/
+
+# Environments (uv, venv) and secrets
+.venv/
+venv/
+.env
+.env.*
+*.pem
+
+# Tool caches and reports
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.coverage
+.coverage.*
+coverage.xml
+coverage.json
+htmlcov/
+.ipynb_checkpoints/
+
+# Data written by fetch_data.py and the pool builders (third-party data, never committed)
+simaudit/data/cache/
+data/cache/
+simaudit/data/uci_api_snapshot.json.gz
+simaudit/paper/p1/exploratory/case_study/third_party/
+
+# Run logs and process markers
+*.log
+*.pid
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
