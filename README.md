@@ -66,7 +66,7 @@ Paths are relative to `simaudit/` unless they start with `datasets/`, `environme
 | `environment/` | `freeze.txt` (Python and every installed distribution) and `models.json` (checkpoint file names, revisions, SHA-256). No weights. |
 | `seeds/` | The provenance file of every run of Studies 4, 7, 9, 12 and the corrections: base seed, seed namespaces, grids, repetitions, learners, dataset ids, code digest. Study 15: `results/study15/second_frame/provenance.json`. |
 | `simaudit/README.md` | Pointer to this file (package metadata). |
-| `REVISIONS.md` | The revision identifiers that the appendix "Pre-registration log" cites (R001–R013, R015–R018), each with its date, file and a one-line description. R014 is an uncited alias of R012 (same commit). Later identifiers replace other commit hashes quoted in the files. |
+| `REVISIONS.md` | The revision identifiers that the appendix "Pre-registration log" cites (R001–R013, R015–R020), each with its date, file and a one-line description. R014 is an uncited alias of R012 (same commit). Later identifiers replace other commit hashes quoted in the files. |
 | `fetch_data.py` | Downloads the public DEV, T1′ and case-study data and checks each file against a pinned SHA-256 (no third-party data is included). |
 | `LICENSE`, `LICENSE-DATA`, `CITATION.cff` | Licences (see "Licence") and citation metadata. |
 | `.github/workflows/ci.yml` | Continuous integration: lock check, byte-compilation and regeneration of five macro files from the stored results. |
@@ -83,6 +83,7 @@ Only the following Markdown documents are included. Internal working notes, plan
 | `prereg/STUDY13_HELDOUT_CONFIRMATION.md` | Study 13 (HELD-OUT study), Amendments 1–3; run once at the joint opening on 2026-10-30. |
 | `prereg/JOINT_OPENING_2026-10-30.md` | The joint HELD-OUT opening note (R018): studies in the event, confirmatory cells, the cross-study Holm family of 19 tests, launch settings. |
 | `prereg/STUDY15_SECOND_FRAME.md` | Study 15 (second frame), frozen 2026-10-31 before any fit. |
+| `prereg/STUDY17_COVERAGE_CONDITIONED.md` | Study 17 (third frame, 60 tables; contrasts beyond one label per class), frozen 2026-11-01 before any fit (R019), with Amendment 1 (R020, 2026-11-02, before any result was read). |
 | `prereg/PILOT_I2.md`, `prereg/STUDY4_LABEL_SELECTION.md`, `prereg/STUDY8_EXPANSION.md` | Context: the pilot defines DEV; Study 4 is the first study (exploratory here); Study 8 builds the pool from which T1′ comes. |
 | `reports/STUDY7_REPORT.md`, `STUDY9_T1PRIME_OUTPUT.md`, `STUDY9_T1PRIME_REPORT.md`, `STUDY12_REPORT.md`, `STUDY12_UCI257_EXPLORATORY.md`, `STUDY4_BASELINES.md`, `STUDY4_STAGE_A.md`, `THEORY_CHECKS.md` | Generated reports that the macro generators parse. |
 | `reports/P1_PROTOCOL_CORRECTIONS_EXPLORATORY.md` | Plan and criteria of the protocol corrections, committed before any correction was computed (R013), followed by the results; parsed by `make_numbers.py`. |
@@ -93,6 +94,7 @@ Only the following Markdown documents are included. Internal working notes, plan
 | `paper/p1/exploratory/case_study/PREREG.md` | Pre-registration of the TabEBM case study (R002), with its amendments. |
 | `paper/p1/exploratory/fm_extra/limix_t1p/PLAN.md`, `fm_extra/dose_plan.md` | Plans of the LimiX run on T1′ and of the dose experiment for fm6–fm8 on DEV, fixed before the runs. |
 | `paper/p1/exploratory/seed_indep/PLAN.md` | Plan and reading rule of the independent-seed check, fixed before the run. |
+| `paper/p1/rebuttal_prep/seed_indep_t1p/out/SUMMARY_T1P.md` | Generated summary of the same check on PMLB/UCI (four pre-registered FMs); its plan and reading rule are in the docstring of `run_seed_indep_t1p.py`, committed before the run. |
 | `paper/p1/exploratory/e17_metrics/e17_report.md` | Section 1 holds the expected directions of the metric panel, written before any E17 metric was computed; the rest reports E17. |
 | `paper/p1/exploratory/tabdpt_check/NOTE.md` | The documentary source of the `\Tdpt*` counts (TabDPT pre-training corpus). |
 | `paper/p1/exploratory/human_check/ADJUDICATION.md` | Adjudication of the disagreements between the blind human codes and the final codes. |
@@ -128,10 +130,12 @@ All macro-file paths below are relative to `paper/p1/`.
 | `exploratory/realtabpfn_check/out/realtabpfn_numbers.tex` | `\ExRtp*` (Real-TabPFN overlap sensitivity, fm1) | `uv run python paper/p1/exploratory/realtabpfn_check/realtabpfn_check.py` | `results/study7/a`, `results/study12`, `fm_extra/out/*_cells.csv`; the HELD-OUT id list (withheld: `overlap.csv` is stored without its HELD-OUT rows, none of which overlaps, so the script does not rerun here) | no |
 | `exploratory/tabdpt_check/tabdpt_numbers.tex` | `\Tdpt*` (TabDPT pre-training corpus counts) | none (documentary; `tabdpt_check/NOTE.md`) | the two cited papers and public OpenML metadata | no |
 | `exploratory/seed_indep/seed_indep_numbers.tex` | `\ExSeedInd*` (independent learner seed; plan `seed_indep/PLAN.md`) | fits: `run_seed_indep.py`; numbers: `uv run python paper/p1/exploratory/seed_indep/analyze_seed_indep.py` | `seed_indep/out/dev/*.parquet` (included); the HELD-OUT row is an aggregate (fits not included) | no |
+| `seedindep_t1p_numbers.tex` | `\ExSeedIndTp*` (independent learner seed on PMLB/UCI, exploratory) | fits and reproduction control: `rebuttal_prep/seed_indep_t1p/run_seed_indep_t1p.py`; numbers: `uv run python paper/p1/rebuttal_prep/seed_indep_t1p/make_seedindep_t1p_numbers.py` | `rebuttal_prep/seed_indep_t1p/out/summary_t1p.csv`, `repro_t1p.csv` (included; the per-fit files are not) | no |
 | `exploratory/sevenfm/out/sevenfm_b1.tex` … `sevenfm_b11.tex` | `\ExSevFm*` (B1–B11 with seven FMs) | `uv run python paper/p1/exploratory/sevenfm/bN_*.py 7` (`harness.py`) | the original analyses' inputs plus the fm6–fm8 fits; their outputs `sevenfm/out/bN/seven/` are included, including B2's scored-draw cache `b2/seven/draws_scored.parquet` | B2, B3, B5, B6, B10: yes |
 | `heldout_numbers.tex`, `heldout_hand.tex`, `exploratory/heldout/out/heldout_{ci,m3plus}_numbers.tex` | `\HO*`, `\ExHO*` (HELD-OUT, joint opening) | `simaudit.analysis.joint_heldout`; `exploratory/heldout/{ci_macros,m3plus,s3_bstar}.py` | the HELD-OUT results (not included; the HELD-OUT ids stay withheld); the macro files and the aggregate `heldout/out/*.csv` are included | no |
 | `study15_numbers.tex` | `\SF*` (Study 15, confirmatory family and pre-declared secondary values) | `uv run python -m simaudit.analysis.study15` (also writes `results/study15/study15_results.json`) | `results/study15/second_frame/*.parquet` (metric rows), `integrity_screen.csv`, `data/pool_second_frame.yaml`; the descriptive ratio to HELD-OUT also reads the joint HELD-OUT results (not included; without them the ratio is empty) | no |
 | `study15_secondary_numbers.tex` | `\SF*` (further pre-declared secondary values, unadjusted) | `uv run python paper/p1/make_study15_secondary.py` | `results/study15/study15_results.json` | no |
+| `study17_numbers.tex` | `\SSvt*` (Study 17: confirmatory families P, E, Q, L1; pre-declared secondary families; descriptive subsets; frame counts) | `uv run python paper/p1/make_study17_numbers.py` | `results/study17/study17_results.json` (written once by `tools/study17/analysis.py`; console output in `analysis_output.txt`), `data/pool_study17.yaml` | no |
 | `exploratory/sf_autopsy/sf_autopsy_numbers.tex`, `sf_sign2x2_numbers.tex` | `\ExSFA*` (Study 15 autopsy, exploratory, post hoc) | `uv run python paper/p1/exploratory/sf_autopsy/sf_autopsy.py`, `sf_sign2x2.py` | `results/study7/a`, `results/study12`, `results/study15/second_frame`, the e10 pool tables, `prereg/STUDY15_SECOND_FRAME.md`; HELD-OUT enters only in aggregate (its results are not included, so the scripts do not rerun here) | no |
 | `exploratory/kumo_unused/out/kumo_unused_numbers.tex` | `\ExKumoUnused*` (Kumo, declared-but-unused classes) | fits: `run_kumo_unused.py`; numbers: `uv run python paper/p1/exploratory/kumo_unused/summarize.py` | `kumo_unused/out/runs/*.parquet` (included whole, 2 MB); the fits read `results/study7/a/*_fm3.parquet` | fits: yes; numbers: no |
 
@@ -181,8 +185,9 @@ Every table in the paper is typeset from the macro files above:
 - `tab:hyp` (hypotheses), `tab:slopes`, `tab:claims`, `tab:seqt1`: `numbers_p1.tex`, `exploratory_numbers.tex`, `rv_numbers.tex`, `claims_audit_numbers.tex`;
 - `tab:distpfn`, `tab:distpfntp`: the two DistPFN macro files;
 - `tab:e17`: `e17_numbers.tex`;
-- `tab:seedindep`: `seed_indep_numbers.tex`;
+- `tab:seedindep`: `seed_indep_numbers.tex` and `seedindep_t1p_numbers.tex`;
 - `tab:secondframe`: `study15_numbers.tex` and `study15_secondary_numbers.tex`;
+- `tab:study17`: `study17_numbers.tex`;
 - `tab:prisma`, `tab:auditagree`, `tab:auditsum`, `tab:auditmetric`, `tab:auditex` (audit): `\SysAudit*` from `supplementary/audit/` and `hc_numbers.tex`;
 - the per-dataset, metric-convention and redraw tables: `tables_p1.tex`, `tables_metrics_p1.tex` and `tables_redraw_p1.tex`.
 
@@ -242,7 +247,7 @@ It checks each file against the SHA-256 pinned in `datasets/dev.csv`, `datasets/
 
 ### 1. Numbers, tables and figures from the stored results (no model fits)
 
-The commands in the macro-file map regenerate each file. The committed `.tex`, `.csv`, figure and `out/` files are the reference outputs to compare with (`git diff` shows any difference). We checked, from a fresh copy with the network disabled, that `make_numbers.py`, `make_tables.py`, `make_exploratory_numbers.py`, `hc_analysis.py`, `make_prop5_numbers.py`, `kumo_unused/summarize.py`, `fm_extra/summarize_t1p_fm8.py`, `make_study15_secondary.py`, the review parts that need no per-fit probabilities and `make_rv_numbers.py`, and `figures/make_figures.py` reproduce their included macro files byte for byte and their figures pixel for pixel (the PDF metadata differs). Three review parts (`bc_contrasts.py`, `s9_sequential_e10.py`, `r6_checks.py`) read labels, so they need `fetch_data.py` first.
+The commands in the macro-file map regenerate each file. The committed `.tex`, `.csv`, figure and `out/` files are the reference outputs to compare with (`git diff` shows any difference). We checked, from a fresh copy with the network disabled, that `make_numbers.py`, `make_tables.py`, `make_exploratory_numbers.py`, `hc_analysis.py`, `make_prop5_numbers.py`, `kumo_unused/summarize.py`, `fm_extra/summarize_t1p_fm8.py`, `make_study15_secondary.py`, `make_study17_numbers.py`, `make_seedindep_t1p_numbers.py`, the review parts that need no per-fit probabilities and `make_rv_numbers.py`, and `figures/make_figures.py` reproduce their included macro files byte for byte and their figures pixel for pixel (the PDF metadata differs). Three review parts (`bc_contrasts.py`, `s9_sequential_e10.py`, `r6_checks.py`) read labels, so they need `fetch_data.py` first.
 
 ### 2. Re-running the experiments (CPU; hours to days)
 
@@ -272,6 +277,8 @@ The TabEBM case study (`exploratory/case_study/`) runs in two stages, both from 
 - stage B runs in the package environment.
 
 Study 13 (HELD-OUT) was run once, at the joint opening on 2026-10-30. Its pre-registration, the opening note and its macro files are included; its data, ids and per-fit results are not. Study 15 was run once after its freeze on 2026-10-31; its encoded tables are built by `simaudit.data.second_frame` from the raw files listed in `data/pool_second_frame.yaml`, a build that also checks content hashes against HELD-OUT (withheld), so the included `frame_build.json` records its result.
+
+Study 17 was run once after its freeze on 2026-11-01, and its analysis (`tools/study17/analysis.py`) once on 2026-11-02. Only its results JSON and the console output of that analysis are included: its per-fit files (about 200 MB) are too large for this repository. Its 60 tables are public (OpenML, UCI, Zenodo, figshare); `data/pool_study17.yaml` gives each source, licence, declared target and content hash. Its fitting code depends on the encoded-table cache, which is not included.
 
 ## What is not included, and why
 

@@ -126,7 +126,7 @@ def write_tables(runs: pd.DataFrame, gap: pd.DataFrame, eff: pd.DataFrame) -> No
     pc = float((runs.uniform_macro_f1 - runs.stored_pc_macro_f1).abs().max())
     n = runs.dataset.nunique()
     L = ["# Post-hoc prior corrections on T1′ (Study 12 probabilities), EXPLORATORY", "",
-         f"Plan: PLAN.md (commit R022). {n} tables; random 20 / stratified 5 reps. "
+         f"Plan: PLAN.md (commit R024). {n} tables; random 20 / stratified 5 reps. "
          "Means over tables, paired bootstrap 95% CI (10k).", "",
          f"Checks: max |none − stored| macro-F1 {chk['macro_f1']:.1e}, accuracy "
          f"{chk['accuracy']:.1e}; max |uniform − stored pc_macro_f1| {pc:.1e}.", ""]

@@ -1,9 +1,9 @@
 # Revision identifiers
 
-Git commit hashes are replaced by neutral identifiers. R001 to R018 are the revisions that the paper
+Git commit hashes are replaced by neutral identifiers. R001 to R020 are the revisions that the paper
 cites (appendix "Pre-registration log"); they are listed with the commit date, the file each one
 freezes or changes, and a one-line description. R014 is not cited: it is an alias of R012, whose commit
-holds both Study 13 Amendment 1 and Study 9 Amendment 2; the files of this repository use R012. Identifiers from R019 on replace
+holds both Study 13 Amendment 1 and Study 9 Amendment 2; the files of this repository use R012. Identifiers from R021 on replace
 other commit hashes quoted inside the files of this repository, with the commit date and message. The mapping
 to the commits of the development history is not public (that history references the sealed HELD-OUT set); it is available from the author on request.
 
@@ -29,34 +29,36 @@ to the commits of the development history is not public (that history references
 | R016 | 2026-10-28 | `prereg/STUDY9_HOW_MANY_LABELS.md` | Study 9 Amendment 4 (integrity screen on HELD-OUT, flag-only; SENS-INT/SENS-ID), before HELD-OUT access |
 | R017 | 2026-10-29 | `prereg/STUDY13_HELDOUT_CONFIRMATION.md` | Study 13 Amendment 3 (LimiX-16M as third secondary learner; S-10 and S-11 Holm over 3; code in a separate earlier commit), before HELD-OUT opening |
 | R018 | 2026-10-30 | `prereg/JOINT_OPENING_2026-10-30.md` | Joint HELD-OUT opening note (Studies 9, 13, 10; cross-study Holm family of 19 tests; launch settings), committed before any HELD-OUT access |
+| R019 | 2026-11-01 | `prereg/STUDY17_COVERAGE_CONDITIONED.md` | Study 17 pre-registration (coverage-conditioned and coverage-aware contrasts beyond one label per class, third frame of 60 tables), frozen before any fit |
+| R020 | 2026-11-02 | `prereg/STUDY17_COVERAGE_CONDITIONED.md`; `tools/study17/analysis.py` | Study 17 Amendment 1: the code of the frame-level rule C-COV now also checks that P is replicated for no FM, as Sec. 4.2 says; before any result was read |
 
 ## Other revisions quoted in the repository files
 
 | ID | Date | Commit message |
 |---|---|---|
-| R019 | 2026-10-28 | docs(paper): P1 exploratory dose-response arms F/S/N |
-| R020 | 2026-10-28 | docs(p1-exploratory): plan for Correction 4 (reweighting/GREG, coverage-only) on T1' Study 12 runs, before the run (audit row 22) |
-| R021 | 2026-10-28 | docs(p1-exploratory): DistPFN plan on stored Study 7 DEV contexts (post hoc, before any run) |
-| R022 | 2026-10-28 | docs(p1-exploratory): plan for post-hoc prior corrections (DistPFN, EM, p/pi) on T1' Study 12 probabilities, before the run |
-| R023 | 2026-10-29 | plan(p1-exploratory): Kumo declared-but-unused class test on DEV (claims-audit row 26), written before any DEV fit |
-| R024 | 2026-10-30 | docs(p1): TabDPT v1.3 (fm6) pretraining-contamination note: B.1 overlap and v1.2/v1.3 corpus eligibility |
-| R025 | 2026-10-30 | docs(p1): heldout_branches synced to blind review 4 - new finding (2) wording with the (ii-c) verdict word, flip over six learners, tab:main column for HELD-OUT, conclusion without emph lead-ins, literal mechanism verdicts unaffected by HELD-OUT |
-| R026 | 2026-10-30 | docs(p1): M7 reproducibility paragraph: Study 7 (a) probabilities shipped, rest at camera-ready; REVISIONS.md content; TabPFN v3.5 access |
-| R027 | 2026-10-30 | docs(prereg): freeze Study 10 (decision of 2026-10-29; delta, Sec. 8 table and budget confirmed; G4 passed with exceptions E-T7-1/E-T7-2) |
-| R028 | 2026-10-27 | feat(p1-exploratory): fm_extra feasibility (TabDPT v1.3, Mitra-v2, LimiX-16M adapters, probes, smoke) |
-| R029 | 2026-10-29 | plan(p1-exploratory): LimiX-16M on T1' with Study 12 draws (design identical to fm6/fm7), after timing pilot, before the run |
-| R030 | 2026-10-29 | results(p1-exploratory): LimiX-16M on T1' per plan R029 (52 tables, Study 12 draws): gap +0.067 [+0.056,+0.079] mean over m, positive at every m; ExLimixTp macros |
-| R031 | 2026-10-29 | results(p1-exploratory): LimiX-16M T1' accuracy gap (same method as macro-F1; added later, not in plan R029) + LimiX DEV accuracy gap; ExLimixTpAcc*/ExLimixDevAcc* macros |
-| R032 | 2026-10-29 | docs(p1-exploratory): value gate and fixed analysis for Study 7 Part (c) on TabDPT, Mitra and LimiX (DEV, before any fit) |
-| R033 | 2026-10-29 | results(p1-exploratory): Part (c) fm6-fm8 optimization check (identical outputs) and timing pilot; no analysis |
-| R034 | 2026-10-29 | results(p1-exploratory): Study 7 Part (c) for TabDPT, Mitra, LimiX on DEV: decline and corrected residual in all 6 cells; 0 beyond, 2 inconclusive, 1 not beyond (outcome O2) |
-| R035 | 2026-10-29 | feat(study13): fm8 LimiX-16M as third secondary FM in the worker and runner (Amendment 3 code) |
-| R036 | 2026-10-31 | feat(study15): second-frame loader, runner and analysis for the post-FM replication of Study 13 test (i) |
-| R037 | 2026-10-21 | docs(prereg): Study 8 Amendment 1, Tier 2 (PMLB + OpenML remainder) and Tier 3, before any download |
-| R038 | 2026-10-21 | docs(prereg): Study 8 Amendment 2, UCI Tier 4, OpenML-free set T1', HELD-OUT checks and integrity screens |
-| R039 | 2026-10-21 | feat(pool): UCI Tier 4 loader, integrity screens and T1' assembly (Study 8 Amendment 2) |
-| R040 | 2026-10-21 | fix(pool): one-directional, rounding- and recoding-robust row overlap; pass integrity CSV to build-t1prime |
-| R041 | 2026-10-21 | docs(study9): DEV dry-run report and freeze of the analysis code |
-| R042 | 2026-10-28 | feat(p1-exploratory): UCI 257 label-spelling sensitivity (Very Low/very_low) on stored Study 9 fits |
-| R043 | 2026-10-28 | docs(report): Study 12, Study 7 replication on T1' (52 tables, 4 FMs) |
-| R044 | 2026-10-31 | docs(p1): fix meaning changes found by readability verifier 2 |
+| R021 | 2026-10-28 | docs(paper): P1 exploratory dose-response arms F/S/N |
+| R022 | 2026-10-28 | docs(p1-exploratory): plan for Correction 4 (reweighting/GREG, coverage-only) on T1' Study 12 runs, before the run (audit row 22) |
+| R023 | 2026-10-28 | docs(p1-exploratory): DistPFN plan on stored Study 7 DEV contexts (post hoc, before any run) |
+| R024 | 2026-10-28 | docs(p1-exploratory): plan for post-hoc prior corrections (DistPFN, EM, p/pi) on T1' Study 12 probabilities, before the run |
+| R025 | 2026-10-29 | plan(p1-exploratory): Kumo declared-but-unused class test on DEV (claims-audit row 26), written before any DEV fit |
+| R026 | 2026-10-30 | docs(p1): TabDPT v1.3 (fm6) pretraining-contamination note: B.1 overlap and v1.2/v1.3 corpus eligibility |
+| R027 | 2026-10-30 | docs(p1): heldout_branches synced to blind review 4 - new finding (2) wording with the (ii-c) verdict word, flip over six learners, tab:main column for HELD-OUT, conclusion without emph lead-ins, literal mechanism verdicts unaffected by HELD-OUT |
+| R028 | 2026-10-30 | docs(p1): M7 reproducibility paragraph: Study 7 (a) probabilities shipped, rest at camera-ready; REVISIONS.md content; TabPFN v3.5 access |
+| R029 | 2026-10-30 | docs(prereg): freeze Study 10 (decision of 2026-10-29; delta, Sec. 8 table and budget confirmed; G4 passed with exceptions E-T7-1/E-T7-2) |
+| R030 | 2026-10-27 | feat(p1-exploratory): fm_extra feasibility (TabDPT v1.3, Mitra-v2, LimiX-16M adapters, probes, smoke) |
+| R031 | 2026-10-29 | plan(p1-exploratory): LimiX-16M on T1' with Study 12 draws (design identical to fm6/fm7), after timing pilot, before the run |
+| R032 | 2026-10-29 | results(p1-exploratory): LimiX-16M on T1' per plan R031 (52 tables, Study 12 draws): gap +0.067 [+0.056,+0.079] mean over m, positive at every m; ExLimixTp macros |
+| R033 | 2026-10-29 | results(p1-exploratory): LimiX-16M T1' accuracy gap (same method as macro-F1; added later, not in plan R031) + LimiX DEV accuracy gap; ExLimixTpAcc*/ExLimixDevAcc* macros |
+| R034 | 2026-10-29 | docs(p1-exploratory): value gate and fixed analysis for Study 7 Part (c) on TabDPT, Mitra and LimiX (DEV, before any fit) |
+| R035 | 2026-10-29 | results(p1-exploratory): Part (c) fm6-fm8 optimization check (identical outputs) and timing pilot; no analysis |
+| R036 | 2026-10-29 | results(p1-exploratory): Study 7 Part (c) for TabDPT, Mitra, LimiX on DEV: decline and corrected residual in all 6 cells; 0 beyond, 2 inconclusive, 1 not beyond (outcome O2) |
+| R037 | 2026-10-29 | feat(study13): fm8 LimiX-16M as third secondary FM in the worker and runner (Amendment 3 code) |
+| R038 | 2026-10-31 | feat(study15): second-frame loader, runner and analysis for the post-FM replication of Study 13 test (i) |
+| R039 | 2026-10-21 | docs(prereg): Study 8 Amendment 1, Tier 2 (PMLB + OpenML remainder) and Tier 3, before any download |
+| R040 | 2026-10-21 | docs(prereg): Study 8 Amendment 2, UCI Tier 4, OpenML-free set T1', HELD-OUT checks and integrity screens |
+| R041 | 2026-10-21 | feat(pool): UCI Tier 4 loader, integrity screens and T1' assembly (Study 8 Amendment 2) |
+| R042 | 2026-10-21 | fix(pool): one-directional, rounding- and recoding-robust row overlap; pass integrity CSV to build-t1prime |
+| R043 | 2026-10-21 | docs(study9): DEV dry-run report and freeze of the analysis code |
+| R044 | 2026-10-28 | feat(p1-exploratory): UCI 257 label-spelling sensitivity (Very Low/very_low) on stored Study 9 fits |
+| R045 | 2026-10-28 | docs(report): Study 12, Study 7 replication on T1' (52 tables, 4 FMs) |
+| R046 | 2026-10-31 | docs(p1): fix meaning changes found by readability verifier 2 |

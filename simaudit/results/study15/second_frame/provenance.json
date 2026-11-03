@@ -4,7 +4,7 @@
   "runner_sha256": "02d16554c30f63f9a711ab5f609aec591b4da9571979061d7609502a5d8db944",
   "study13_runner_sha256": "e06e1444c8f15432086b13c0cbddec12e9517c150260c15b3b4b1a88a8a4df6b",
   "loader_sha256": "1e344eae8f0c6c2234f089af55f21ae1bf77ac39ac976a0f76bff44ac1f97e71",
-  "git_head": "R044",
+  "git_head": "R046",
   "host": "<host>",
   "pythonhashseed": null,
   "base_seed": 20261020,

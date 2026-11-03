@@ -135,7 +135,7 @@ def fmt(r: pd.Series) -> str:
 def summary(runs: pd.DataFrame, gap: pd.DataFrame, eff: pd.DataFrame) -> None:
     chk = {m: float((runs[f"none_{m}"] - runs[f"stored_{m}"]).abs().max()) for m in METRICS}
     L = ["# DistPFN on stored Study 7 DEV contexts (EXPLORATORY)", "",
-         "Plan: PLAN.md (commit R021, before the run). Post hoc on the stored Study 7 "
+         "Plan: PLAN.md (commit R023, before the run). Post hoc on the stored Study 7 "
          "Part (a) probabilities; no FM called; 20 DEV tables; random 20 reps, stratified 5 "
          "reps per (table, FM, m). Means over tables, paired bootstrap 95% CI (10k).", "",
          f"Check: recomputed 'none' vs stored, max |diff| macro-F1 = {chk['macro_f1']:.1e}, "
