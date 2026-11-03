@@ -22,7 +22,7 @@ figures:
 # Default: tectonic (brew install tectonic); output in build/.
 pdf: main.tex numbers_p1.tex tables_p1.tex tables_numbers_p1.tex refs.bib
 	mkdir -p build
-	tectonic -X compile main.tex -Z search-path=tmlr_template --outdir build --keep-logs
+	tectonic -X compile main.tex -Z search-path=tmlr_template --outdir build --keep-logs --keep-intermediates
 
 # Alternative with a TeX Live installation.
 pdf-texlive: main.tex numbers_p1.tex tables_p1.tex tables_numbers_p1.tex refs.bib

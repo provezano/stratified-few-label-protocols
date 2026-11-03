@@ -4,7 +4,7 @@ Written and committed on 2026-10-28, **before any T1′ fit of these arms**. Sta
 
 ## 1. Question
 
-On DEV (commit R019; `b_dose/out/SUMMARY.md`), with the count of the non-upweighted classes held fixed (arm F), the p/π̂ prior correction leaves no decline of macro-F1 in any of the 8 FM × side cells, while with the share fixed and the count falling (arm S) macro-F1 still declines after the correction in all 8 cells. The paper reads this as: the Part (c) residual after p/π̂ follows the count, not the share. The result is "DEV only". This run asks whether the same holds on tables outside DEV.
+On DEV (commit R021; `b_dose/out/SUMMARY.md`), with the count of the non-upweighted classes held fixed (arm F), the p/π̂ prior correction leaves no decline of macro-F1 in any of the 8 FM × side cells, while with the share fixed and the count falling (arm S) macro-F1 still declines after the correction in all 8 cells. The paper reads this as: the Part (c) residual after p/π̂ follows the count, not the share. The result is "DEV only". This run asks whether the same holds on tables outside DEV.
 
 ## 2. Tables (chosen without looking at any outcome)
 

@@ -1,4 +1,4 @@
-"""Correction 4 on T1′ (Study 12 stored runs), EXPLORATORY; plan: PLAN.md (commit R020).
+"""Correction 4 on T1′ (Study 12 stored runs), EXPLORATORY; plan: PLAN.md (commit R022).
 
 Reuses reports/p1_corrections.py unchanged (CellModel, composition_features, greg_beta,
 subsample_cell). New: the T1′ loader, REDRAW+A7, and interval coverage of NAIVE / GREG.
@@ -166,7 +166,7 @@ def fmt_row(r) -> str:
 
 def tables(ps, co, small) -> list[str]:
     L = ["# Correction 4 on T1′ (Study 12 runs), EXPLORATORY", "",
-         "Plan: PLAN.md (commit R020). Bias = estimate − held-out random mean; "
+         "Plan: PLAN.md (commit R022). Bias = estimate − held-out random mean; "
          "CI = bootstrap over tables; ratio = RMSE / RMSE(NAIVE) at equal runs k; "
          "cover = share of 95% intervals containing the held-out truth.", ""]
     for metric in METRICS:

@@ -8,7 +8,7 @@ This note is required by Study 13 Sec. 0.3 (item 3) and Sec. 4.4. It is committe
 |---|---|---|---|
 | Study 9, Sec. 9 | `prereg/STUDY9_HOW_MANY_LABELS.md` | FROZEN, Amendments 1–4 | `ed97591a70dd61f5082d92f19d5f492ec89c6743349612c51418f1164df019b0` |
 | Study 13 | `prereg/STUDY13_HELDOUT_CONFIRMATION.md` | FROZEN 2026-10-28, Amendments 1–3 | `949ce46c7973df757c2f61d161162eef166646b109e200bbae9139afb0d4e375` |
-| Study 10 | `prereg/STUDY10_SELECTOR_CONFIRMATION.md` | FROZEN 2026-10-30 (commit `R027`), before the deadline of 2026-10-31 23:59 UTC | `87ea00fc021dafd481b8acc960c6b785cb798fa363f8d4cff55bbd2acb942544` |
+| Study 10 | `prereg/STUDY10_SELECTOR_CONFIRMATION.md` | FROZEN 2026-10-30 (commit `R029`), before the deadline of 2026-10-31 23:59 UTC | `87ea00fc021dafd481b8acc960c6b785cb798fa363f8d4cff55bbd2acb942544` |
 
 The hashes above are of the files as committed before this note. Each prereg's log gets a one-line pointer to this note in the same commit, so those three files change only by that appended line.
 

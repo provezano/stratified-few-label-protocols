@@ -265,7 +265,7 @@ PMLB datasets that pass A1.2 except that `n_categorical_features > 0` (integer-c
 **Unchanged.** Sec. 3's eligibility, exclusion and deduplication rules; the seed; the Tier 1 quotas, queues and reallocation; and Sec. 7 (Tier 1 only).
 
 ### Freeze note, PMLB part (2026-10-21)
-`simaudit build-pool-pmlb` was run once, after Amendment 1 was committed (R037) and after the Git LFS fix (the files at the commit are LFS pointers; the content now comes from GitHub's media host and is checked against the pointer's SHA-256). The first attempt stored only the pointers and rejected every dataset. Those files were deleted before any parse, and the build was re-run with no other change.
+`simaudit build-pool-pmlb` was run once, after Amendment 1 was committed (R039) and after the Git LFS fix (the files at the commit are LFS pointers; the content now comes from GitHub's media host and is checked against the pointer's SHA-256). The first attempt stored only the pointers and rejected every dataset. Those files were deleted before any parse, and the build was re-run with no other change.
 
 **Result.** `data/pool_ext_pmlb.yaml` and `data/pool_ext_pmlb_audit.csv`.
 
@@ -539,11 +539,11 @@ No integrity screen and no model had been run on any expansion dataset when this
 ### Freeze note, Amendment 2 (2026-10-21)
 
 **Order of work.**
-1. Amendment 2 was committed (R038).
+1. Amendment 2 was committed (R040).
 2. `simaudit build-pool-uci` was run once.
-3. A2.3a was committed with the code (R039).
+3. A2.3a was committed with the code (R041).
 4. A first screen run was made. It was not committed (A2.3b).
-5. A2.3b was committed (R040).
+5. A2.3b was committed (R042).
 6. `screen-integrity` and `build-t1prime` were run once.
 
 No model has been run on any expansion dataset.
@@ -601,7 +601,7 @@ No model has been run on any expansion dataset.
 - Each is about 60 wall-hours at 4 workers.
 
 ### Trigger note at T* (A2.5), 2026-10-21
-- **T\*.** The first of the two events of A2.5 is the Study 9 Sec. 10 freeze note: commit R041, 2026-10-21 20:26:15 −0300. By then no Study 7 DEV report had been committed (`reports/STUDY7_REPORT.md` is not in the repository; no Study 7 report commit exists).
+- **T\*.** The first of the two events of A2.5 is the Study 9 Sec. 10 freeze note: commit R043, 2026-10-21 20:26:15 −0300. By then no Study 7 DEV report had been committed (`reports/STUDY7_REPORT.md` is not in the repository; no Study 7 report commit exists).
 - **Tier 1 at T\*.** `data/pool_ext.yaml` had not been committed, and Tier 1 has no freeze note. OpenML was unreachable during the whole 3-hour poll (Amendment 1 freeze note).
 - **Outcome: the trigger fires.** T1′ (`data/pool_t1prime.yaml`, frozen in R003, 52 datasets) replaces Tier 1 in every confirmatory use:
   - Study 8 Sec. 7;

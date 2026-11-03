@@ -1,0 +1,9 @@
+{
+  "claim": "mixed: replicated ['fm1', 'fm5'], equivalent ['fm2', 'fm3']",
+  "reading": {
+    "fm1": "balance gap beyond coverage",
+    "fm2": "coverage explains the gap (within +-0.02)",
+    "fm3": "coverage explains the gap (within +-0.02)",
+    "fm5": "balance gap beyond coverage"
+  }
+}

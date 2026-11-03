@@ -1,11 +1,11 @@
 # HELD-OUT outcome branches for P1 (prepared 2026-10-30, before any HELD-OUT result exists)
 
-> Plan last changed at R025, before any HELD-OUT outcome was computed or viewed. Line numbers refer to an earlier draft of the paper.
+> Plan last changed at R027, before any HELD-OUT outcome was computed or viewed. Line numbers refer to an earlier draft of the paper.
 
 This file is written before any HELD-OUT result exists, and nobody has looked at partial results. It holds the text that `main.tex` will need for each outcome that the pre-registrations allow, so that the final fill-in only picks a branch and defines the macros.
 
 - Every number is a placeholder macro `\HO...`. No value is filled in. The macro list is in Sec. 5.
-- Line numbers refer to `main.tex` at commit R026 (after the blind-review revision of 2026-10-30).
+- Line numbers refer to `main.tex` at commit R028 (after the blind-review revision of 2026-10-30).
 - Sources of the rules:
   - `prereg/STUDY13_HELDOUT_CONFIRMATION.md` Sec. 4.1–4.4, Amendment 1 B.8 and C.3, Amendment 3 C.1–C.5;
   - `prereg/STUDY9_HOW_MANY_LABELS.md` Sec. 6 and Sec. 9;

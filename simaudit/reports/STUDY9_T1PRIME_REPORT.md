@@ -1,6 +1,6 @@
 # Study 9 on EXP′ = T1′: how many labels does a tabular FM need? (confirmatory)
 
-Prereg: `prereg/STUDY9_HOW_MANY_LABELS.md` (frozen 2026-10-21; Amendment 1; freeze note 1 at R041), with `prereg/STUDY8_EXPANSION.md` A2.5–A2.7 and its trigger note (T1′ replaces Tier 1).
+Prereg: `prereg/STUDY9_HOW_MANY_LABELS.md` (frozen 2026-10-21; Amendment 1; freeze note 1 at R043), with `prereg/STUDY8_EXPANSION.md` A2.5–A2.7 and its trigger note (T1′ replaces Tier 1).
 Data: T1′, 52 datasets (`data/pool_t1prime.yaml`). Runs: 4 FMs (FM2 TabICL, FM1 TabPFN v2, FM5 TabPFN v3.5, FM3 Kumo), 208/208 jobs, 0 failures, in `results/study9/t1prime/`.
 Verbatim generated output: `reports/STUDY9_T1PRIME_OUTPUT.md`. Part A of that file is the frozen `analyze` + `report` output. Part B holds the pre-specified extras.
 

@@ -58,6 +58,12 @@ def main() -> None:
     m["SFHoInsideCount"] = str(
         sum(m[f"SFHoInsideFM{n}"] == "yes" for n in NAME.values()),
     )
+    cols = res["secondary"]["columns"]
+    for row in res["secondary"]["data"]:
+        r = dict(zip(cols, row))
+        if r["id"] == "(ii-c)":  # stratified TabICLv2 minus TabPFN v3.5: interval and two-sided Wilcoxon p
+            m["SFIIcCI"] = f"[{fmt_num(r['ci_low'])}, {fmt_num(r['ci_high'])}]"
+            m["SFIIcWilcoxonP"] = fmt_p(r["p_wilcoxon"])
     safe = res["exploratory_tabpfn35_safe"]["fm5"]
     m["SFSafeFiveCI"] = f"[{fmt_num(safe['ci_low'])}, {fmt_num(safe['ci_high'])}]"
     m["SFSafeFiveP"] = fmt_p(safe["p"])

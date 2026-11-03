@@ -2,7 +2,7 @@
 
 Status: FROZEN 2026-10-31T03:36:42Z. Drafted the same day. No Study 15 fit exists at the freeze. After the freeze, changes only by dated amendments at the end, each committed before the run or analysis it affects.
 
-Code (committed before this prereg, in its own commit R036; tested on synthetic data under tmp paths only):
+Code (committed before this prereg, in its own commit R038; tested on synthetic data under tmp paths only):
 - `src/simaudit/data/second_frame.py` (table specs, encoding rule, eligibility, dedup, build, loader);
 - `src/simaudit/data/xlsx_lite.py` (standard-library xlsx reader for the untrusted workbooks);
 - `src/simaudit/runner/study15.py` (runner; `--set second_frame`), which reuses `runner/study13.py` unchanged;
@@ -203,7 +203,7 @@ Wilcoxon two-sided, normal approximation with ARE 0.955, at the strictest Holm s
 5. fm6–fm8 not run; Study 13 S-2 to S-14 not analysed; arm F run but not analysed.
 
 ## 11. Log and amendments
-- **2026-10-31:** draft, then frozen (2026-10-31T03:36:42Z; code commit R036, `make verify` green: 932 tests, coverage 96.5%, CRAP gate 0 failing). The frame was built (`results/study15/second_frame/frame_build.json`, `data/pool_second_frame.yaml`): 20 of 20 eligible, no hash or row-overlap match, no exclusion.
+- **2026-10-31:** draft, then frozen (2026-10-31T03:36:42Z; code commit R038, `make verify` green: 932 tests, coverage 96.5%, CRAP gate 0 failing). The frame was built (`results/study15/second_frame/frame_build.json`, `data/pool_second_frame.yaml`): 20 of 20 eligible, no hash or row-overlap match, no exclusion.
 - Two encoding-rule corrections were made before freezing, on metadata only:
   - "none" was removed from the missing tokens, because it removed the `Mortality` level "None" (n 334 → 597, C 5 → 6);
   - the ≥ 95% numeric rule was added, because a few unparsable cells such as "<5" had turned laboratory columns into nominal ones.

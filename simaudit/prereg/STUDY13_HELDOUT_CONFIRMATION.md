@@ -460,13 +460,13 @@ One pin is new and is not in pins.json: the SHA-256 of the config file the worke
 
 ### B. Provenance: fm8 outputs already seen (disclosed)
 
-fm8 has already been run on DEV and T1′, and its outputs have been seen. No fm8 setting was chosen or changed on any of them. The settings (A.2) are the package defaults plus fp32 on CPU and were fixed in the feasibility commit (R028), before any fm8 metric existed.
+fm8 has already been run on DEV and T1′, and its outputs have been seen. No fm8 setting was chosen or changed on any of them. The settings (A.2) are the package defaults plus fp32 on CPU and were fixed in the feasibility commit (R030), before any fm8 metric existed.
 
 Seen, all under `paper/p1/exploratory/fm_extra/out/`:
-1. **Feasibility** (R028): `probe_fm8.json` (timing and row-sum checks on DEV 46562) and the smoke run (`smoke/`, 2 fm8 files; `smoke_cells.csv`, `smoke_summary.csv`).
+1. **Feasibility** (R030): `probe_fm8.json` (timing and row-sum checks on DEV 46562) and the smoke run (`smoke/`, 2 fm8 files; `smoke_cells.csv`, `smoke_summary.csv`).
 2. **Study 7 Part (a) on DEV:** `s7a/{did}_fm8.parquet` (20 tables, 2,000 stratified/random fits), `s7a_sel/{did}_fm8.parquet` (20 tables, selector cells), and the summaries `s7a_cells.csv` and `s7a_summary.csv`. Seen: the fm8 macro-F1 gap, stratified − random, mean over m = +0.049 [+0.030, +0.065] (20 tables), and the DEV accuracy gap.
-3. **Study 12 T1′ design (exploratory; plan R029):** `t1p_fm8/` (52 tables), `t1p_fm8_pilot/` (3 files), `t1p_fm8_cells.csv`, `t1p_fm8_summary.csv`, `t1p_fm8_acc_summary.csv`, `t1p_fm8_numbers.tex`, `T1P_FM8_SUMMARY.md` (commits R030, R031). Seen: macro-F1 gap +0.067 [+0.056, +0.079], mean over m, positive at every m; accuracy gap −0.023 [−0.051, +0.000].
-4. **Study 7 Part (c) dose on DEV (exploratory; plan R032):** `dose_c/{did}_fm8.parquet` (20 tables), `dose_c_pilot/` and `dose_c_refcheck/` (6 fm8 files each), `dose_c_opt_check.json`, `dose_c_raw.csv`, `dose_c_chain.csv`, `dose_c_verdicts.csv`, `dose_c_numbers.tex`, `DOSE_C_SUMMARY.md` (commits R033, R034). Seen: negative raw and p/π̂-corrected slopes in both arms; LimiX "inconclusive" under the r14 chain.
+3. **Study 12 T1′ design (exploratory; plan R031):** `t1p_fm8/` (52 tables), `t1p_fm8_pilot/` (3 files), `t1p_fm8_cells.csv`, `t1p_fm8_summary.csv`, `t1p_fm8_acc_summary.csv`, `t1p_fm8_numbers.tex`, `T1P_FM8_SUMMARY.md` (commits R032, R033). Seen: macro-F1 gap +0.067 [+0.056, +0.079], mean over m, positive at every m; accuracy gap −0.023 [−0.051, +0.000].
+4. **Study 7 Part (c) dose on DEV (exploratory; plan R034):** `dose_c/{did}_fm8.parquet` (20 tables), `dose_c_pilot/` and `dose_c_refcheck/` (6 fm8 files each), `dose_c_opt_check.json`, `dose_c_raw.csv`, `dose_c_chain.csv`, `dose_c_verdicts.csv`, `dose_c_numbers.tex`, `DOSE_C_SUMMARY.md` (commits R035, R036). Seen: negative raw and p/π̂-corrected slopes in both arms; LimiX "inconclusive" under the r14 chain.
 5. Also read for this amendment: the `seconds` column of `s7a/*_fm8.parquet` and `dose_c/*_fm8.parquet` and of the stored fm2 runs (D), and the stored probabilities of eight fm8 Part (a) cells of `s7a/` were compared with the worker (E.3).
 
 So the S-10 direction for fm8 (Δ > 0) agrees with fm8's DEV and T1′ macro-F1 gaps that were already seen. The direction is not taken from them: it is the direction of the coverage/balance mechanism and of the four primary FMs, as for fm6 and fm7 (Amendment 1 B.8). Because fm8's DEV and T1′ outputs are known, a HELD-OUT result for fm8 is a replication on new data of an effect already seen on DEV and T1′, not a blind prediction.
@@ -507,7 +507,7 @@ So the S-10 direction for fm8 (Δ > 0) agrees with fm8's DEV and T1′ macro-F1 
 
 ### E. Code, tests and the DEV identity check
 
-**E.1 Code** (committed before this amendment, in a separate commit, R035):
+**E.1 Code** (committed before this amendment, in a separate commit, R037):
 - `runner/fm_extra_worker.py`: `PINS["fm8"]` (copy of pins.json), `read_pinned` (hash the bytes, then use only those bytes), `limix_checkpoint` (`weights_only=True`), `_limix` (A.2–A.4; config SHA-256 check; `v1_0` only), and `build` dispatches fm6, fm7 and fm8 by name. The fm6 and fm7 functions are unchanged.
 - `runner/study13.py`: `EXTRA_FMS` = (fm6, fm7, fm8), `EXTRA_VENVS["fm8"]` = `.venv_fm_extra_limix`, `GROUPS` ends with fm8, `LIMIX_MAX_CLASSES = 10` in `skip_job` and in `provenance_amendment1.json`. `ExternalFM` is unchanged; it starts `.venv_fm_extra_limix/bin/python -I fm_extra_worker.py fm8`.
 - `analysis/study13.py`: `EXTRA_FMS` = (fm6, fm7, fm8), so S-10 and S-11 are Holm families of 3, with the fixed-size rule of C.3.
