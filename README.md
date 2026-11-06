@@ -1,8 +1,8 @@
 # Stratified Few-Label Protocols Can Overstate Macro-Averaged Metrics for Tabular Foundation Models
 
-Code, pre-registrations, stored results and audit materials for the paper of the same title by Felipe Provezano Coutinho (under review at TMLR).
+Code, analysis plans, stored results and supporting materials for the paper of the same title by Felipe Provezano Coutinho (manuscript under review).
 
-Few-label evaluations of tabular foundation models (FMs) usually draw the labelled set stratified by class, so that every class is present in the context. This repository holds everything needed to check how that choice changes reported macro-averaged metrics compared with drawing the labelled rows at random: the pre-registered studies on public OpenML, PMLB and UCI tables, a second pre-registered replication frame, the analysis code, the stored per-fit scores, and the materials of the audit of protocols reported in the literature. Every number, table and figure of the paper is written by a script in this repository into a LaTeX macro file, a CSV file or a figure, and can be regenerated from the stored results without refitting any model.
+Few-label evaluations of tabular foundation models (FMs) usually draw the labelled set stratified by class, so that every class is present in the context. This repository holds everything needed to check how that choice changes reported macro-averaged metrics compared with drawing the labelled rows at random: the confirmatory studies on public OpenML, PMLB and UCI tables, a second replication frame, the analysis code, the stored per-fit scores, and the materials of the review of protocols reported in the literature. Every number, table and figure of the paper is written by a script in this repository into a LaTeX macro file, a CSV file or a figure, and can be regenerated from the stored results without refitting any model.
 
 ## Citation
 
@@ -13,14 +13,12 @@ If you use this code or these results, please cite the paper:
   title         = {Stratified Few-Label Protocols Can Overstate Macro-Averaged Metrics for Tabular Foundation Models},
   author        = {Coutinho, Felipe Provezano},
   year          = {2026},
-  eprint        = {XXXX.XXXXX},  % TODO: replace with the arXiv identifier once assigned
-  archivePrefix = {arXiv},
-  note          = {Under review at Transactions on Machine Learning Research (TMLR)},
+  note          = {Manuscript under review},
   url           = {https://github.com/provezano/stratified-few-label-protocols}
 }
 ```
 
-The arXiv identifier (`arXiv:XXXX.XXXXX`) is a placeholder and will be filled in once assigned. `CITATION.cff` holds the same reference in machine-readable form.
+This entry will be updated with the journal reference once the paper is published. `CITATION.cff` holds the same reference in machine-readable form.
 
 ## Quick start
 
@@ -46,7 +44,9 @@ uv run python ../fetch_data.py --case-study
 
 Paths are relative to `simaudit/` unless they start with `datasets/`, `environment/`, `seeds/` or `REVISIONS.md`.
 
-**Names used in the files.** "P1" is the internal working name of this paper. DEV, T1′ (the PMLB/UCI set of the paper) and HELD-OUT are the three table sets; the second frame is the set of Study 15. fm1 = TabPFN v2, fm2 = TabICLv2, fm3 = Kumo-Tabular, fm5 = TabPFN v3.5 (the four pre-registered FMs); fm6 = TabDPT v1.3, fm7 = Mitra-v2, fm8 = LimiX-16M (exploratory). Study numbers follow Table `tab:studies` of the paper.
+**A note on the word "pre-registration".** Each confirmatory study followed an analysis plan that the author wrote and froze before the runs, with SHA-256 digests and freeze times recorded by the author. The plans were not deposited in a public registry before the data were seen, so they are not preregistrations in the usual sense, and the paper does not call them that. Folder and file names such as `prereg/`, `PREREG.md` and the phrase "pre-registration" inside these files are historical working names, kept so that paths and digests stay stable.
+
+**Names used in the files.** "P1" is the internal working name of this paper. DEV, T1′ (the PMLB/UCI set of the paper) and HELD-OUT are the three table sets; the second frame is the set of Study 15. fm1 = TabPFN v2, fm2 = TabICLv2, fm3 = Kumo-Tabular, fm5 = TabPFN v3.5 (the four FMs of the confirmatory plans); fm6 = TabDPT v1.3, fm7 = Mitra-v2, fm8 = LimiX-16M (exploratory). Study numbers follow Table `tab:studies` of the paper.
 
 ## Layout
 
