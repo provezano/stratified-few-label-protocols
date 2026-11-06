@@ -15,7 +15,7 @@ keywords:
   - few-label learning
   - evaluation protocols
   - macro-averaged metrics
-  - pre-registration
+  - analysis plans
 preferred-citation:
   type: article
   title: "Stratified Few-Label Protocols Can Overstate Macro-Averaged Metrics for Tabular Foundation Models"
@@ -25,7 +25,6 @@ preferred-citation:
       email: provezano@gmail.com
       affiliation: Independent Researcher
   year: 2026
-  journal: "Transactions on Machine Learning Research"
   status: submitted
-  notes: "Under review at TMLR. arXiv:XXXX.XXXXX (placeholder; to be filled in once the arXiv identifier is assigned)."
+  notes: "Manuscript under review."
   repository-code: "https://github.com/provezano/stratified-few-label-protocols"
