@@ -1,0 +1,17 @@
+PUBLIC COPY. Host names, local paths and internal note names are replaced; nothing else is changed.
+The SHA-256 digests in no digest (written after the runs) refer to the unredacted frozen file.
+
+# Deviations from the frozen plan (balance-mechanism probe)
+
+## D1 (2026-11-08 22:22-22:33). One unit ran on both hosts
+- **What happened.** Unit `f34136595_covidmort fm1` (TabPFN v2) started on host B at 22:22, and on host A at 22:26, before the 10-minute claim exchange had passed host B's claim to the local queue. Both runs finished.
+- **Which copy counts.** `pull.sh` copies with --ignore-existing, so the local copy is in `raw/` and entered the frozen analysis. The host B copy is kept in `raw_duplicate_hostB/`.
+- **The copies differ.** Class counts are identical, but metrics differ by up to 0.007 in macro-F1 for the same seeds and code. The two hosts are both Apple-silicon CPUs of different generations (M-series), so floating-point paths differ.
+- **Effect on the verdicts.** Rerunning the frozen analysis with the host B copy instead gives identical verdicts and p values to the reported precision:
+  - H-scatter p 0.131;
+  - H-response ρ 0.477, p 5e-5, slope 0.57.
+- **Reporting.** Host is logged per unit (121 local, 51 host B). Host-level numerical noise of this size is below the table-level spread and is reported as a threat.
+
+## D2. A pull.sh rsync rule order copied host B .partial checkpoints into raw/
+- Infrastructure only. analyze.py ignores `.partial` files, and the copies were deleted after the analysis.
+- Because of D1, the automatic host B cleanup refused to run (`HOSTB_CLEAN_FAILED`). It was done by hand after checking the other 51 files: `HOSTB_CLEANED`.

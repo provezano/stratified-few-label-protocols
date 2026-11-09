@@ -1,0 +1,4 @@
+Flip-rate references, same definition as PLAN.txt (4 main FMs, clear > 0.01 in both, protocol S(5 reps) vs R reps 0-4; noise R reps 5-9 vs 10-14), computed 2026-11-07 from stored fits (seen frames; descriptive):
+DEV (study7/a, 20 tables): protocol 0.298 (77/258), noise 0.116 (31/268)
+PMLB/UCI (study12, 52 tables): protocol 0.371 (214/577), noise 0.122 (86/707)   [results/pilot_pmlb.csv]
+newer-source (study15, 20 tables): protocol 0.591 (117/198), noise 0.125 (31/248) [results/pilot_sf.csv]

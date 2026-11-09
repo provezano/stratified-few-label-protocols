@@ -1,0 +1,66 @@
+PUBLIC COPY. Host names, local paths and internal note names are replaced; nothing else is changed.
+The SHA-256 digests in INCLUSION_RULE.sha256 refer to the unredacted frozen file.
+
+# P1 fresh-data confirmation: inclusion rule (fixed before candidate processing)
+
+Written 2026-11-07, before any candidate was accepted. Its sha256 is in INCLUSION_RULE.sha256.
+No model is fitted on any candidate. The only label statistic used is the per-class count of the declared target.
+
+## 1. Sources
+Zenodo, figshare, Mendeley Data and Dataverse (Harvard, Borealis, Recherche Data Gouv). At least 3 of these sources
+must be represented among the eligible tables; if the ordered pass ends with fewer, this is reported (no reordering).
+
+## 2. Candidate list (mechanical, deterministic)
+One row per record. A record is a candidate if all hold:
+- its listing date (Zenodo `created`, figshare `posted`, Mendeley/Dataverse listing date) is >= 2026-09-24;
+- its id (record, concept, Mendeley id, Dataverse DOI suffix) is not in any earlier frame or pool (Section 5);
+- at least one of its tabular files (csv/tsv/xlsx), as already probed by the E7, S2 or CONF3 harvests or by a fresh probe
+  of the same kind, has 100 <= rows <= 6000, >= 2 columns, and an outcome-like column: a column whose name matches the
+  CONF3 `OUT` regex (death, mortal, surviv, outcome, status, disease, diagnos, infect, complicat, presen, absen, recurr,
+  relaps, positiv, adverse, event, readmi, fail, success, resist, pregnan, delirium, nest, predat, symptom, ...;
+  names starting with sex/gender/age/year/date/site/region/country excluded) with 2..10 distinct values, smallest >= 11.
+Order: listing date ascending, then source (dataverse, figshare, mendeley, zenodo), then record id (string order).
+The list is frozen in curation/order.csv (sha256 recorded in HARVEST_STATUS.txt) before the first decision.
+
+## 3. Processing
+Candidates are processed strictly in that order. Every record that meets Section 4 is ACCEPTED; every other record is
+REJECTED with a code and a reason (curation/decisions.py, curation/rejections.csv). No preference for multiclass,
+size, imbalance or domain. Processing stops when 36 tables are eligible after the build (Section 4 + 5); records after
+the stopping point are not judged. If the list is exhausted first, the count is reported (target >= 30).
+
+Target choice within a record: the class outcome that the title or description names as the study outcome (if several,
+the first named in the title, then in the description); if none is named, the first outcome-like column in file column
+order that the authors document as an outcome/status (not a design factor, treatment arm or covariate). The file is the
+one holding that column (ties: first in file-name order, then sheet order). One table per record. A record that is
+another deposit of the same study data as an already accepted record is rejected (R5r).
+
+Drops (declared before encoding, from names/documentation only): identifiers; dates/times; free text; columns that
+define, compose or follow the target (component outcomes, follow-up/event times, other post-outcome endpoints,
+model predictions); the authors' split flags.
+
+## 4. Eligibility (all required)
+- First public version >= 2026-09-24 (strictly after TabPFN v3.5, 2026-09-09, and Kumo-Tabular, 2026-09-23), verified:
+  Zenodo = earliest `created`/`publication_date` over all versions of the concept (versions API, tools/zfirst.py);
+  figshare = version 1 posted date (versions API, tools/fsfirst.py); Mendeley = version must be 1, its publish date
+  (public API); Dataverse = listing created and publication dates (both >= cut).
+- Open licence (CC BY / CC0 / ODC / Etalab or similar open licence; NC variants accepted only if open for research
+  reuse is stated; ND rejected).
+- Real data (not synthetic, simulated or generated); not a re-release/compilation of pre-cutoff or public-source data.
+- A real classification target named or described by the authors (clinical outcome, presence/absence, status, ...).
+- Encoded with simaudit.data.second_frame (Study 15 rule, unchanged): 2 <= C <= 10, smallest class >= 11,
+  100 <= n <= 5000, 1 <= d <= 100 after encoding.
+
+## 5. Exclusions (hash + record + signature)
+Excluded by record/concept id and by content hash, row overlap (>= 0.5) and signature (|n-n'| <= 2, d = d', C = C')
+against: DEV + HELD-OUT content hashes from pool_i2.yaml (hash list only; sealed_heldout/ and HELD-OUT id lists are never
+opened), T1', T2, Study 15/16/17/18 pools and spec lists, semprior/calib-fm/posfm npz, the E7 frame npz and all 220 E7
+manifest records, the S2 frame (frame.csv, data/npz), S2 harvest manifest/decisions/npz, the class-balancing G4 frames
+(out/frame/frame.csv, conf2), CONF3 decisions/specs/build report/npz. Within-frame content and raw-file duplicates are
+excluded too. A signature hit is a rejection (RX) unless a manual check shows a different table (recorded).
+
+## Rejection codes
+R0 first version < 2026-09-24 or not verifiable; R1 licence not open/unverified; R2 mechanical rule fails (C, smallest
+class, n, d); R3a no documented class outcome / target is a design factor or covariate; R3d target defined from feature
+columns or model output; R5r re-release/compilation or duplicate deposit; R5s synthetic/simulated; R6 unsuitable structure
+(aggregated rows, long format, several rows per unit, unclear target); R7 non-tabular features; RX reserved/used elsewhere
+(id, hash, overlap, signature); RU unreadable file.

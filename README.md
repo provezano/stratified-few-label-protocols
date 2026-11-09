@@ -67,6 +67,7 @@ Paths are relative to `simaudit/` unless they start with `datasets/`, `environme
 | `seeds/` | The provenance file of every run of Studies 4, 7, 9, 12 and the corrections: base seed, seed namespaces, grids, repetitions, learners, dataset ids, code digest. Study 15: `results/study15/second_frame/provenance.json`. |
 | `simaudit/README.md` | Pointer to this file (package metadata). |
 | `REVISIONS.md` | The revision identifiers that the appendix "Pre-registration log" cites (R001–R013, R015–R020), each with its date, file and a one-line description. R014 is an uncited alias of R012 (same commit). Later identifiers replace other commit hashes quoted in the files. |
+| `postrelease_2026-11/` | The post-release tables and the balance probe (added November 2026): code, frozen plans (public copies), per-table results and per-fit scores; see `postrelease_2026-11/README.txt`. |
 | `fetch_data.py` | Downloads the public DEV, T1′ and case-study data and checks each file against a pinned SHA-256 (no third-party data is included). |
 | `LICENSE`, `LICENSE-DATA`, `CITATION.cff` | Licences (see "Licence") and citation metadata. |
 | `.github/workflows/ci.yml` | Continuous integration: lock check, byte-compilation and regeneration of five macro files from the stored results. |

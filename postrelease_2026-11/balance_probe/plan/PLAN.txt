@@ -1,0 +1,145 @@
+PUBLIC COPY. Host names, local paths and internal note names are replaced; nothing else is changed.
+The SHA-256 digests in PLAN.sha256 refer to the unredacted frozen file.
+
+# Balance-mechanism probe for P1: frozen plan (2026-11-08)
+
+This plan is frozen: its SHA-256 is recorded in plan/PLAN.sha256 before the first probe fit. It is NOT a
+pre-registration, because no public registry is used. The study is exploratory and confirmatory in the sense of a
+frozen plan, and is reported as such.
+
+## 1. Question and claim under test
+The objection is that the balance part of the stratified-labelling gap beyond one label per class was confirmed only
+for the two TabPFN models. The stored fits show that the balance part splits into two parts:
+- a scatter part (prior-proportional exact class counts minus covered random counts), positive for all four FMs;
+- a prior-shift part (balanced minus prior-proportional counts at fixed coverage), whose sign is FM-specific and follows
+  each FM's prior response. Diagnosis: an internal diagnosis note.
+
+Claim tested: "Balance adds to the gap for all four FMs through the scatter of random class counts. The further gain
+from a fully balanced context is FM-specific and follows each FM's prior response."
+
+## 2. Tables, and what is new
+Main set: the 39 post-release tables analysed in the confirmation study (confirm_2026-11-08; frame
+plan/frame.csv, set = confirm). These tables are NOT untouched. Their confirmation balance parts
+(stratified minus covered random, `bal_mf_fm*` in confirm_2026-11-08/results/fresh_pertable.csv) have already been
+analysed and reported. H-response therefore reuses these already-reported confirmation fits on its outcome side. Only
+the probe fits are new. H-scatter and the secondary hypotheses use the new probe fits only.
+
+Held-aside check, 4 tables (set = heldaside). These are the post-release tables the confirmation harvest accepted on
+judgement but excluded at build for capacity only (R2):
+- z23223338_vte (n 5966);
+- z23474900_treephyto (n 5872);
+- m_4nr4xmbxnb_elevbp (d 220);
+- d_TVKRXD_hivst (d 111).
+
+No model has ever been fitted on them. Each passed the build's exclusion check, which covers HELD-OUT hashes, 1,207
+reference hashes, row overlap and signatures (build_report.csv). They were re-encoded from the harvest's local raw copies
+with the harvest rule, and their content hashes equal build_report.csv (code/encode_heldaside.py).
+
+Other candidates:
+- No other fitted-never post-release table remains:
+  - the harvest's judged accepts are all either in the frame or excluded for date/licence/size-of-class/overlap;
+  - positions 547-593 of the candidate list were never judged, and judging them now would be a new harvest.
+- d_EF0JED_birdpresence (dropped from the confirmation, TabPFN constant-feature failure) is not used.
+
+The 43 tables enter H-scatter and the secondary hypotheses; the 39 enter H-response. The held-aside 4 are also reported
+alone (descriptive, section 6).
+
+## 3. Probe design (code/probe.py)
+The design is the evidence study's composition manipulation, unchanged:
+- fixed 30% test split (namespace 36);
+- pool = remaining rows; nested class-wise row orders per rep; one FM seed per (m, rep);
+- complement of the pool unused.
+
+Levels at fixed coverage:
+- λ = 0 (prior-proportional exact counts), 0.5, 1 (balanced);
+- V (a covered random composition: a random draw of m·C pool rows, redrawn until every class is present; its class
+  counts are then filled from the nested row orders).
+
+Settings:
+- m ∈ {3, 5, 10} labels per class, 5 reps, 4 FMs (TabPFN v2, TabICLv2, Kumo, TabPFN v3.5);
+- seed namespace 62 (new; the evidence study used 61); base seed 20261020;
+- identical compositions are fitted once.
+
+Metrics on the test split: macro-F1, balanced accuracy and accuracy.
+
+## 4. Quantities (per table x FM; means over reps within m, then over m)
+- scatter = MF(λ0) − MF(V)
+- shift = MF(λ1) − MF(λ0); shift_BA and shift_ACC likewise
+- probe balance part = MF(λ1) − MF(V)
+- predicted shift = c0 + a·shift_BA + b·shift_ACC, with c0, a, b FROZEN in plan/frozen_coefs.json:
+  - fitted on the stored evidence fits, 40 tables x 4 FMs, R² 0.80;
+  - c0 = 0.00109, a = 0.8239, b = 0.2991.
+- predicted balance part = scatter + predicted shift
+- λ* = argmax over {0, 0.5, 1} of MF
+- r = C · π_min of the pool
+
+## 5. Hypotheses and tests
+
+Primary family, Holm over 2, α = 0.05:
+- H-scatter: the scatter part is > 0 for every FM.
+  - Test: per FM, a one-sided Wilcoxon signed-rank over the 43 tables.
+  - Intersection-union: p = the largest of the four p values.
+- H-response: per-FM balance parts follow the measured prior response.
+  - Statistic: over the 39 tables with all four FMs, the within-table-centred Spearman correlation between the
+    predicted balance part (probe) and the confirmation balance part (bal_mf_fm*, independent draws, already reported).
+  - One-sided permutation p: FM labels of the prediction are permuted within each table, 20,000 permutations, seed 20261108.
+
+Secondary family, Holm over 3:
+- H-λ*: the mean λ* of the two TabPFN models exceeds that of TabICLv2 and Kumo. Per-table difference, one-sided Wilcoxon.
+- H-shiftsign: the mean shift part of the two TabPFN models exceeds that of TabICLv2 and Kumo. Per-table difference,
+  one-sided Wilcoxon.
+- H-imb: the mean shift part of TabICLv2 and Kumo increases with r. One-sided Spearman.
+
+Data handling:
+- A (table, FM, m, rep) cell counts only if all four compositions were fitted without error. Fit errors are recorded,
+  not retried: seeds are fixed, so failures are deterministic.
+- A table enters a per-FM test only if it has at least one complete cell for that FM.
+- H-response uses only tables with all four FMs.
+
+## 6. Reported descriptively (no test)
+- Per FM: mean and 95% bootstrap CI of the scatter, shift and probe balance parts.
+- Efficiency (mean shift_BA / |mean shift_ACC|), against the frozen predicted order v3.5 > v2 > Kumo > TabICLv2.
+- Mean λ*.
+- Within-table calibration slope of the outcome on the prediction, and the pooled Spearman correlation.
+- The 4 held-aside tables alone.
+- Fit errors, and the host of each unit.
+
+## 7. Decision wording
+- If H-scatter passes, the paper states: "Balance adds to the gap for all four FMs through the scatter of class counts
+  (fresh tables)."
+- If H-response also passes, it adds: "The further gain from a fully balanced context is FM-specific and follows each
+  FM's measured prior response (BA gained vs accuracy lost); per-FM balance parts on fresh tables were predicted from
+  coefficients frozen on earlier tables."
+- In either case the paper states that H-response's outcome reuses already-reported confirmation fits.
+- If a primary hypothesis fails, the current wording stays ("balance part beyond one label per class confirmed for the
+  two TabPFN models"), and the failure is reported with its numbers.
+- Secondary results are reported as supporting or not, never as headline.
+
+## 8. Power (pilot on the stored 40 tables, already seen; results/pilot.json)
+- H-scatter: the smallest stored per-FM effect is TabICLv2 +0.013 with 15-16 of 20 tables positive. At n = 43, power is
+  above 0.95 for each FM at α = 0.025.
+- H-response: on the stored 40 tables (prediction from the manipulation fits; outcome stratified minus random at m ≥ 3,
+  separate fits), the within-table Spearman is 0.68 (permutation p 2e-4).
+  - Resampled power at n = 39 and α = 0.025 is 1.00 (500 resamples).
+  - Using the probe balance part directly instead of the frozen prediction gives 0.87 (descriptive only, not tested).
+  - Pooled Spearman: 0.60.
+
+## 9. Compute, hosts, safeguards
+- Device: Apple-silicon CPU only, the same class as the confirmation. Hosts: host A and host B; units may be split
+  between them, and the host is logged per unit.
+- Jobs: nice 15, one thread per job.
+- Local caps: ≤ 3 units at once, launch only while load1 < 14 (headroom for the P5 job, gated at ≤ 11).
+- host B caps (granted by its owner):
+  - ≤ 11 units at once, launch only while load1 < 13;
+  - the cap is re-read from ~/ge-paper/.frentes_data/p1_balance_mech_2026-11-08/CAP_SLOTS before every launch;
+  - only ~/ge-paper is used; no credentials are copied;
+  - temp, data and raw copies are removed after the outputs are verified locally (sha256).
+- Estimate: about 45-55 CPU-h (172 units).
+- HELD-OUT guard:
+  - every table is a post-release table whose content hash was checked against the HELD-OUT hash list at harvest build;
+  - probe.py loads only data/npz/<key>.npz and checks its content hash against plan/frame.csv;
+  - nothing under sealed_heldout/ is read.
+- Unattended-run protocol:
+  - code/queue.sh per host, code/pull.sh (sync and claims, then the frozen analysis once at ALL_DONE), code/resume.sh;
+  - markers: queue_*/STATUS.md, queue/ALL_DONE, queue/analysis/ALL_DONE or ALL_FAILED.
+- No uploads, no paid API.

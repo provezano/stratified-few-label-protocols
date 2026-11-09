@@ -1,0 +1,245 @@
+PUBLIC COPY. Host names, local paths and internal note names are replaced; nothing else is changed.
+The SHA-256 digests in PLAN.sha256 refer to the unredacted frozen file.
+
+# P1 fresh-table confirmation: frozen plan
+
+Status: FROZEN at the time recorded in `PLAN.sha256`, before any foundation model (FM) was run on any table of the
+frame below. This is a frozen analysis plan with a SHA-256 hash, not a pre-registration: no public registry holds it.
+The plan, the frame (`frame.csv`), the per-table predictions (`predictions.csv`), the frozen model coefficients
+(`frozen_model.json`), the inclusion rule of the harvest and the code are hashed together (`PLAN.sha256`).
+
+## 0. Why, and what has been seen
+
+All six blind reviewers of P1 said that the newer-source non-replication is "hard to address; only new data would
+answer it". This study collects new data. It tests, on tables that no earlier P1 analysis has touched, every claim of
+the abstract and of the contributions list.
+
+Seen before this plan (disclosed):
+- Everything about the 20 development (DEV), 52 PMLB/UCI, 20 newer-source tables and the coverage-test (Study 17)
+  tables, including the diagnosis of the newer-source non-replication (the diagnosis specification,
+  SHA-256 7a263e29…, its addenda and an internal note). The sealed tables enter only as the aggregate
+  numbers in the paper.
+- The pilot of this plan (`results/pilot_sf.csv`, `results/pilot_pmlb.csv`, `results/power.csv`): the quantities of
+  every hypothesis below, computed on the stored newer-source and PMLB/UCI fits with the code used for the analysis.
+  It is the source of the power analysis and of the expectations stated with each hypothesis.
+- Fresh tables (this frame): metadata, column names, n, d, C and the class counts after encoding. No model was fitted,
+  and no feature-label statistic was computed. The table traits that enter the predictions are functions of n and the
+  class counts only.
+- Code check: `code/run_unit.py` re-ran one stored newer-source unit (z22133098_trees, TabICLv2, arm T, 180 fits);
+  seeds, attempts, coverage, macro-F1, accuracy and balanced accuracy are bit-identical to the stored Study 15 file.
+- `code/analyze.py` was run once on the stored newer-source fits as a pipeline test (tmp folder). It reproduces the
+  diagnosis remainder of the paper's model (−0.013) and gives the pilot values quoted below.
+
+## 1. Frame
+
+### 1.1 Inclusion rule (frozen before candidates were listed; `harvest/INCLUSION_RULE.txt`, own SHA-256)
+- First public version on or after **2026-09-24**, the day after the release of the last FM used (TabPFN v3.5
+  2026-09-09, Kumo-Tabular 2026-09-23; TabICLv2 2026-02-12; TabPFN v2 / Real-TabPFN 2025-07). The first version is
+  verified through the repository API (Zenodo concept first version, figshare v1 posted date, Mendeley version 1).
+  None of these tables can be in any FM's pre-training or checkpoint selection.
+- Sources: Zenodo, figshare, Mendeley Data, Harvard/other Dataverse (at least three represented). Open licence.
+- A real classification target named or described by the authors, chosen from title, description and column names
+  only. Identifiers, dates and target-defining or post-outcome columns are dropped with a written reason.
+- P1 eligibility (Study 15 rule, `second_frame` encoder unchanged): 2 ≤ C ≤ 10, smallest class ≥ 11, 100 ≤ n ≤ 5,000,
+  1 ≤ d ≤ 100 after encoding.
+- New to every earlier frame: exclusion by record or concept ID, by content hash, by row overlap ≥ 0.5 and by
+  signature (|n − n′| ≤ 2, d = d′, C = C′) against DEV, the HELD-OUT hash list (`pool_i2.yaml`; `sealed_heldout/` and
+  the HELD-OUT ID list were never opened), T1′/PMLB/UCI, T2 and its metadata candidates, Studies 15, 16, 17 and 18,
+  the E7 frame and its curated records, the S2 frame and harvest, the class-balancing frames (G4, CONF2, CONF3),
+  semprior and calib-fm pools.
+- Candidates are processed in a fixed order (first-public date, then source, then record ID); every record that meets
+  the rule is accepted, and every rejected record is logged with a code and a reason
+  (`harvest/curation/rejections.csv`). The harvest stops at 40 eligible tables.
+
+### 1.2 Tables
+See Section 9 (written from `frame.csv`).
+
+## 2. Design (identical to the P1 frames)
+- Study 15's arm T, reused unchanged through `simaudit` `runner/study13.py` (`code/run_unit.py`): row permutation
+  (namespace 35), cell seeds (namespace 34), redraw seeds, base seed 20261020, table IDs = source offset + record
+  number (Zenodo 10¹⁰, figshare 2·10¹⁰, Dataverse 4·10¹⁰, Mendeley 5·10¹⁰; non-numeric records via CRC-32), so every
+  seed is new.
+- Strategies: stratified (5 reps), random (20 reps), redraw (random draws redrawn until they cover every class,
+  20 reps; reused when the first draw covers). m ∈ {1, 3, 5, 10} labels per class, budget B = mC, scored on the
+  complement of the labelled rows. Arm F (fixed split) is not run: no hypothesis uses it, and arm-T seeds do not
+  depend on it.
+- FMs: TabPFN v2 (Real-TabPFN checkpoint, tabpfn 9.2.0), TabICLv2, Kumo-Tabular, TabPFN v3.5, through the same
+  wrappers and pins as the earlier frames. CPU, one thread per job.
+- **Device rule.** The development, PMLB/UCI and newer-source frames ran on Apple-silicon CPUs (host A; the
+  newer-source manipulation also on host B). This study runs only on Apple-silicon CPUs (host A, host B; host C only if
+  needed): one device class. `simaudit` code on host B is byte-identical to the local copy (SHA-256 of `study13.py`,
+  `fm.py`, `harness.py`, `study2.py`, `study4.py` checked), and host C was earlier shown bit-identical for TabPFN v2,
+  TabICL and Kumo.
+- **Failures.** A unit (table × FM) is retried up to three times. A table without all four FMs is dropped from every
+  analysis (complete case). If fewer than 30 tables remain, the primary family is reported as underpowered, with the
+  numbers.
+
+## 3. Per-table quantities (`code/confirm_lib.py`, `code/analyze.py`)
+Means over reps within (strategy, m), then over m:
+- gap_M = stratified − random, m ∈ {1, 3, 5, 10}, for M = macro-F1, balanced accuracy (BA), accuracy (the P1 unit).
+- balance part bal_M = stratified − redraw, m ∈ {3, 5, 10}; coverage part cov_M = redraw − random, m ∈ {1, 3, 5, 10};
+  bal1, cov1: the same at m = 1.
+- FM-mean = mean over the four FMs.
+- Pre-data traits (`code/predict.py`, from n and the class counts): binary, log10 n, r = C·π_min, V = mean over
+  m ∈ {3, 5, 10} of the expected squared distance of a random composition from balance, q = mean over m of the exact
+  probability that a random draw misses a class.
+- Mechanism terms (from the fits, as in the diagnosis): cost of misses pred_cov (Monte Carlo 4,000 draws) and signal
+  (BA of random draws at m = 10, rescaled).
+- Flips: a comparison of two FMs on one table and budget is clear when both protocols separate them by more than 0.01
+  in macro-F1. Protocol flip: the winner differs between stratified (5 reps) and random reps 0–4; noise flip: random
+  reps 5–9 against random reps 10–14 (matched 5-rep means).
+
+## 4. The frozen prediction
+`frozen_model.json` (written by `code/freeze_model.py` from the stored traits of the 72 standard tables):
+- **pre (primary prediction):** FM-mean macro-F1 gap ~ 1 + q + V + binary + log10 n, OLS on the 72 development and
+  PMLB/UCI tables. Every term is known before any fit, so the predicted gap of every fresh table is in
+  `predictions.csv` now.
+- **m2 (secondary):** the paper's model (DIAGNOSIS_SPEC, without the frame indicator), refitted on the same 72 tables:
+  gap ~ 1 + pred_cov + V + binary + signal + log10 n. Its coefficients are frozen now; its inputs pred_cov and signal
+  come from the fits.
+- **pre92 (descriptive):** the pre-data model refitted on all 92 seen tables.
+Pilot (20 newer-source tables, seen): the pre-data model ranks them (Spearman 0.58) but over-predicts their mean gap by
+0.032 (slope 2.1); the paper's model ranks them at 0.78 with a remainder of −0.013. If the fresh tables resemble the
+newer-source tables, H-pred is expected to pass on ranking and to show a mean over-prediction; the result is reported
+either way.
+
+## 5. Hypotheses, tests and decision rules
+Tests are two-sided unless stated; a test passes when its Holm-adjusted p < 0.05 within its family **and** its
+estimate has the predicted sign. Decision intervals: table bootstrap, 5,000 resamples, seed 20261108, percentile 95%.
+
+**A small gap is not a failure.** The macro-F1 claim is tested as agreement between the predicted and the observed
+per-table gap (H-pred), not by the size of the gap. A small observed gap confirms the claim when the frozen model
+predicted it small. The per-FM S − R macro-F1 tests (D-gap) are descriptive and are read against the prediction.
+
+### 5.1 PRIMARY family (Holm over 2)
+| ID | Claim (abstract / contributions) | Test |
+|---|---|---|
+| H-pred | "Table traits predict where the gain appears" (abstract); "table traits predict where stratified labelling overstates macro-F1 … as a model fitted on the standard tables predicts" (contribution 3) | Spearman(pre-data prediction, observed FM-mean gap) > 0, one-sided |
+| H-cov1 | "With one label per class, the whole gain comes from random draws that miss a class" (abstract; Proposition) | TOST on the FM-mean balance part at m = 1 (stratified − redraw), margin ±0.02 (the P1 coverage-test margin) |
+
+Decision rules and wording:
+- **H-pred confirmed** if the Spearman test passes **and** the calibration holds: the 95% interval of the slope of
+  observed on predicted includes 1, or the 95% interval of the mean residual (observed − predicted) includes 0.
+  Wording: "on fresh tables published after every FM, traits fitted on the standard tables predicted the per-table
+  gap (Spearman ρ, mean residual)".
+- **Weaker version** if the Spearman test passes and the calibration fails: "traits rank where the gain appears on fresh
+  tables, but the standard-table model mis-sizes it by [mean residual]". The abstract keeps "predict where", not
+  "predict how much".
+- **Not confirmed** if the Spearman test fails: the abstract sentence is limited to the frames where it held, and the
+  failure is diagnosed (Section 7) before anything is written.
+- **H-cov1 confirmed** if TOST passes: "holds on all four frames". Not confirmed: the theorem stands (it is a proof),
+  and the paper reports that the fresh-table estimate could not establish equivalence within ±0.02, with the interval.
+- Pilot power (resampled newer-source tables, Holm over 2): H-pred 0.87 at 25 tables, 0.93 at 30, 0.97 at 35; H-cov1
+  0.67 at 25, 0.74 at 30, 0.87 at 35. **The frame needs about 35 tables**; the harvest stops at 40.
+
+### 5.2 SECONDARY family (Holm over 13)
+| ID | Claim | Test |
+|---|---|---|
+| H-bal.fm1, H-bal.fm5 | "With more labels, unequal class counts add to it, most for the two TabPFN models" | balance part (S − redraw, m ∈ {3,5,10}) > 0 for TabPFN v2 and TabPFN v3.5, Wilcoxon |
+| H-bal.order | same ("most for the two TabPFN models") | mean balance part of the two TabPFN models minus that of TabICLv2 and Kumo-Tabular > 0, Wilcoxon |
+| H-BA.fm (4) | the protocol inflates balanced accuracy (RQ2, contribution 1 "predicts which metrics move") | S − R BA > 0 per FM, Wilcoxon |
+| H-acc.fm (4) | "Stratified labelling also lowers accuracy on imbalanced tables" | S − R accuracy < 0 per FM on the imbalanced tables (r = C·π_min ≤ 0.6, i.e. binary minority share ≤ 0.30), Wilcoxon; not evaluable if fewer than 8 such tables |
+| H-miss.cost | "miss-share report" (abstract, contribution 4): the miss share, with its cost, predicts the coverage part | Spearman(cost of misses pred_cov, observed FM-mean coverage part) > 0, one-sided |
+| H-pred.M2 | the paper's model ranks fresh tables | Spearman(m2 prediction, observed FM-mean gap) > 0, one-sided |
+| H-rank | "changes which model wins close comparisons" | per-table protocol flip rate − noise flip rate > 0, Wilcoxon |
+
+H-rank enters the secondary family because the pilot power is ≥ 0.8 at ≤ 35 tables (1.0 at 20).
+
+Decision rules and wording:
+- **H-bal:** confirmed if all three pass: "on all frames tested, balance adds to the gap beyond one label per class,
+  most for the two TabPFN models". Weaker: H-bal.order passes but one TabPFN model is not separately positive:
+  "balance adds most for the TabPFN models" with the per-FM numbers. Not confirmed: the abstract sentence is restricted
+  to the development and coverage-test frames. (Pilot power at 35 tables: fm1 0.64, fm5 0.89, order 1.0; the fm1 test
+  is underpowered and a failure of it alone leads to the weaker version.)
+- **H-BA:** confirmed per FM; "for all four FMs" only if 4/4 pass.
+- **H-acc:** confirmed per FM; "lowers accuracy on imbalanced tables" kept for the FMs that pass.
+- **H-miss:** two parts. (a) Reproducibility (decision interval, not in the Holm family): the share of stored random
+  draws that miss a class equals the exact probability from the class counts, i.e. the 95% interval of the mean
+  difference lies within ±0.03. Then the paper can say that the miss share can be computed from the class counts
+  before any labelling. (b) H-miss.cost passes: the miss share weighted by its cost predicts the coverage part. The miss
+  share alone is reported descriptively; in the pilot it does not predict the coverage part (Spearman −0.53), which is
+  what the paper already says ("the miss share alone does not predict the gap").
+- **H-pred.M2:** a pass means the paper's mechanism model transfers; its mean remainder on fresh tables is reported
+  next to the newer-source remainder (−0.013).
+- **H-rank:** confirmed if it passes. The fresh flip rate is reported next to the PMLB/UCI rate recomputed with the same
+  four FMs and definition (pilot: 0.37 against noise 0.12; newer-source 0.59 against 0.13).
+
+### 5.3 Descriptive (no confirmatory weight)
+Per FM: S − R macro-F1 with bootstrap interval and Wilcoxon p (D-gap), per-FM m = 1 TOST (D-cov1), per-FM
+prediction residuals, the pre92 model, the miss share alone, per-budget gaps, the subset of tables first public after
+2026-10-15.
+
+## 6. Paper consequences (fixed now)
+The non-replication subsection reports the fresh-table result with numbers whatever the outcome, and the paper gains
+a claim-by-frame table: for each claim of the abstract and contributions, which frames support it (development, PMLB/
+UCI, sealed, newer-source, coverage-test, fresh), using the verdict labels above. The abstract's wording follows the
+decision rules in Section 5. No re-run, re-seed, re-encoding or table change follows any outcome.
+
+## 7. Failure diagnosis (fixed now)
+Any primary or secondary claim that is not confirmed is diagnosed before any text is written, with the method of
+an internal note: set medians of miss share, cost of misses, signal, imbalance and binary share against
+the standard and newer-source sets; the transfer residual of the paper's model; and the per-FM split. The diagnosis
+is exploratory and is labelled so.
+
+## 8. Compute and protocol
+- Estimate from the pilot cost model (≈ 10 CPU-s per row + 2,400 s per table, all four FMs, arm T; Kumo-Tabular 43%):
+  see Section 9 for the frame total.
+- Hosts (Apple silicon only): host B (up to 14 one-thread jobs, gated on another project's
+  `CONTEST_S3.DONE` marker, load1 < 15, ≥ 25% memory free); host A (≤ 4 jobs, load1 < 16). host C is not used unless
+  both are blocked.
+- Detached on-disk queues (`code/queue.sh`, one per host; `plan/units.txt`), claims exchanged by `code/pull.sh` every
+  10 minutes, `code/resume.sh`, `queue_*/STATUS.md`; markers `queue_*/ALL_DONE` (host released) and `ALL_FAILED`;
+  study markers `queue/ALL_DONE` and `queue/ALL_FAILED`; automatic frozen analysis on `queue/ALL_DONE`
+  (`queue/analysis/ALL_DONE`). nice 15, one thread per job.
+- The analysis runs once. The pipeline test on the newer-source fits is the only earlier run of `analyze.py`.
+
+## 9. Frame and predictions
+
+40 tables; sources: figshare 18, zenodo 16, mendeley 4, dataverse 2; C = 2: 35, C ≥ 3: 5; n 100–3100 (median 410); first public 2026-09-25 to 2026-11-03. Imbalanced (r ≤ 0.6): 23.
+
+Compute estimate (pilot cost model, arm T, four FMs): 98 CPU-hours, 160 units; largest unit ≈ 4.0 h (z23805394_mentaldis, fm3). With 14 jobs on host B and 4 local: about 6–8 h of wall time.
+
+Frozen predicted FM-mean gap (pre-data model): mean +0.049, range +0.007 to +0.086.
+
+| # | key | source | record | first public (how verified) | licence | target | n | d | C | class counts | r | predicted gap |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | z22960380_citizenstatus | zenodo | 22960380 | 2026-09-25 (Zenodo versions API: 1 version(s) of the concept, first id 22960380, earliest created 2026-09-25, earliest publication_date 2026-09-25) | cc-by-4.0 | `status` | 1362 | 5 | 2 | 1264/98 | 0.14 | +0.017 |
+| 2 | f34004118_hfref | figshare | 34004118 | 2026-09-27 (figshare versions API: 1 version(s); v1 posted 2026-09-27 (published_date 2026-09-27)) | CC BY 4.0 | `Primary_Endpoint` | 454 | 29 | 2 | 312/142 | 0.63 | +0.055 |
+| 3 | z22997149_menohealth | zenodo | 22997149 | 2026-09-27 (Zenodo versions API: 1 version(s) of the concept, first id 22997149, earliest created 2026-09-27, earliest publication_date 2026-09-27) | cc-by-4.0 | `Have you ever changed or improved your health behaviour` | 237 | 45 | 4 | 21/115/56/45 | 0.35 | +0.074 |
+| 4 | f34044552_gastricT | figshare | 34044552 | 2026-10-01 (figshare versions API: 1 version(s); v1 posted 2026-10-01 (published_date 2026-10-01)) | CC BY 4.0 | `Pathologic T-staging` | 406 | 16 | 4 | 119/53/140/94 | 0.52 | +0.079 |
+| 5 | f34062060_mdm4bc | figshare | 34062060 | 2026-10-03 (figshare versions API: 1 version(s); v1 posted 2026-10-03 (published_date 2026-10-03)) | CC BY 4.0 | `Group` | 236 | 11 | 2 | 112/124 | 0.95 | +0.065 |
+| 6 | f34063860_postopdelir | figshare | 34063860 | 2026-10-04 (figshare versions API: 2 version(s); v1 posted 2026-10-04 (published_date 2026-10-04)) | CC BY 4.0 | `POD` | 326 | 34 | 2 | 267/59 | 0.36 | +0.041 |
+| 7 | f34066806_ivfhcg | figshare | 34066806 | 2026-10-05 (figshare versions API: 1 version(s); v1 posted 2026-10-05 (published_date 2026-10-05)) | CC BY 4.0 | `BETA_HCG_RESULT` | 288 | 16 | 2 | 97/191 | 0.67 | +0.059 |
+| 8 | f34068024_mtloutcome | figshare | 34068024 | 2026-10-05 (figshare versions API: 1 version(s); v1 posted 2026-10-05 (published_date 2026-10-05)) | CC BY 4.0 | `outcome` | 467 | 12 | 3 | 127/32/308 | 0.21 | +0.059 |
+| 9 | d_WYSVP5_pumpkinseed | dataverse | dv_borealisdata_WYSVP5 | 2026-10-06 (Dataverse listing: created 2026-10-06, published 2026-10-07 (both must be >= cut)) | CC-BY 4.0 | `Maturation Status` | 156 | 8 | 2 | 59/97 | 0.76 | +0.063 |
+| 10 | f34105206_neonatalrds | figshare | 34105206 | 2026-10-06 (figshare versions API: 1 version(s); v1 posted 2026-10-06 (published_date 2026-10-06)) | CC BY 4.0 | `RESPIRATORY DISTRESS` | 1356 | 37 | 2 | 1249/107 | 0.16 | +0.019 |
+| 11 | z23197644_faaannicu | zenodo | 23197644 | 2026-10-06 (Zenodo versions API: 1 version(s) of the concept, first id 23197644, earliest created 2026-10-06, earliest publication_date 2026-10-06) | cc-by-4.0 | `nicu` | 101 | 12 | 2 | 88/13 | 0.26 | +0.036 |
+| 12 | z23233050_damselsurv | zenodo | 23233050 | 2026-10-06 (Zenodo versions API: 1 version(s) of the concept, first id 23233050, earliest created 2026-10-08, earliest publication_date 2026-10-06) | cc-zero | `Survival -F0` | 711 | 7 | 2 | 508/203 | 0.57 | +0.051 |
+| 13 | f34136595_covidmort | figshare | 34136595 | 2026-10-07 (figshare versions API: 1 version(s); v1 posted 2026-10-07 (published_date 2026-10-07)) | CC BY 4.0 | `death` | 1040 | 21 | 2 | 505/535 | 0.97 | +0.061 |
+| 14 | z23210393_lassapcr | zenodo | 23210393 | 2026-10-07 (Zenodo versions API: 1 version(s) of the concept, first id 23210393, earliest created 2026-10-07, earliest publication_date 2026-10-07) | cc-by-4.0 | `RT-PCR Result` | 782 | 8 | 2 | 679/103 | 0.26 | +0.030 |
+| 15 | z23217851_moldstatus | zenodo | 23217851 | 2026-10-07 (Zenodo versions API: 1 version(s) of the concept, first id 23217851, earliest created 2026-10-08, earliest publication_date 2026-10-07) | cc-by-4.0 | `Status` | 1200 | 6 | 2 | 1062/138 | 0.23 | +0.026 |
+| 16 | f30466181_fishsurv | figshare | 30466181 | 2026-10-08 (figshare versions API: 1 version(s); v1 posted 2026-10-08 (published_date 2026-10-08)) | CC BY 4.0 | `Survival` | 827 | 6 | 2 | 131/696 | 0.32 | +0.035 |
+| 17 | f34218222_gastricsurv | figshare | 34218222 | 2026-10-08 (figshare versions API: 1 version(s); v1 posted 2026-10-08 (published_date 2026-10-08)) | CC BY 4.0 | `sur_status` | 2211 | 22 | 2 | 1467/744 | 0.67 | +0.053 |
+| 18 | z23264479_daphsurv | zenodo | 23264479 | 2026-10-09 (Zenodo versions API: 1 version(s) of the concept, first id 23264479, earliest created 2026-10-09, earliest publication_date 2026-10-09) | cc-by-4.0 | `Survival` | 312 | 9 | 2 | 134/178 | 0.86 | +0.064 |
+| 19 | f34328925_avfdysf | figshare | 34328925 | 2026-10-10 (figshare versions API: 2 version(s); v1 posted 2026-10-10 (published_date 2026-10-10)) | CC BY 4.0 | `Outcome_365d_1` | 288 | 43 | 2 | 196/92 | 0.64 | +0.057 |
+| 20 | f34338147_sicm | figshare | 34338147 | 2026-10-12 (figshare versions API: 1 version(s); v1 posted 2026-10-12 (published_date 2026-10-12)) | CC BY 4.0 | `SICM` | 158 | 37 | 2 | 63/95 | 0.80 | +0.065 |
+| 21 | f34378926_hivinc | figshare | 34378926 | 2026-10-12 (figshare versions API: 1 version(s); v1 posted 2026-10-12 (published_date 2026-10-12)) | CC BY 4.0 | `HIV_FollowUp` | 729 | 15 | 2 | 715/14 | 0.04 | +0.007 |
+| 22 | f34557540_gtf4 | figshare | 34557540 | 2026-10-16 (figshare versions API: 1 version(s); v1 posted 2026-10-16 (published_date 2026-10-16)) | CC BY 4.0 | `Efficacy` | 108 | 38 | 3 | 41/30/37 | 0.83 | +0.086 |
+| 23 | z23432510_luaddeath | zenodo | 23432510 | 2026-10-17 (Zenodo versions API: 1 version(s) of the concept, first id 23432510, earliest created 2026-10-17, earliest publication_date 2026-10-17) | cc-by-4.0 | `death` | 142 | 12 | 2 | 39/103 | 0.55 | +0.055 |
+| 24 | z23439806_metsynd | zenodo | 23439806 | 2026-10-17 (Zenodo versions API: 1 version(s) of the concept, first id 23439806, earliest created 2026-10-26, earliest publication_date 2026-10-17) | cc-by-4.0 | `sindrome_metabolica` | 402 | 11 | 2 | 251/151 | 0.75 | +0.060 |
+| 25 | f34688373_bcdeath | figshare | 34688373 | 2026-10-18 (figshare versions API: 1 version(s); v1 posted 2026-10-18 (published_date 2026-10-18)) | CC BY 4.0 | `Death01` | 100 | 36 | 2 | 66/34 | 0.68 | +0.062 |
+| 26 | d_EF0JED_birdpresence | dataverse | dv_borealisdata_EF0JED | 2026-10-21 (Dataverse listing: created 2026-10-21, published 2026-10-22 (both must be >= cut)) | CC0 1.0 | `Present` | 442 | 3 | 2 | 334/108 | 0.49 | +0.048 |
+| 27 | f34725615_ahfmort | figshare | 34725615 | 2026-10-21 (figshare versions API: 1 version(s); v1 posted 2026-10-21 (published_date 2026-10-21)) | CC BY 4.0 | `outcome` | 572 | 33 | 2 | 519/53 | 0.19 | +0.024 |
+| 28 | z23722999_pppdefault | zenodo | 23722999 | 2026-10-24 (Zenodo versions API: 2 version(s) of the concept, first id 23722999, earliest created 2026-10-24, earliest publication_date 2026-10-24) | cc-by-4.0 | `default_fact` | 2707 | 6 | 2 | 2251/456 | 0.34 | +0.033 |
+| 29 | m_myy25v3xjy_pumpknow | mendeley | mndmyy25v3xjy | 2026-10-25 (Mendeley public API: version 1, publish_date 2026-10-25) | CC BY 4.0 | `KStatus` | 150 | 21 | 2 | 41/109 | 0.55 | +0.055 |
+| 30 | z23778804_reburn | zenodo | 23778804 | 2026-10-29 (Zenodo versions API: 1 version(s) of the concept, first id 23778804, earliest created 2026-10-29, earliest publication_date 2026-10-29) | cc-by-4.0 | `event` | 879 | 2 | 2 | 691/188 | 0.43 | +0.043 |
+| 31 | z23805394_mentaldis | zenodo | 23805394 | 2026-10-30 (Zenodo versions API: 1 version(s) of the concept, first id 23805394, earliest created 2026-10-30, earliest publication_date 2026-10-30) | cc-by-4.0 | `any_mental_disorder` | 3100 | 11 | 2 | 2524/576 | 0.37 | +0.035 |
+| 32 | f34873153_sevpneum | figshare | 34873153 | 2026-10-31 (figshare versions API: 1 version(s); v1 posted 2026-10-31 (published_date 2026-10-31)) | CC BY | `re:^severe pneumonia` | 257 | 30 | 2 | 179/78 | 0.61 | +0.056 |
+| 33 | z23860050_mpbcdeath | zenodo | 23860050 | 2026-10-31 (Zenodo versions API: 2 version(s) of the concept, first id 23860050, earliest created 2026-10-31, earliest publication_date 2026-10-31) | cc-by-4.0 | `status` | 551 | 28 | 2 | 525/26 | 0.09 | +0.015 |
+| 34 | m_ccyfb92b9m_popiadm | mendeley | mndccyfb92b9m | 2026-11-01 (Mendeley public API: version 1, publish_date 2026-11-01) | CC BY NC 3.0 | `admission` | 144 | 27 | 2 | 62/82 | 0.86 | +0.066 |
+| 35 | z23855998_popf | zenodo | 23855998 | 2026-11-01 (Zenodo versions API: 1 version(s) of the concept, first id 23855998, earliest created 2026-11-01, earliest publication_date 2026-11-01) | cc-by-4.0 | `re:^POPF grade B` | 240 | 17 | 2 | 34/206 | 0.28 | +0.036 |
+| 36 | m_s9g88mm27k_zfdead | mendeley | mnds9g88mm27k | 2026-11-02 (Mendeley public API: version 1, publish_date 2026-11-02) | CC BY 4.0 | `re:^Dead_96h` | 100 | 12 | 2 | 67/33 | 0.66 | +0.062 |
+| 37 | m_vbgs2hxgcd_racase | mendeley | mndvbgs2hxgcd | 2026-11-02 (Mendeley public API: version 1, publish_date 2026-11-02) | CC BY 4.0 | `RA or Control` | 414 | 9 | 2 | 207/207 | 1.00 | +0.064 |
+| 38 | z23897684_diffintub | zenodo | 23897684 | 2026-11-02 (Zenodo versions API: 1 version(s) of the concept, first id 23897684, earliest created 2026-11-02, earliest publication_date 2026-11-02) | cc-by-4.0 | `IDS=>5` | 221 | 12 | 2 | 171/50 | 0.45 | +0.048 |
+| 39 | f34896621_anyapo | figshare | 34896621 | 2026-11-03 (figshare versions API: 1 version(s); v1 posted 2026-11-03 (published_date 2026-11-03)) | CC BY 4.0 | `any_APO` | 474 | 38 | 2 | 162/312 | 0.68 | +0.058 |
+| 40 | z23917022_dyslexia | zenodo | 23917022 | 2026-11-03 (Zenodo versions API: 1 version(s) of the concept, first id 23917022, earliest created 2026-11-03, earliest publication_date 2026-11-03) | cc-by-4.0 | `re:^DYSLEXIA SUBTYPE` | 1228 | 5 | 4 | 910/123/41/154 | 0.13 | +0.039 |

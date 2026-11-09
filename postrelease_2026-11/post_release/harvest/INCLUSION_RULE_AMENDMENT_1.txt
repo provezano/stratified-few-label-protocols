@@ -1,0 +1,12 @@
+PUBLIC COPY. Host names, local paths and internal note names are replaced; nothing else is changed.
+The SHA-256 digests in INCLUSION_RULE.sha256 refer to the unredacted frozen file.
+
+# Amendment 1 to INCLUSION_RULE.txt (sha256 c5b2113b...; unchanged)
+
+Date 2026-11-07, requested by the study lead for power (primary hypotheses need about 35 tables), written before the first
+build and before any decisions.py entry existed. Only Section 3 changes:
+- stop point raised from 36 to 40 eligible tables (minimum 35; report if fewer);
+- if curation/order.csv is exhausted before 40, extend with fresh listings (Zenodo records created 2026-11-01..11-07,
+  Mendeley Data, Dataverse, figshare), probed the same way; the extension is appended to the order in its own block,
+  sorted by the same keys (listing date, source, record id), after the frozen list.
+Everything else (candidate definition, order, accept-every-eligible rule, eligibility, exclusions, codes) is unchanged.

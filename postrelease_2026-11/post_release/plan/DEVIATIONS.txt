@@ -1,0 +1,47 @@
+PUBLIC COPY. Host names, local paths and internal note names are replaced; nothing else is changed.
+The SHA-256 digests in no digest (written after the runs) refer to the unredacted frozen file.
+
+# Disclosed deviations from the frozen plan (PLAN.sha256)
+
+## Deviation 1 (2026-11-08): queue scripts skip a unit that failed three times instead of stopping the study
+
+**What happened.** The study started 2026-11-07 20:09 (-03). The local queue stopped at 23:06 after unit
+`d_EF0JED_birdpresence fm1` (TabPFN v2) failed three times; host B, gated until 03:42, stopped at 08:23 on 2026-11-08 after
+`d_EF0JED_birdpresence fm5` (TabPFN v3.5) failed three times. 139 of 160 units had finished (73 local, 66 host B, no
+overlap); 21 were missing, of which these two had failed.
+
+**Cause.** Both failures are the same deterministic error in TabPFN's preprocessing
+(`TabPFNValidationError: All features are constant and would have been removed`). The table has d = 3 discrete
+features (3, 16 and 10 distinct values). In at least one labelled set the labelled rows are identical on all three
+features, so TabPFN refuses to fit. The seeds are fixed, so the three attempts reproduce the same labelled set and the
+same error: the failure is a property of the table under the frozen design, not of the hosts. TabICLv2 and
+Kumo-Tabular fitted the same labelled sets without error.
+
+**Plan rule that applies.** PLAN.txt section 2: "A unit (table x FM) is retried up to three times. A table without all
+four FMs is dropped from every analysis (complete case)." `code/analyze.py` already implements the complete-case drop
+(`missing_complete_case`). The table `d_EF0JED_birdpresence` is therefore dropped; 39 tables remain (plan target about 35).
+
+**Infrastructure fault.** `code/queue.sh` (frozen SHA-256 42df5e3b...) did not follow that rule: on the third failure of
+one unit it wrote `ALL_FAILED` + `ALL_DONE` and released the whole host, and `code/pull.sh` (frozen a2fe3e26...) then
+wrote `queue/ALL_FAILED` and stopped the study. A secondary cosmetic error: `queue.sh` read `claims_other.txt` before
+`pull.sh` had first written it (stderr message, no effect).
+
+**Change.** `queue.sh` now records such a unit in `queue_<host>/FAILED_UNITS.txt`, skips it and continues, and creates
+`claims_other.txt` at start. `pull.sh` exchanges the failed-unit lists between hosts (so neither host retries the
+other's failed unit), finishes when every unit has a fit or has failed three times, writes the union to
+`queue/FAILED_UNITS.txt`, and then runs the frozen `code/analyze.py` once, as before. Under 30 tables the analysis
+still runs and the primary family is reported as underpowered (plan section 2), rather than the study stopping.
+Frozen originals are kept byte-identical in `plan/deviations/frozen_code/`.
+
+**Not changed.** `run_unit.py`, `analyze.py`, `family.py`, `confirm_lib.py`, the frame, the predictions, the frozen
+model, the seeds, the FMs and their pins, the device class (Apple-silicon CPU: host A and host B only), and the
+retry count. No unit was re-run with a changed setting. No fit had been analysed when this change was made.
+
+**Effect on the analysis.** None beyond the plan's own complete-case rule: the fresh frame is analysed on 39 tables.
+- patched: 8440da7c65d46d800cb9eaf53a54ef28076034cf5b05a349ac065319121cb618  code/queue.sh
+- patched: 7507498f4755e55c480e5aace8788e3d843ab71ef11dacaaa9502bb9eac93276  code/pull.sh
+
+## Deviation 2 (found 2026-11-09, after the analysis; no re-analysis of the planned tests)
+The inclusion rule dated Kumo-Tabular's release to 2026-09-23. A desk-editor simulation questioned this, and a check of the Hugging Face API (2026-11-09) found two dates: the model repository was created on 2026-09-01, and the public commit "Release Kumo Tabular" is dated 2026-09-28. The blog post is dated 29 September. Three frame tables (z22960380_citizenstatus, f34004118_hfref and z22997149_menohealth, first published 2026-09-25 to 09-27) therefore appeared before Kumo-Tabular was public, though after all four models had been trained.
+- Exploratory sensitivity: `code/sens_kumo_release.py` → `results/sens_kumo_release.json`. On the 36 remaining tables, ρ(M2) is 0.86, ρ(pre) is 0.73 and the mean M2 remainder is −0.002. The FM gaps are essentially unchanged.
+- Disclosed in the main text (Sec. 5.1) and in the supplement (app:postrelease).

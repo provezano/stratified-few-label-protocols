@@ -1,0 +1,507 @@
+pos,record,source,date,code,reason,stage
+1,32749329,figshare,2026-09-24,R3a,burn severity is the study gradient (design factor),judgment
+2,33981208,figshare,2026-09-24,R3a,consumer survey; only demographics,judgment
+3,mndrskzv8vjhy,mendeley,2026-09-24,R0,R0: first public None < 2026-09-24 or not verifiable as first version (Mendeley public API: version 2 ()),build
+4,22911182,zenodo,2026-09-24,R3a,corpus coding metadata,judgment
+5,22935246,zenodo,2026-09-24,R5s,network simulation output,judgment
+6,22936645,zenodo,2026-09-24,R3a,outcomes are continuous scales; marital status is a covariate,judgment
+7,22937967,zenodo,2026-09-24,R3a,farm typology inputs; no class outcome,judgment
+8,22943181,zenodo,2026-09-24,R5r,compilation of published trait/occurrence sources,judgment
+9,22944462,zenodo,2026-09-24,R3a,network route events; no documented class outcome,judgment
+10,22944911,zenodo,2026-09-24,R3a,rotation/tillage are design factors,judgment
+11,22945588,zenodo,2026-09-24,R3a,no class outcome (pain items are test-level responses; outcomes continuous),judgment
+12,22945729,zenodo,2026-09-24,R3a,attitude survey; work experience is a covariate,judgment
+13,33995411,figshare,2026-09-25,R2,R2: smallest class 10 < 11,build
+14,22772321,zenodo,2026-09-25,R6,aggregated areas per water type,judgment
+15,22918436,zenodo,2026-09-25,R3a,genomic variant annotations,judgment
+16,22952107,zenodo,2026-09-25,R6,aggregated source records (271 rows of statistics),judgment
+17,22960259,zenodo,2026-09-25,R3a,survey; occupation covariate,judgment
+19,22960909,zenodo,2026-09-25,R3a,country-level sanctions panel; no class outcome,judgment
+20,22961817,zenodo,2026-09-25,R6,cleaning events; injury is the explanatory factor,judgment
+21,22963157,zenodo,2026-09-25,R3a,LLM benchmark,judgment
+22,22963191,zenodo,2026-09-25,R5r,power-plant list compiled from public registers,judgment
+23,22965144,zenodo,2026-09-25,R3a,outcomes (digital competence) are continuous scores,judgment
+24,22966965,zenodo,2026-09-25,R6,trial-level long-format responses,judgment
+25,22967466,zenodo,2026-09-25,R3a,regression target (shear capacity),judgment
+26,22969098,zenodo,2026-09-25,R3a,recipe catalogue,judgment
+27,22787350,zenodo,2026-09-26,R6,trial-level long format,judgment
+28,22938743,zenodo,2026-09-26,R3a,manipulation check,judgment
+29,22970684,zenodo,2026-09-26,R3a,AI perception results,judgment
+30,22973169,zenodo,2026-09-26,R3a,benchmark evaluation output,judgment
+31,22978547,zenodo,2026-09-26,R3a,experimental panel design,judgment
+32,22979627,zenodo,2026-09-26,R3a,no named class outcome; food insecurity a covariate,judgment
+33,22981957,zenodo,2026-09-26,R3a,audit workbook,judgment
+35,22987464,zenodo,2026-09-27,R5r,literature-curated trait database,judgment
+36,22993477,zenodo,2026-09-27,R3a,voice benchmark,judgment
+37,22995363,zenodo,2026-09-27,R5r,systematic review extraction,judgment
+39,23001961,zenodo,2026-09-27,R5r,compiled postcode indicators,judgment
+40,23002967,zenodo,2026-09-27,R5r,compiled regulatory records,judgment
+41,34007694,figshare,2026-09-28,R3a,native/invasive status is the design factor,judgment
+42,22968988,zenodo,2026-09-28,R3a,sample metadata,judgment
+43,23005231,zenodo,2026-09-28,R5s,synthetic building telemetry,judgment
+44,23007343,zenodo,2026-09-28,R3d,health status assigned by authors' rule from features,judgment
+45,23018528,zenodo,2026-09-28,R3a,education survey,judgment
+46,23020852,zenodo,2026-09-28,R3a,conversion uncertainty labels,judgment
+47,23021411,zenodo,2026-09-28,R3a,survey wave,judgment
+48,23022798,zenodo,2026-09-28,R6,monitoring rows per transect x taxon; 'Diagnostic' undocumented,judgment
+49,23024588,zenodo,2026-09-28,R3a,questionnaire validation items,judgment
+50,mnd4g2wwnv3hz,mendeley,2026-09-29,R3a,barriers survey; pregnancy status descriptive,judgment
+51,mnd4nr4xmbxnb,mendeley,2026-09-29,R2,R2: d = 220 > 100,build
+52,mndsrd7cvv6yc,mendeley,2026-09-29,R5r,meta-analysis extraction,judgment
+53,mndx62p2mpddj,mendeley,2026-09-29,R5r,literature database,judgment
+54,23024344,zenodo,2026-09-29,R3a,weather QC flags,judgment
+55,23036823,zenodo,2026-09-29,R5r,clinical/expression table from public melanoma cohort data,judgment
+56,23040156,zenodo,2026-09-29,R7,text annotations,judgment
+57,23040253,zenodo,2026-09-29,R3a,bat detector design,judgment
+58,23042802,zenodo,2026-09-29,R6,trial-level experiment,judgment
+59,23042894,zenodo,2026-09-29,R3a,burn severity/introduced status are covariates,judgment
+60,23042932,zenodo,2026-09-29,R3a,capability survey,judgment
+61,23043225,zenodo,2026-09-29,R3a,growth stage is design,judgment
+62,dvnGKXWFN,dataverse,2026-09-30,R3a,course topic coverage,judgment
+63,mnd8dxdnpskjz,mendeley,2026-09-30,R3a,perception survey,judgment
+64,mndjbtnhhmbxw,mendeley,2026-09-30,R3a,FDI panel,judgment
+65,22729779,zenodo,2026-09-30,R3a,structural chemistry,judgment
+66,22832597,zenodo,2026-09-30,R6,trial contingency file,judgment
+67,23050820,zenodo,2026-09-30,R5r,review of published translocations,judgment
+68,23051011,zenodo,2026-09-30,R3a,caregiver knowledge survey,judgment
+69,23056960,zenodo,2026-09-30,R3a,sequence mapping,judgment
+70,23059237,zenodo,2026-09-30,R5s,simulated digital twin,judgment
+71,23068022,zenodo,2026-09-30,R3a,media coding,judgment
+72,23070284,zenodo,2026-09-30,R3a,awareness survey,judgment
+73,23072026,zenodo,2026-09-30,R3a,qualification registry,judgment
+74,dvnGI3YFG,dataverse,2026-10-01,R3a,printed values,judgment
+75,28926644,figshare,2026-10-01,R5r,trait compilation,judgment
+76,34039206,figshare,2026-10-01,R6,patient-aware single-cell sample table,judgment
+78,23063995,zenodo,2026-10-01,R3a,public goods survey,judgment
+79,23072502,zenodo,2026-10-01,R3a,converter switching events,judgment
+80,23074189,zenodo,2026-10-01,R3a,trainee assessment,judgment
+81,23080220,zenodo,2026-10-01,R3a,astronomical frame detections,judgment
+82,23080602,zenodo,2026-10-01,R3a,nest is a design factor,judgment
+83,23084440,zenodo,2026-10-01,R3a,importance-performance survey,judgment
+84,23084548,zenodo,2026-10-01,R3a,software trust scores,judgment
+85,23089222,zenodo,2026-10-01,R6,regional aggregate,judgment
+86,23089809,zenodo,2026-10-01,R6,trial metadata (several trials per mouse),judgment
+87,23089884,zenodo,2026-10-01,R6,long-format responses,judgment
+88,mndbrp92n6g2p,mendeley,2026-10-02,R3a,stakeholder survey,judgment
+89,23092961,zenodo,2026-10-02,R3a,web crawl panel,judgment
+90,23099580,zenodo,2026-10-02,R3a,household survey without named class outcome,judgment
+91,23100786,zenodo,2026-10-02,R3a,word lists,judgment
+92,23101200,zenodo,2026-10-02,R0,concept first version: Zenodo versions API earliest publication_date 2026-06-09 (FDR25),judgment
+93,23106560,zenodo,2026-10-02,R3a,spill records,judgment
+94,23107155,zenodo,2026-10-02,R3a,bibliographic,judgment
+95,23109271,zenodo,2026-10-02,R3a,LLM output,judgment
+97,23117023,zenodo,2026-10-03,R3a,prompt annotations,judgment
+98,23117945,zenodo,2026-10-03,R3a,cohort sample without a named outcome; screening flags derived from labs,judgment
+99,23118843,zenodo,2026-10-03,R3a,attitude survey,judgment
+100,23121122,zenodo,2026-10-03,R3a,model prediction output,judgment
+101,23121915,zenodo,2026-10-03,R3a,market survey,judgment
+102,dvnDZTBVW,dataverse,2026-10-04,R3a,vignette experiment,judgment
+104,23130191,zenodo,2026-10-04,R3a,telemetry,judgment
+105,23134997,zenodo,2026-10-04,R3a,consumer survey,judgment
+106,23144934,zenodo,2026-10-04,R3a,motivation survey,judgment
+107,23146331,zenodo,2026-10-04,R3a,price list,judgment
+108,dv_entrepot_89ADBK,dataverse,2026-10-05,R3a,land use is a covariate of soil geochemistry,judgment
+110,34067874,figshare,2026-10-05,R3d,risk tiers computed by the authors' rule from the features (likely generated data),judgment
+112,34070637,figshare,2026-10-05,R3a,exposure group is the design,judgment
+113,23010782,zenodo,2026-10-05,R3a,diet survey,judgment
+114,23155666,zenodo,2026-10-05,R3a,facilitator forms,judgment
+115,23160460,zenodo,2026-10-05,R6,behaviour bouts; breeding stage is a covariate,judgment
+116,23163443,zenodo,2026-10-05,R5r,FAERS/EMA public pharmacovigilance data,judgment
+117,23164657,zenodo,2026-10-05,R3a,historical coding,judgment
+118,23166343,zenodo,2026-10-05,R3a,farm typology,judgment
+119,23167364,zenodo,2026-10-05,R3a,ground-motion metadata,judgment
+120,23169108,zenodo,2026-10-05,R3a,survey,judgment
+121,23170794,zenodo,2026-10-05,R3a,erosion tests,judgment
+122,23171513,zenodo,2026-10-05,R3a,archaeological identifications,judgment
+123,23174013,zenodo,2026-10-05,R3a,price index,judgment
+125,dv_entrepot_Q6IQ0Q,dataverse,2026-10-06,R3a,plot composition; agriculture type is design,judgment
+127,mnd88k58zwxmy,mendeley,2026-10-06,R3a,disaster risk panel,judgment
+128,mnd9yzn86wy9n,mendeley,2026-10-06,R3a,image metadata,judgment
+129,mndxsrdd6z37k,mendeley,2026-10-06,R3a,reactor kinetics,judgment
+130,22828203,zenodo,2026-10-06,R3a,student feedback,judgment
+131,23163284,zenodo,2026-10-06,R3a,sampling events,judgment
+132,23176565,zenodo,2026-10-06,R5s,synthetic emergency-care data,judgment
+133,23179594,zenodo,2026-10-06,R3a,diet is treatment,judgment
+134,23181166,zenodo,2026-10-06,R3a,proteomics cohort without a named class outcome,judgment
+135,23182204,zenodo,2026-10-06,R3a,CAST-seq sites,judgment
+136,23184366,zenodo,2026-10-06,R3a,screening log,judgment
+137,23187215,zenodo,2026-10-06,R5r,reference catalogue,judgment
+138,23188896,zenodo,2026-10-06,R3a,communication coding,judgment
+139,23189814,zenodo,2026-10-06,R0,concept first version: Zenodo versions API earliest publication_date 2026-09-07,judgment
+140,23190237,zenodo,2026-10-06,R3a,benchmark,judgment
+141,23191415,zenodo,2026-10-06,R3a,corpus coding,judgment
+142,23192788,zenodo,2026-10-06,R5r,Scopus export,judgment
+143,23195124,zenodo,2026-10-06,R3a,simulated-patient case is design,judgment
+145,dvn1L9B5A,dataverse,2026-10-07,R3a,caste list,judgment
+146,dvnTX683E,dataverse,2026-10-07,R3a,literacy survey,judgment
+147,34078956,figshare,2026-10-07,R3a,MAG annotation,judgment
+148,34132352,figshare,2026-10-07,R3a,manuscript analysis,judgment
+150,34165404,figshare,2026-10-07,R3a,inbreeding is design,judgment
+151,mnd39kvw3kvf2,mendeley,2026-10-07,R3a,nanoparticle literature table,judgment
+152,mnd8pbc75mpfy,mendeley,2026-10-07,R3a,attitude survey,judgment
+153,mndy5r7jnf6cd,mendeley,2026-10-07,R3a,germplasm status is accession type,judgment
+154,19633713,zenodo,2026-10-07,R3a,"morphotype descriptors, no outcome",judgment
+155,23083467,zenodo,2026-10-07,R3a,occurrence flags,judgment
+156,23166033,zenodo,2026-10-07,R7,text comments,judgment
+157,23201979,zenodo,2026-10-07,R3a,biotech program benchmark,judgment
+158,23205632,zenodo,2026-10-07,R3a,survey,judgment
+159,23205695,zenodo,2026-10-07,R3a,fear ratings,judgment
+160,23209001,zenodo,2026-10-07,R3a,incident atlas coding,judgment
+162,23214370,zenodo,2026-10-07,R3a,diet is design,judgment
+163,23215748,zenodo,2026-10-07,R3a,business dataset,judgment
+164,23218526,zenodo,2026-10-07,R3a,corpus appraisal,judgment
+165,23223338,zenodo,2026-10-07,R2,R2: n = 5966 > 5000,build
+166,23223512,zenodo,2026-10-07,R0,concept first version: Zenodo versions API earliest created 2026-07-29,judgment
+167,23224070,zenodo,2026-10-07,R3a,intervention design,judgment
+168,dvnWT5VIY,dataverse,2026-10-08,R3a,caste list (same as 145),judgment
+171,23215813,zenodo,2026-10-08,R3a,bacterial growth status in experiment,judgment
+173,23228129,zenodo,2026-10-08,R5s,synthesised data,judgment
+174,23231901,zenodo,2026-10-08,R3a,scheduling runs,judgment
+175,23232044,zenodo,2026-10-08,R3a,responsible sex is descriptive,judgment
+177,23233124,zenodo,2026-10-08,R3a,initiative catalogue,judgment
+178,23235482,zenodo,2026-10-08,R6,trial-level,judgment
+179,23236207,zenodo,2026-10-08,R3a,survey,judgment
+180,23238143,zenodo,2026-10-08,R3a,survey,judgment
+181,23239114,zenodo,2026-10-08,R3a,household survey,judgment
+182,23239366,zenodo,2026-10-08,R3a,bootstrap output,judgment
+183,23244251,zenodo,2026-10-08,R3a,survey,judgment
+184,23244745,zenodo,2026-10-08,R3a,textbook codes,judgment
+185,mndgv9ktvxzh5,mendeley,2026-10-09,R6,882 trials from 154 dogs (several rows per unit),judgment
+186,mndn2fcbn3bpw,mendeley,2026-10-09,R3a,survey,judgment
+187,mndxs5p94z4hn,mendeley,2026-10-09,R3a,survey,judgment
+188,23051551,zenodo,2026-10-09,R5r,integrated database,judgment
+189,23105051,zenodo,2026-10-09,R3a,classroom data,judgment
+190,23211030,zenodo,2026-10-09,R3a,content spells,judgment
+191,23241904,zenodo,2026-10-09,R3a,seismic catalogue,judgment
+192,23253608,zenodo,2026-10-09,R3a,conservation table,judgment
+193,23258436,zenodo,2026-10-09,R3a,survey,judgment
+194,23258538,zenodo,2026-10-09,R3a,software comparison,judgment
+195,23263986,zenodo,2026-10-09,R3a,predictions/evaluations,judgment
+197,23264683,zenodo,2026-10-09,R6,judgment trials,judgment
+198,23265605,zenodo,2026-10-09,R3a,failure state is the experimental design,judgment
+199,23266178,zenodo,2026-10-09,R5r,virosphere compilation,judgment
+201,34328943,figshare,2026-10-10,R5r,second deposit of the same AVF dataset as 34328925 (accepted at pos 200),judgment
+202,34330920,figshare,2026-10-10,R2,R2: smallest class 7 < 11,build
+203,23273217,zenodo,2026-10-10,R3a,screening,judgment
+204,23277953,zenodo,2026-10-10,R3a,survey,judgment
+205,23278917,zenodo,2026-10-10,R3a,survey,judgment
+206,23280941,zenodo,2026-10-10,R3a,diet is treatment,judgment
+207,23281822,zenodo,2026-10-10,R3a,codebook,judgment
+208,23283512,zenodo,2026-10-10,R3a,survey,judgment
+209,23285268,zenodo,2026-10-10,R5s,Monte Carlo benchmark,judgment
+210,23286738,zenodo,2026-10-10,R3a,MR results,judgment
+211,dvn3QFNPO,dataverse,2026-10-11,R3a,attitude survey,judgment
+212,23290064,zenodo,2026-10-11,R6,several species presence columns; no single documented target,judgment
+213,23296662,zenodo,2026-10-11,R5s,synthetic shop sales,judgment
+214,23299627,zenodo,2026-10-11,R5r,compiled plant database,judgment
+215,23300357,zenodo,2026-10-11,R5r,compiled species catalogue,judgment
+216,23304844,zenodo,2026-10-11,R3a,price index,judgment
+217,30980203,figshare,2026-10-12,R5r,compiled functional traits,judgment
+218,34336359,figshare,2026-10-12,RX,RX: row overlap 0.92 with g4framenpz:oml_469,build
+220,34348266,figshare,2026-10-12,R3a,HPO term validation,judgment
+222,23308336,zenodo,2026-10-12,R3a,acoustic scores,judgment
+223,23312208,zenodo,2026-10-12,R3a,bibliometric screening,judgment
+224,23314063,zenodo,2026-10-12,R6,daily repeated rows per tagged individual (day x ID),judgment
+225,23316036,zenodo,2026-10-12,R6,province-year aggregates,judgment
+226,23319410,zenodo,2026-10-12,R3a,building risk zones,judgment
+227,23320272,zenodo,2026-10-12,R3a,job listings,judgment
+228,23322414,zenodo,2026-10-12,R3a,survey,judgment
+229,32209470,figshare,2026-10-13,R3a,activity flags; n > 5000,judgment
+230,mnd7p36487cjh,mendeley,2026-10-13,R3a,QC summary,judgment
+231,mnd96pyrchd3d,mendeley,2026-10-13,R3a,survey,judgment
+232,mndg53ypyx4g8,mendeley,2026-10-13,R3a,survey,judgment
+233,23331631,zenodo,2026-10-13,R5r,regulatory notices compiled,judgment
+234,23334890,zenodo,2026-10-13,R3a,survey,judgment
+235,23335081,zenodo,2026-10-13,R3a,BIM validation,judgment
+236,23337810,zenodo,2026-10-13,R7,text comments,judgment
+237,23340479,zenodo,2026-10-13,R5s,synthetic simulation,judgment
+238,23342132,zenodo,2026-10-13,R3a,diet is design,judgment
+239,23343041,zenodo,2026-10-13,R5r,review,judgment
+240,23344669,zenodo,2026-10-13,R3a,registry screening,judgment
+241,23344678,zenodo,2026-10-13,R3a,kill vs random points: controls generated by the authors (use-availability design),judgment
+242,23348329,zenodo,2026-10-13,R3a,procurement complaints,judgment
+243,23348707,zenodo,2026-10-13,R3a,diet is design,judgment
+244,23351848,zenodo,2026-10-13,R5r,inventory compiled from literature/imagery,judgment
+245,23353152,zenodo,2026-10-13,R3a,sightings table,judgment
+246,34501192,figshare,2026-10-14,R3a,infection order is design,judgment
+247,34513158,figshare,2026-10-14,R3a,observation scores,judgment
+248,34515174,figshare,2026-10-14,R3a,protocol group is design; d > 100,judgment
+249,mnd8rvr5m863v,mendeley,2026-10-14,R3a,metabolomics features,judgment
+250,mndcw88nb7822,mendeley,2026-10-14,R3a,survey,judgment
+251,23352925,zenodo,2026-10-14,R5r,FAOSTAT-derived,judgment
+252,23355699,zenodo,2026-10-14,R5s,synthetic customer data,judgment
+253,23362978,zenodo,2026-10-14,R3a,survey,judgment
+254,23373690,zenodo,2026-10-14,R3a,self-reported survey without named class outcome,judgment
+255,23375916,zenodo,2026-10-14,R3a,crop diversification index continuous,judgment
+256,23376213,zenodo,2026-10-14,R3a,survey,judgment
+257,23376799,zenodo,2026-10-14,R3a,prices,judgment
+258,23378271,zenodo,2026-10-14,R3a,software experiment,judgment
+259,34517022,figshare,2026-10-15,R3a,infection status is the experimental treatment,judgment
+260,34518054,figshare,2026-10-15,R3a,"case-series table, n small",judgment
+261,34520131,figshare,2026-10-15,R6,lesion-level rows (several lesions per patient),judgment
+262,22255481,zenodo,2026-10-15,R6,aggregated coding rates,judgment
+263,23285025,zenodo,2026-10-15,R5r,public PAD-UFES derived test metadata,judgment
+264,23295409,zenodo,2026-10-15,R3a,coverage flags,judgment
+265,23373668,zenodo,2026-10-15,R3a,belief ratings,judgment
+266,23374607,zenodo,2026-10-15,R6,10-min behaviour bins per nest,judgment
+267,23383580,zenodo,2026-10-15,R5s,simulation,judgment
+268,23384159,zenodo,2026-10-15,R3a,benchmark,judgment
+269,23391723,zenodo,2026-10-15,R3a,finance records,judgment
+270,23392723,zenodo,2026-10-15,R3a,lifestyle cohort without named class outcome,judgment
+271,23397863,zenodo,2026-10-15,R0,concept first version: Zenodo versions API earliest created 2026-03-18,judgment
+272,23401152,zenodo,2026-10-15,R3a,water point status registry compiled,judgment
+274,mndhpvn66636m,mendeley,2026-10-16,R6,EHP PCR result in a separate sheet keyed by pond (needs a join); survey sheet has no outcome,judgment
+275,23167328,zenodo,2026-10-16,R5s,simulation index,judgment
+276,23326729,zenodo,2026-10-16,R3a,media coding,judgment
+277,23408428,zenodo,2026-10-16,R3a,land status covariate,judgment
+278,23408723,zenodo,2026-10-16,R5r,Scopus export,judgment
+279,23409555,zenodo,2026-10-16,R3a,inventory,judgment
+280,23409659,zenodo,2026-10-16,R3a,event index,judgment
+281,23413806,zenodo,2026-10-16,R5r,public TCGA breast cancer data,judgment
+282,23414188,zenodo,2026-10-16,R3a,tariffs,judgment
+283,23414190,zenodo,2026-10-16,R3a,tariffs,judgment
+284,23420749,zenodo,2026-10-16,R6,regional monthly aggregates,judgment
+285,23421919,zenodo,2026-10-16,R3a,fruit stage design,judgment
+286,23422086,zenodo,2026-10-16,R3a,LLM grading,judgment
+287,23423973,zenodo,2026-10-16,R3a,survey,judgment
+288,23426049,zenodo,2026-10-16,R5r,ACLED public events,judgment
+289,23426335,zenodo,2026-10-16,R5r,bibliometric,judgment
+290,32939393,figshare,2026-10-17,R0,"R0: first public None < 2026-09-24 or not verifiable as first version (figshare versions API not available (versions API lists only v5 (posted 2026-10-17) and v6; v1-v4 not retrievable, first version not verifiable))",build
+291,23428931,zenodo,2026-10-17,R3a,prompt vocabulary,judgment
+292,23431359,zenodo,2026-10-17,R3a,funding sample,judgment
+293,23431429,zenodo,2026-10-17,R3a,funding sample,judgment
+294,23432346,zenodo,2026-10-17,R3a,funding sample,judgment
+295,23432403,zenodo,2026-10-17,R3a,funding sample,judgment
+297,23432979,zenodo,2026-10-17,R3a,database status,judgment
+298,23439429,zenodo,2026-10-17,R3a,astronomy,judgment
+299,23439924,zenodo,2026-10-17,R3a,website audit,judgment
+300,23440150,zenodo,2026-10-17,R3a,homegarden survey,judgment
+301,23442203,zenodo,2026-10-17,R5r,screening records,judgment
+303,23447587,zenodo,2026-10-18,R3a,COG background,judgment
+304,23447601,zenodo,2026-10-18,R3a,disturbance events derived,judgment
+305,23449247,zenodo,2026-10-18,R3a,question bank,judgment
+306,23451164,zenodo,2026-10-18,R5r,review coding,judgment
+307,23452117,zenodo,2026-10-18,R3a,isotope results,judgment
+308,23452598,zenodo,2026-10-18,R3a,tile measurements,judgment
+309,23453429,zenodo,2026-10-18,R3a,survey,judgment
+310,23453840,zenodo,2026-10-18,R5r,literature compilation,judgment
+311,23455261,zenodo,2026-10-18,R5r,meta-analysis,judgment
+312,23455663,zenodo,2026-10-18,R7,image records,judgment
+313,23459596,zenodo,2026-10-18,R3a,forensic experiment,judgment
+314,22897529,zenodo,2026-10-19,R3a,degrader design,judgment
+315,23466329,zenodo,2026-10-19,R3a,management survey,judgment
+316,23467967,zenodo,2026-10-19,R6,plot x species long format (several species rows per plot),judgment
+317,23469254,zenodo,2026-10-19,R3a,turbine registry,judgment
+318,23474900,zenodo,2026-10-19,R2,R2: n = 5872 > 5000,build
+319,23475706,zenodo,2026-10-19,R3a,fee lines,judgment
+320,23478179,zenodo,2026-10-19,R3a,school metrics,judgment
+321,dvnDN0A0G,dataverse,2026-10-20,R3a,communication coding,judgment
+322,dvnS2SXBN,dataverse,2026-10-20,R3a,survey,judgment
+323,32326584,figshare,2026-10-20,R5r,public NORM surveillance data,judgment
+324,34697970,figshare,2026-10-20,R2,R2: smallest class 1 < 11,build
+325,mnd35hvtbgkmz,mendeley,2026-10-20,R3a,drug approvals,judgment
+326,mndhs4wf5gk5w,mendeley,2026-10-20,R3a,wave experiment,judgment
+327,23397886,zenodo,2026-10-20,R5r,species list compiled from IUCN,judgment
+328,23492257,zenodo,2026-10-20,R3a,price grid,judgment
+329,23495099,zenodo,2026-10-20,R0,concept first version: Zenodo versions API earliest created 2026-02-19,judgment
+330,23506313,zenodo,2026-10-20,R6,aggregated mortality counts,judgment
+331,23509743,zenodo,2026-10-20,R3a,water quality positives derived,judgment
+333,dvnTVKRXD,dataverse,2026-10-21,R2,R2: d = 111 > 100,build
+335,23233552,zenodo,2026-10-21,R6,long-format infection records with date/number; target unclear,judgment
+336,23520690,zenodo,2026-10-21,R3a,record linkage,judgment
+337,23522092,zenodo,2026-10-21,R5r,literature-derived concrete mixtures,judgment
+338,23526688,zenodo,2026-10-21,R3a,macro panel,judgment
+339,23529346,zenodo,2026-10-21,R3a,survey,judgment
+340,23529865,zenodo,2026-10-21,R3a,burned-area candidates,judgment
+341,23530790,zenodo,2026-10-21,R3a,astronomy catalogue,judgment
+342,23534486,zenodo,2026-10-21,R3a,benchmark,judgment
+343,23538644,zenodo,2026-10-21,R3a,survey,judgment
+344,23539324,zenodo,2026-10-21,R5s,simulation output,judgment
+345,23540960,zenodo,2026-10-21,R5r,bibliometric,judgment
+346,dv_borealisdata_RQM9EP,dataverse,2026-10-22,R3a,legume presence is design,judgment
+347,34743111,figshare,2026-10-22,R6,sample x drug rows (several rows per patient sample),judgment
+348,23275620,zenodo,2026-10-22,R7,image metadata,judgment
+349,23313635,zenodo,2026-10-22,R3a,incubation design,judgment
+350,23373561,zenodo,2026-10-22,R3a,catalogue,judgment
+351,23389256,zenodo,2026-10-22,R3a,survey,judgment
+352,23555207,zenodo,2026-10-22,R3d,automated accessibility tool output,judgment
+353,23557333,zenodo,2026-10-22,R3a,thermal response groups derived,judgment
+354,23558891,zenodo,2026-10-22,R3a,survey,judgment
+355,23559763,zenodo,2026-10-22,R3a,project registry,judgment
+356,23564465,zenodo,2026-10-22,R5r,harmonised public atlas,judgment
+357,23567746,zenodo,2026-10-22,R2,"R2: C = 33 outside (2, 10)",build
+358,23567778,zenodo,2026-10-22,R3a,settlement registry,judgment
+359,23570228,zenodo,2026-10-22,R5r,source-linked public incident records,judgment
+360,23574411,zenodo,2026-10-22,R3a,literature snowball,judgment
+361,23574582,zenodo,2026-10-22,R3a,GAM input,judgment
+362,23575833,zenodo,2026-10-22,R3a,experiment codes,judgment
+363,23577117,zenodo,2026-10-22,R3a,sports panel,judgment
+364,23578275,zenodo,2026-10-22,R3a,warehouse list,judgment
+365,23579051,zenodo,2026-10-22,R3a,evidence register,judgment
+366,dvnYT1AF5,dataverse,2026-10-23,R3a,survey,judgment
+367,22946493,zenodo,2026-10-23,R3a,citation corpus,judgment
+368,23383730,zenodo,2026-10-23,R3a,policy table,judgment
+369,23553718,zenodo,2026-10-23,R5r,integrated records,judgment
+370,23567387,zenodo,2026-10-23,R5r,database,judgment
+371,23572084,zenodo,2026-10-23,R5r,scoping review,judgment
+372,23587604,zenodo,2026-10-23,R3a,survey,judgment
+373,23589032,zenodo,2026-10-23,R3a,survey,judgment
+374,23589242,zenodo,2026-10-23,R3d,automated accessibility tool output,judgment
+375,23591186,zenodo,2026-10-23,R3a,site table,judgment
+376,23595025,zenodo,2026-10-23,R3d,Status_Target derived from actual vs baseline CO2 columns,judgment
+377,23597809,zenodo,2026-10-23,R5s,rainfall frequency sensitivity analysis,judgment
+378,23599194,zenodo,2026-10-23,R3a,survey,judgment
+379,23602328,zenodo,2026-10-23,R6,long-format repeated narratives,judgment
+380,32050113,figshare,2026-10-24,R0,R0: first public 2026-04-18 < 2026-09-24 or not verifiable as first version (figshare versions API: 5 version(s); v1 posted 2026-04-18 (published_date 2026-04-18)),build
+381,23610601,zenodo,2026-10-24,R3a,lab diffusion data; temperature status is an experimental condition,judgment
+382,23612602,zenodo,2026-10-24,R3a,gene evidence table,judgment
+383,23613607,zenodo,2026-10-24,R3a,settlement catalogue; deadline status is administrative,judgment
+384,23613629,zenodo,2026-10-24,R3a,settlement-lobbying join,judgment
+385,23614013,zenodo,2026-10-24,R3a,efflux pair annotations,judgment
+386,23618650,zenodo,2026-10-24,R3a,replication screening table,judgment
+387,23623817,zenodo,2026-10-24,R3a,item attribute table,judgment
+388,23626303,zenodo,2026-10-24,R3a,criteria matrix for actuarial audit model,judgment
+389,23626768,zenodo,2026-10-24,R3a,benchmark task outcomes of software runs,judgment
+390,23627171,zenodo,2026-10-24,R6,data dictionary,judgment
+391,23628165,zenodo,2026-10-24,R7,spectra manifest,judgment
+392,dvnJI10Q6,dataverse,2026-10-25,R3a,consumer survey,judgment
+393,mnd3x3vsckrwb,mendeley,2026-10-25,R3a,dairy consumer survey,judgment
+394,mnd8pw4bvhrb3,mendeley,2026-10-25,R3a,workplace expectation survey,judgment
+396,mndw9xng6kyff,mendeley,2026-10-25,R3a,questionnaire,judgment
+397,mndy56ftnhbrz,mendeley,2026-10-25,R3a,"species checklist; status is a species attribute, not a study outcome",judgment
+398,23465968,zenodo,2026-10-25,R3a,species table,judgment
+399,23630234,zenodo,2026-10-25,R3a,taxon list,judgment
+400,23643202,zenodo,2026-10-25,R3a,coded literature records,judgment
+401,23643607,zenodo,2026-10-25,R3a,psychometric scores,judgment
+402,23645452,zenodo,2026-10-25,R6,clinic-year panel,judgment
+403,23648012,zenodo,2026-10-25,R5s,synthetic deployment dataset,judgment
+404,23648692,zenodo,2026-10-25,R3a,timetable connections,judgment
+405,23649344,zenodo,2026-10-25,R3a,eddy-covariance records,judgment
+406,23652616,zenodo,2026-10-25,R3a,physics feature table,judgment
+407,23118876,zenodo,2026-10-26,R6,single-person daily self-tracking,judgment
+408,23360091,zenodo,2026-10-26,R3a,music catalogue,judgment
+410,23654713,zenodo,2026-10-26,R3a,network nodes,judgment
+411,23656758,zenodo,2026-10-26,R6,aggregated by state,judgment
+412,23657176,zenodo,2026-10-26,R3a,review screening worksheet,judgment
+413,23659494,zenodo,2026-10-26,R3a,scale items; outcome continuous,judgment
+414,23661041,zenodo,2026-10-26,R3a,web accessibility barometer,judgment
+415,23661628,zenodo,2026-10-26,R3a,frost-date table,judgment
+416,23663062,zenodo,2026-10-26,R5s,language-model writing sessions (machine generated),judgment
+417,23666148,zenodo,2026-10-26,R3a,survey,judgment
+418,23666827,zenodo,2026-10-26,R6,creep test stages,judgment
+419,23668471,zenodo,2026-10-26,R3a,title outcome is blood-pressure variability/control (continuous); status is a cohort flag,judgment
+420,23672678,zenodo,2026-10-26,R3a,fractal results,judgment
+421,23673967,zenodo,2026-10-26,R3a,idea-level derived data,judgment
+422,23678929,zenodo,2026-10-26,R6,aggregated waiting times,judgment
+423,dv_borealisdata_VIIPUW,dataverse,2026-10-27,R6,"capture records, several per bat",judgment
+424,dvn3SSICK,dataverse,2026-10-27,R3a,farmer survey (d=935),judgment
+425,dvnEX7UTR,dataverse,2026-10-27,R3a,resilience survey,judgment
+426,23181750,zenodo,2026-10-27,R6,"session-level records, several per participant",judgment
+427,23473953,zenodo,2026-10-27,R3a,document register,judgment
+428,23676233,zenodo,2026-10-27,R3a,video coding,judgment
+429,23679893,zenodo,2026-10-27,R3a,file inventory,judgment
+430,23682950,zenodo,2026-10-27,R5s,generated preschool recommendation data,judgment
+431,23682971,zenodo,2026-10-27,R5s,generated preschool recommendation data,judgment
+432,23684795,zenodo,2026-10-27,R5s,generated preschool recommendation data,judgment
+433,23686339,zenodo,2026-10-27,R3a,repository-level metrics,judgment
+434,23692150,zenodo,2026-10-27,R3d,Cluster is the authors' cluster-analysis output,judgment
+435,23694694,zenodo,2026-10-27,R6,MR result rows,judgment
+436,23695068,zenodo,2026-10-27,R3d,LLM-generated codes,judgment
+437,23696113,zenodo,2026-10-27,R7,image manifest,judgment
+438,23698153,zenodo,2026-10-27,R3a,coded review objections,judgment
+439,23699235,zenodo,2026-10-27,R3a,coded literature,judgment
+440,22877238,zenodo,2026-10-28,R7,satellite patch manifest,judgment
+441,23382643,zenodo,2026-10-28,R3a,signatory table,judgment
+442,23655785,zenodo,2026-10-28,R3a,channel responsiveness table,judgment
+443,23713282,zenodo,2026-10-28,R6,patch pairs,judgment
+444,23722000,zenodo,2026-10-28,R3a,consumer survey,judgment
+446,23724812,zenodo,2026-10-28,R3a,field trial; tillage is a treatment,judgment
+447,23725155,zenodo,2026-10-28,R6,device measurements,judgment
+448,23725405,zenodo,2026-10-28,R5s,synthetic threat rows,judgment
+449,23725538,zenodo,2026-10-28,R3a,event catalogue,judgment
+450,23726050,zenodo,2026-10-28,R3a,case-study survey,judgment
+451,23726979,zenodo,2026-10-28,R5s,synthetic building data,judgment
+452,23728237,zenodo,2026-10-28,R5s,simulation scenarios,judgment
+453,23728597,zenodo,2026-10-28,R3a,regulatory ledger,judgment
+454,23729322,zenodo,2026-10-28,R3a,digital-divide survey,judgment
+455,23730731,zenodo,2026-10-28,R3a,digital-divide survey,judgment
+456,23732201,zenodo,2026-10-28,R3a,filing events,judgment
+457,23737755,zenodo,2026-10-28,R3a,bibliometric export,judgment
+458,23743673,zenodo,2026-10-28,R3a,statute table,judgment
+459,23744421,zenodo,2026-10-28,R3a,benchmark table,judgment
+460,23744425,zenodo,2026-10-28,R3a,citation table,judgment
+461,31663618,figshare,2026-10-29,R6,repeated chick locations,judgment
+462,mndtjy98rw9sg,mendeley,2026-10-29,R3a,ESG survey,judgment
+463,23660840,zenodo,2026-10-29,R3a,employer survey,judgment
+464,23728599,zenodo,2026-10-29,R3a,perception survey,judgment
+465,23750128,zenodo,2026-10-29,R3a,product label table,judgment
+466,23750404,zenodo,2026-10-29,R3a,skip-time records,judgment
+467,23750653,zenodo,2026-10-29,R3a,self-esteem scales (continuous),judgment
+468,23752565,zenodo,2026-10-29,R3a,attitude scales (continuous),judgment
+469,23763980,zenodo,2026-10-29,R3a,stage is an experimental factor,judgment
+470,23770479,zenodo,2026-10-29,R3a,reservation log,judgment
+471,23772529,zenodo,2026-10-29,R3a,rate index,judgment
+473,23785620,zenodo,2026-10-29,R3a,used-roost descriptions only; no class outcome,judgment
+474,dvn38ZOKO,dataverse,2026-10-30,R3a,perception survey,judgment
+475,23785793,zenodo,2026-10-30,R6,"telemetry fixes, several per snake",judgment
+476,23785938,zenodo,2026-10-30,R3a,betting prices,judgment
+477,23793621,zenodo,2026-10-30,R5s,forward-modelled synthetic candidates,judgment
+478,23796307,zenodo,2026-10-30,R5s,LLM prompt outputs,judgment
+479,23803968,zenodo,2026-10-30,R6,match events,judgment
+480,23805047,zenodo,2026-10-30,R6,country-year panel,judgment
+482,23805783,zenodo,2026-10-30,R5s,LLM outputs,judgment
+483,23805915,zenodo,2026-10-30,R5r,re-release of Cheema and Hannan (2023) SEHAD-HC data,judgment
+484,23808632,zenodo,2026-10-30,R3a,trust survey,judgment
+485,23810776,zenodo,2026-10-30,R3a,facility geodata; CRI is a composite index,judgment
+486,23811704,zenodo,2026-10-30,R3a,book catalogue,judgment
+488,22078158,zenodo,2026-10-31,R5r,compilation from public metabolite databases,judgment
+489,23793514,zenodo,2026-10-31,R6,site frequencies,judgment
+490,23805668,zenodo,2026-10-31,R3a,GNSS track,judgment
+491,23825683,zenodo,2026-10-31,R3a,betting prices,judgment
+492,23825768,zenodo,2026-10-31,R3a,skill classification,judgment
+493,23833040,zenodo,2026-10-31,R3a,rater scores,judgment
+494,23835619,zenodo,2026-10-31,R3a,tool pricing,judgment
+495,23837619,zenodo,2026-10-31,R3a,citation factors,judgment
+496,23841056,zenodo,2026-10-31,R3a,bibliometric corpus,judgment
+497,23841679,zenodo,2026-10-31,R3a,survey scales (continuous),judgment
+498,dvnNPTEUV,dataverse,2026-11-01,R3a,experiment; outcomes are continuous learning indices,judgment
+499,34874724,figshare,2026-11-01,R3a,flood perception survey,judgment
+500,mnd3ddpvs3m2w,mendeley,2026-11-01,R6,long format (variable/value),judgment
+501,mndb9ntj8tn8c,mendeley,2026-11-01,R3a,behaviour frequency scales,judgment
+503,mndgm8vcdf67j,mendeley,2026-11-01,R5r,same POPI cohort as accepted record mndccyfb92b9m (pos 502),judgment
+504,mndn5tss6msm7,mendeley,2026-11-01,R5r,compilation of public NTSB accident records and audit metrics,judgment
+505,mndyvpntkh7y9,mendeley,2026-11-01,R3a,"isolate table; several susceptibility endpoints, no single documented class outcome",judgment
+506,mndzjxfjtwdw3,mendeley,2026-11-01,R6,assay rows,judgment
+507,23570033,zenodo,2026-11-01,R3a,RNA chain table,judgment
+508,23646010,zenodo,2026-11-01,R3a,review screening log,judgment
+509,23853660,zenodo,2026-11-01,R5s,sensitivity analysis,judgment
+510,23854026,zenodo,2026-11-01,R3a,benchmark set table,judgment
+511,23855727,zenodo,2026-11-01,R3a,notes table,judgment
+514,23863495,zenodo,2026-11-01,R3a,media monitor table,judgment
+515,23864273,zenodo,2026-11-01,R3a,API directory,judgment
+516,23867000,zenodo,2026-11-01,R3a,coded segments,judgment
+517,23867957,zenodo,2026-11-01,R3a,database annotation,judgment
+518,23870014,zenodo,2026-11-01,R3a,AI failure index,judgment
+519,mndgwhr5brf36,mendeley,2026-11-02,R3a,burnout/life satisfaction scales (continuous),judgment
+520,mndpr3yj69smr,mendeley,2026-11-02,R3a,title outcome psychological wellbeing is continuous,judgment
+523,23594680,zenodo,2026-11-02,R5s,AI answer outputs,judgment
+524,23855548,zenodo,2026-11-02,R3a,bank offers,judgment
+525,23863597,zenodo,2026-11-02,R3a,film table,judgment
+526,23865090,zenodo,2026-11-02,R3a,wearable use survey,judgment
+527,23875926,zenodo,2026-11-02,R3a,data manifest,judgment
+528,23877093,zenodo,2026-11-02,R6,OTU-sample long format,judgment
+529,23878516,zenodo,2026-11-02,R5s,paid API results,judgment
+530,23878882,zenodo,2026-11-02,R2,R2: smallest class 3 < 11,build
+531,23879791,zenodo,2026-11-02,R3a,exercise trial; outcomes continuous pre/post,judgment
+532,23879905,zenodo,2026-11-02,R3a,bibliometric data,judgment
+533,23883127,zenodo,2026-11-02,R3a,barcode specimen table,judgment
+534,23883568,zenodo,2026-11-02,R3a,knowledge survey (scores),judgment
+535,23886856,zenodo,2026-11-02,R6,transmission-pair counts,judgment
+536,23889194,zenodo,2026-11-02,R6,district aggregates; stunting status derived from percentages,judgment
+537,23889284,zenodo,2026-11-02,R6,incident counts,judgment
+538,23889473,zenodo,2026-11-02,R5s,package test data,judgment
+539,23891989,zenodo,2026-11-02,R3a,product snapshot,judgment
+540,23892365,zenodo,2026-11-02,R6,TLC measurements,judgment
+542,34875597,figshare,2026-11-03,R3a,training-needs survey,judgment
+544,23910263,zenodo,2026-11-03,R3a,circularity evidence table,judgment
+545,23913988,zenodo,2026-11-03,R3a,consumer survey,judgment
