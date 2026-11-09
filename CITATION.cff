@@ -7,9 +7,11 @@ authors:
     given-names: Felipe Provezano
     email: fpcoutinho@alumni.usp.br
     affiliation: Independent Researcher
+    orcid: "https://orcid.org/0000-0001-7206-5856"
 repository-code: "https://github.com/provezano/stratified-few-label-protocols"
 license: MIT
-date-released: "2026-10-31"
+version: "1.1.0"
+date-released: "2026-11-09"
 keywords:
   - tabular foundation models
   - few-label learning
@@ -24,7 +26,8 @@ preferred-citation:
       given-names: Felipe Provezano
       email: fpcoutinho@alumni.usp.br
       affiliation: Independent Researcher
+      orcid: "https://orcid.org/0000-0001-7206-5856"
   year: 2026
   status: submitted
-  notes: "Manuscript under review."
+  notes: "Manuscript submitted for publication."
   repository-code: "https://github.com/provezano/stratified-few-label-protocols"

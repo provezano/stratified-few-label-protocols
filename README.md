@@ -1,6 +1,6 @@
 # Stratified Few-Label Protocols Can Overstate Macro-Averaged Metrics for Tabular Foundation Models
 
-Code, analysis plans, stored results and supporting materials for the paper of the same title by Felipe Provezano Coutinho (manuscript under review).
+Code, analysis plans, stored results and supporting materials for the paper of the same title by Felipe Provezano Coutinho (manuscript submitted for publication).
 
 Few-label evaluations of tabular foundation models (FMs) usually draw the labelled set stratified by class, so that every class is present in the context. This repository holds everything needed to check how that choice changes reported macro-averaged metrics compared with drawing the labelled rows at random: the confirmatory studies on public OpenML, PMLB and UCI tables, a second replication frame, the analysis code, the stored per-fit scores, and the materials of the review of protocols reported in the literature. Every number, table and figure of the paper is written by a script in this repository into a LaTeX macro file, a CSV file or a figure, and can be regenerated from the stored results without refitting any model.
 
@@ -13,7 +13,7 @@ If you use this code or these results, please cite the paper:
   title         = {Stratified Few-Label Protocols Can Overstate Macro-Averaged Metrics for Tabular Foundation Models},
   author        = {Coutinho, Felipe Provezano},
   year          = {2026},
-  note          = {Manuscript under review},
+  note          = {Manuscript submitted for publication},
   url           = {https://github.com/provezano/stratified-few-label-protocols}
 }
 ```
