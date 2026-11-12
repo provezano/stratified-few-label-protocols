@@ -2,7 +2,7 @@
 
 Code, analysis plans, stored results and supporting materials for the paper of the same title by Felipe Provezano Coutinho (manuscript submitted for publication).
 
-Few-label evaluations of tabular foundation models (FMs) usually draw the labelled set stratified by class, so that every class is present in the context. This repository holds everything needed to check how that choice changes reported macro-averaged metrics compared with drawing the labelled rows at random: the confirmatory studies on public OpenML, PMLB and UCI tables, a second replication frame, the analysis code, the stored per-fit scores, and the materials of the review of protocols reported in the literature. Every number, table and figure of the paper is written by a script in this repository into a LaTeX macro file, a CSV file or a figure, and can be regenerated from the stored results without refitting any model.
+Few-label evaluations of tabular foundation models (FMs) usually draw the labelled set stratified by class, so that every class is present in the context. This repository holds everything needed to check how that choice changes reported macro-averaged metrics compared with drawing the labelled rows at random: the confirmatory studies on public OpenML, PMLB and UCI tables, a second replication frame, the analysis code, the stored per-fit scores, and the materials of the review of protocols reported in the literature. Every number, table and figure of the paper is written by a script in this repository into a LaTeX macro file, a CSV file or a figure; the macro files and figures themselves are not tracked (see "What is not included, and why").
 
 ## Citation
 
@@ -17,6 +17,10 @@ If you use this code or these results, please cite the paper:
   url           = {https://github.com/provezano/stratified-few-label-protocols}
 }
 ```
+
+Preprint (all versions): https://doi.org/10.5281/zenodo.24091866
+
+The paper source and its outputs are not included in this repository; see the archived release, Zenodo [10.5281/zenodo.24082391](https://doi.org/10.5281/zenodo.24082391).
 
 This entry will be updated with the journal reference once the paper is published. `CITATION.cff` holds the same reference in machine-readable form.
 
