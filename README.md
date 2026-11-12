@@ -30,12 +30,13 @@ cd stratified-few-label-protocols/simaudit
 uv sync --frozen                     # Python 3.12, exact versions pinned in uv.lock
 export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 NUMBA_NUM_THREADS=1
 
-# regenerate the main macro file and the per-dataset tables from the stored results (no data, no network)
-cd paper/p1 && uv run python make_numbers.py && uv run python make_tables.py && cd ../..
-git diff --stat                      # empty: the regenerated files match the committed ones
-
 # download the public tables (checked against pinned SHA-256), needed by scripts that read labels
 uv run python ../fetch_data.py --case-study
+
+# write the main macro file and the per-dataset tables (the macro files, tables and figures are not tracked;
+# the scripts write them, and paper/p1/regenerated_outputs.sha256 holds the expected SHA-256 of the light-environment ones)
+uv run python paper/p1/exploratory/c4_t1p/run_c4_t1p.py   # input of make_numbers.py
+cd paper/p1 && uv run python make_numbers.py && uv run python make_tables.py && cd ../..
 ```
 
 `uv sync --frozen` installs the full environment, including PyTorch and the FM packages (TabPFN, TabICL, Kumo-Tabular). Regenerating numbers, tables and figures from the stored results needs only the scientific Python stack; the continuous-integration workflow (`.github/workflows/ci.yml`) shows a light install with versions taken from `uv.lock`.
@@ -53,12 +54,12 @@ Paths are relative to `simaudit/` unless they start with `datasets/`, `environme
 | Path | Content |
 |---|---|
 | `simaudit/src/simaudit/` | The experiment package: data loaders, samplers (stratified, random, selectors), FM wrappers, runners and the frozen analysis code of every study. |
-| `simaudit/pyproject.toml`, `simaudit/uv.lock`, `simaudit/Makefile` | The environment (Python 3.12, exact versions) and the main commands. |
+| `simaudit/pyproject.toml`, `simaudit/uv.lock` | The environment (Python 3.12, exact versions). |
 | `simaudit/prereg/` | The pre-registrations, with their amendments, addenda, freeze notes and errata at the end of each file (see "Documents"). |
 | `simaudit/reports/` | The reports that `make_numbers.py` and other macro generators parse, the scripts that write them, and `study12_ERRATA.md`. |
 | `simaudit/results/` | Stored scores of Studies 4, 7 (with S4), 9 (DEV and T1′), 12, 15 and the protocol corrections: one row per fit, with labelled rows, seeds, metrics and run time; the per-row probability columns are left out (see below). |
 | `simaudit/data/` | The table pools: `pool_i2.yaml` (DEV only), `pool_t1prime.yaml`, `pool_ext_pmlb.yaml`, `pool_ext_uci.yaml`, `pool_second_frame.yaml`. |
-| `simaudit/paper/p1/` | The generators of every macro file, table and figure, with their outputs. |
+| `simaudit/paper/p1/` | The generators of every macro file, table and figure. The outputs themselves (`*.tex`, figures) are not tracked: the scripts write them. |
 | `simaudit/paper/p1/exploratory/` | The exploratory analyses: scripts, cited plans, per-table outputs and macro files. |
 | `simaudit/paper/p1/supplementary/audit/` | The audit of reported protocols (Section 6.1 and the appendix "Audit of reported protocols"). |
 | `simaudit/paper/p1/exploratory/human_check/` | The blind human check of the audit sample, with its adjudication. |
@@ -70,7 +71,7 @@ Paths are relative to `simaudit/` unless they start with `datasets/`, `environme
 | `postrelease_2026-11/` | The post-release tables and the balance probe (added November 2026): code, frozen plans (public copies), per-table results and per-fit scores; see `postrelease_2026-11/README.txt`. |
 | `fetch_data.py` | Downloads the public DEV, T1′ and case-study data and checks each file against a pinned SHA-256 (no third-party data is included). |
 | `LICENSE`, `LICENSE-DATA`, `CITATION.cff` | Licences (see "Licence") and citation metadata. |
-| `.github/workflows/ci.yml` | Continuous integration: lock check, byte-compilation and regeneration of five macro files from the stored results. |
+| `.github/workflows/ci.yml` | Continuous integration: lock check, byte-compilation, and regeneration of 15 macro files and the main figures from the stored results, checked against `simaudit/paper/p1/regenerated_outputs.sha256`. |
 
 ## Documents
 
@@ -95,7 +96,6 @@ Only the following Markdown documents are included. Internal working notes, plan
 | `paper/p1/exploratory/case_study/PREREG.md` | Pre-registration of the TabEBM case study (R002), with its amendments. |
 | `paper/p1/exploratory/fm_extra/limix_t1p/PLAN.md`, `fm_extra/dose_plan.md` | Plans of the LimiX run on T1′ and of the dose experiment for fm6–fm8 on DEV, fixed before the runs. |
 | `paper/p1/exploratory/seed_indep/PLAN.md` | Plan and reading rule of the independent-seed check, fixed before the run. |
-| `paper/p1/rebuttal_prep/seed_indep_t1p/out/SUMMARY_T1P.md` | Generated summary of the same check on PMLB/UCI (four pre-registered FMs); its plan and reading rule are in the docstring of `run_seed_indep_t1p.py`, committed before the run. |
 | `paper/p1/exploratory/e17_metrics/e17_report.md` | Section 1 holds the expected directions of the metric panel, written before any E17 metric was computed; the rest reports E17. |
 | `paper/p1/exploratory/tabdpt_check/NOTE.md` | The documentary source of the `\Tdpt*` counts (TabDPT pre-training corpus). |
 | `paper/p1/exploratory/human_check/ADJUDICATION.md` | Adjudication of the disagreements between the blind human codes and the final codes. |
@@ -133,7 +133,7 @@ All macro-file paths below are relative to `paper/p1/`.
 | `exploratory/seed_indep/seed_indep_numbers.tex` | `\ExSeedInd*` (independent learner seed; plan `seed_indep/PLAN.md`) | fits: `run_seed_indep.py`; numbers: `uv run python paper/p1/exploratory/seed_indep/analyze_seed_indep.py` | `seed_indep/out/dev/*.parquet` (included); the HELD-OUT row is an aggregate (fits not included) | no |
 | `seedindep_t1p_numbers.tex` | `\ExSeedIndTp*` (independent learner seed on PMLB/UCI, exploratory) | fits and reproduction control: `rebuttal_prep/seed_indep_t1p/run_seed_indep_t1p.py`; numbers: `uv run python paper/p1/rebuttal_prep/seed_indep_t1p/make_seedindep_t1p_numbers.py` | `rebuttal_prep/seed_indep_t1p/out/summary_t1p.csv`, `repro_t1p.csv` (included; the per-fit files are not) | no |
 | `exploratory/sevenfm/out/sevenfm_b1.tex` … `sevenfm_b11.tex` | `\ExSevFm*` (B1–B11 with seven FMs) | `uv run python paper/p1/exploratory/sevenfm/bN_*.py 7` (`harness.py`) | the original analyses' inputs plus the fm6–fm8 fits; their outputs `sevenfm/out/bN/seven/` are included, including B2's scored-draw cache `b2/seven/draws_scored.parquet` | B2, B3, B5, B6, B10: yes |
-| `heldout_numbers.tex`, `heldout_hand.tex`, `exploratory/heldout/out/heldout_{ci,m3plus}_numbers.tex` | `\HO*`, `\ExHO*` (HELD-OUT, joint opening) | `simaudit.analysis.joint_heldout`; `exploratory/heldout/{ci_macros,m3plus,s3_bstar}.py` | the HELD-OUT results (not included; the HELD-OUT ids stay withheld); the macro files and the aggregate `heldout/out/*.csv` are included | no |
+| `heldout_numbers.tex`, `heldout_hand.tex`, `exploratory/heldout/out/heldout_{ci,m3plus}_numbers.tex` | `\HO*`, `\ExHO*` (HELD-OUT, joint opening) | `simaudit.analysis.joint_heldout`; `exploratory/heldout/{ci_macros,m3plus,s3_bstar}.py` | the HELD-OUT results (not included; the HELD-OUT ids stay withheld); the aggregate `heldout/out/*.csv` are included (the macro files are in the archived release) | no |
 | `study15_numbers.tex` | `\SF*` (Study 15, confirmatory family and pre-declared secondary values) | `uv run python -m simaudit.analysis.study15` (also writes `results/study15/study15_results.json`) | `results/study15/second_frame/*.parquet` (metric rows), `integrity_screen.csv`, `data/pool_second_frame.yaml`; the descriptive ratio to HELD-OUT also reads the joint HELD-OUT results (not included; without them the ratio is empty) | no |
 | `study15_secondary_numbers.tex` | `\SF*` (further pre-declared secondary values, unadjusted) | `uv run python paper/p1/make_study15_secondary.py` | `results/study15/study15_results.json` | no |
 | `study17_numbers.tex` | `\SSvt*` (Study 17: confirmatory families P, E, Q, L1; pre-declared secondary families; descriptive subsets; frame counts) | `uv run python paper/p1/make_study17_numbers.py` | `results/study17/study17_results.json` (written once by `tools/study17/analysis.py`; console output in `analysis_output.txt`), `data/pool_study17.yaml` | no |
@@ -177,7 +177,7 @@ All figures are written by `cd paper/p1 && uv run python figures/make_figures.py
 | `fig:mech` | `figures/fig4_mechanism.pdf` | `results/study7/{a,b,c}`, `exploratory/out/e10_pools_dev.csv`, `exploratory/review_reanalysis/out/mech_tables.csv` |
 | `fig:forest` | `figures/fig_forest.pdf` | `results/study7/a`, `results/study12` (also `analysis/t1p_heterogeneity.py`, `exploratory/e9_meta_analysis.py`) |
 | `fig:accimb` | `exploratory/out/e6_accuracy_imbalance.pdf` | `results/study7/a`, `exploratory/out/e10_pools_dev.csv`, `exploratory/out/e1_gaps.csv`, `exploratory/e1_t1p/out/e1t1p_gaps.csv` |
-| `fig:heldout` | `figures/fig8_heldout.pdf` | `results/study13/heldout` (HELD-OUT; not included: `make_figures.py` skips this figure when those results are absent, and the included file is the one built from them) |
+| `fig:heldout` | `figures/fig8_heldout.pdf` | `results/study13/heldout` (HELD-OUT; not included: `make_figures.py` skips this figure when those results are absent; the built file is in the archived release) |
 
 ### Tables
 
@@ -277,9 +277,9 @@ The TabEBM case study (`exploratory/case_study/`) runs in two stages, both from 
 - stage A runs in a separate environment: TabEBM at the pinned commit, tabpfn 2.1.2 and imbalanced-learn 0.12.4 (versions and hashes in `PREREG.md`);
 - stage B runs in the package environment.
 
-Study 13 (HELD-OUT) was run once, at the joint opening on 2026-10-30. Its pre-registration, the opening note and its macro files are included; its data, ids and per-fit results are not. Study 15 was run once after its freeze on 2026-10-31; its encoded tables are built by `simaudit.data.second_frame` from the raw files listed in `data/pool_second_frame.yaml`, a build that also checks content hashes against HELD-OUT (withheld), so the included `frame_build.json` records its result.
+Study 13 (HELD-OUT) was run once, at the joint opening on 2026-10-30. Its pre-registration and the opening note are included (its macro files are in the archived release); its data, ids and per-fit results are not. Study 15 was run once after its freeze on 2026-10-31; its encoded tables are built by `simaudit.data.second_frame` from the raw files listed in `data/pool_second_frame.yaml`, a build that also checks content hashes against HELD-OUT (withheld), so the included `frame_build.json` records its result.
 
-Study 17 was run once after its freeze on 2026-11-01, and its analysis (`tools/study17/analysis.py`) once on 2026-11-02. Only its results JSON and the console output of that analysis are included: its per-fit files (about 200 MB) are too large for this repository. Its 60 tables are public (OpenML, UCI, Zenodo, figshare); `data/pool_study17.yaml` gives each source, licence, declared target and content hash. Its fitting code depends on the encoded-table cache, which is not included.
+Study 17 was run once after its freeze on 2026-11-01, and its analysis (`tools/study17/analysis.py`) once on 2026-11-02. Only its results JSON is included: its per-fit files (about 200 MB) are too large for this repository. Its 60 tables are public (OpenML, UCI, Zenodo, figshare); `data/pool_study17.yaml` gives each source, licence, declared target and content hash. Its fitting code depends on the encoded-table cache, which is not included.
 
 ## What is not included, and why
 
@@ -291,7 +291,7 @@ Study 17 was run once after its freeze on 2026-11-01, and its analysis (`tools/s
 - **Per-row arrays.** See "Results that need the per-fit probabilities"; also the case study's `out/arrays/`.
 - **Logs, process markers and caches.** Run logs, PID and DONE markers, `__pycache__` and E15's per-run cache `exploratory/out/e15_runs.parquet` are left out.
 - **Internal working material.** The internal research notes, working summaries and report prose, plans that the paper does not cite, the review's `extract_numbers.py` (it reads internal files; its output `audit_numbers.json` is included), and code and checks that no number of the paper uses (a timing benchmark of companion work, label-budget theory notes, platform checks). Also the material of later studies that are not part of this paper.
-- **The paper source.** See the paper itself (citation above).
+- **The paper source and the paper outputs.** The manuscript, its LaTeX sources and the compiled figures are not part of this repository. The macro files, tables and figures that the paper reads are written by the scripts listed below; those that need withheld inputs (HELD-OUT results, per-fit probabilities, the UCI API snapshot) or are hand-written are kept in the archived release (Zenodo, DOI 10.5281/zenodo.24082391).
 - **Development history.** This repository is a snapshot of the research code base, published as a single commit. Commit hashes are replaced by the identifiers of `REVISIONS.md`, and absolute paths by repository-relative ones or `<HOME>`/`<workspace>`. The mapping from revision identifiers to commits of the development history is not public, because that history references the sealed HELD-OUT set; it is available from the author on request.
 
 Some files differ from their originals in the development history, so a hash that a pre-registration or a provenance file cites may not match the copy here:
@@ -304,7 +304,7 @@ No design value, number, threshold, hypothesis or decision rule was changed. The
 
 ## Licence
 
-- **Code** (`*.py`, `*.sh`, `Makefile`s, `pyproject.toml`, `uv.lock`, the CI workflow): MIT licence, see [`LICENSE`](LICENSE).
+- **Code** (`*.py`, `*.sh`, `pyproject.toml`, `uv.lock`, the CI workflow): MIT licence, see [`LICENSE`](LICENSE).
 - **Results, documents and figures** (everything else: stored results and derived outputs under `results/` and `out/`, macro files `*.tex`, CSV/JSON/YAML files, pre-registrations, reports and other Markdown documents, figures): Creative Commons Attribution 4.0 International (CC BY 4.0), see [`LICENSE-DATA`](LICENSE-DATA).
 
 The public tables that `fetch_data.py` downloads, the FM packages and their weights, and the papers listed in the audit materials keep their own licences and terms; `datasets/t1prime.csv` and `data/pool_second_frame.yaml` give the licence of each table. TabPFN v3.5 weights are gated by their provider and are not included.

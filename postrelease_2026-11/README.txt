@@ -7,9 +7,7 @@ that the paper reports on tables first published after every model was released:
                   pre-data and mechanism models, predictions, unit runner, analysis, results; Section "post-release
                   tables" of the supplementary material)
   balance_probe/  the composition experiment that splits the balance part (frozen plan, probe, analysis, per-unit scores;
-                  Section "balance mechanism" of the supplementary material), and host_check/, an exploratory check that
-                  each of the two hosts reproduces its own outputs bit for bit (the small cross-host difference comes from
-                  the platform's math library, not from run-to-run randomness)
+                  Section "balance mechanism" of the supplementary material)
 
 What is and is not included
 - Plans and deviation records are public copies (.txt). Host names, local paths and internal note names are replaced;
