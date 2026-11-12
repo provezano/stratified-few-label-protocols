@@ -39,3 +39,9 @@ simaudit/paper/p1/exploratory/case_study/third_party/
 .DS_Store
 .idea/
 .vscode/
+
+# Macro files, tables and figures written by the scripts under simaudit/paper/p1 (outputs, not tracked)
+simaudit/paper/p1/**/*.tex
+simaudit/paper/p1/**/*.pdf
+simaudit/paper/p1/**/*.png
+simaudit/paper/p1/exploratory/kumo_unused/out/SUMMARY.md

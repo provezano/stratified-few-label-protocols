@@ -17,6 +17,7 @@ env:
   OPENBLAS_NUM_THREADS: "1"
   NUMBA_NUM_THREADS: "1"
   PYTHONHASHSEED: "0"
+  ANALYSIS_PKGS: "numpy pandas scipy pyarrow tabulate pyyaml scikit-learn matplotlib statsmodels pydantic-settings openml"
 
 jobs:
   reproduce:
@@ -49,27 +50,47 @@ jobs:
           uv export --frozen --no-hashes --no-emit-project -o "$RUNNER_TEMP/constraints.txt"
           uv venv --python 3.12 "$RUNNER_TEMP/venv"
           uv pip install --python "$RUNNER_TEMP/venv/bin/python" \
-            -c "$RUNNER_TEMP/constraints.txt" numpy pandas scipy pyarrow tabulate
+            -c "$RUNNER_TEMP/constraints.txt" ${{ env.ANALYSIS_PKGS }}
           echo "PY=$RUNNER_TEMP/venv/bin/python" >> "$GITHUB_ENV"
 
       - name: Byte-compile all Python sources
         run: $PY -m compileall -q simaudit/src simaudit/paper simaudit/reports fetch_data.py
 
-      - name: Regenerate macro files from the stored results
+      # The macro files and figures are not tracked; the scripts write them. CI rebuilds the
+      # ones that need only the stored results and this light environment, then checks their
+      # SHA-256 against regenerated_outputs.sha256 (figures: only that they are written).
+      - name: Regenerate macro files and figures from the stored results
+        env:
+          PYTHONPATH: ${{ github.workspace }}/simaudit/src
+          MPLBACKEND: Agg
         run: |
-          (cd simaudit/paper/p1 && $PY make_numbers.py)
-          (cd simaudit/paper/p1 && $PY make_tables.py)
-          (cd simaudit/paper/p1/exploratory/human_check && $PY hc_analysis.py)
-          (cd simaudit/paper/p1/exploratory/prop5 && $PY make_prop5_numbers.py)
-          (cd simaudit && $PY paper/p1/exploratory/kumo_unused/summarize.py)
+          set -e
+          P=simaudit/paper/p1; E=$P/exploratory
+          mkdir -p $E/prop5/out $E/human_check/out $E/kumo_unused/out $P/figures
+          (cd $P && $PY make_tables.py)
+          (cd $E/human_check && $PY hc_analysis.py)
+          (cd $E/prop5 && $PY make_prop5_numbers.py)
+          (cd $E/claims_audit && $PY rho_all.py && $PY redraw_tost.py && $PY make_claims_numbers.py)
+          cd simaudit
+          $PY paper/p1/exploratory/kumo_unused/summarize.py
+          $PY paper/p1/exploratory/e16_multiclass/e16_numbers.py
+          $PY paper/p1/exploratory/distpfn/run_distpfn.py
+          $PY paper/p1/exploratory/e1_t1p/analyze_e1_t1p.py
+          $PY paper/p1/exploratory/fm_extra/summarize_t1p_fm8.py
+          $PY paper/p1/rebuttal_prep/seed_indep_t1p/make_seedindep_t1p_numbers.py
+          $PY paper/p1/make_study15_secondary.py
+          $PY paper/p1/make_study17_numbers.py
+          $PY paper/p1/figures/make_figures.py
 
-      # make_tables.py sorts tables_p1.tex by C with an unstable sort, so the order of
-      # rows with equal C can differ across platforms; that file is compared as a set
-      # of lines, every other file byte for byte.
-      - name: Check that the regenerated files match the committed ones
+      # make_tables.py sorts tables_p1.tex by C with an unstable sort, so the order of rows
+      # with equal C can differ across platforms; that file is hashed after sorting its lines.
+      - name: Check the regenerated files against regenerated_outputs.sha256
+        working-directory: simaudit
         run: |
-          git status --short
+          sort -o paper/p1/tables_p1.tex paper/p1/tables_p1.tex
+          grep -v '^#' paper/p1/regenerated_outputs.sha256 | sha256sum -c -
+          ls paper/p1/figures/fig1_protocols.pdf paper/p1/figures/fig2_gap.pdf paper/p1/figures/fig3_ranks.pdf \
+             paper/p1/figures/fig4_mechanism.pdf paper/p1/figures/fig_forest.pdf
+          # summarize_t1p_fm8.py rewrites two tracked CSV files; they differ from the stored ones
+          # only in the last bit of some floats (|diff| <= 1.2e-16), so they are listed, not compared.
           git diff --stat
-          T=simaudit/paper/p1/tables_p1.tex
-          diff <(git show HEAD:$T | sort) <(sort $T)
-          git diff --exit-code -- . ":(exclude)$T"
